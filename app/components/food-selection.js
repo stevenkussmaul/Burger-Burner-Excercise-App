@@ -2,9 +2,10 @@
 
 const foodSelection = {
     template: `
-    <section ng-repeat="food in $ctrl.listOfFood">
+    <section class="food-list" ng-click="$ctrl.add(food.fields.item_name)" ng-repeat="food in $ctrl.listOfFood">
         <p>{{ food.fields.item_name }}</p>
         <p>{{ food.fields.nf_calories }}</p>
+
     </section>
     `,
     bindings: [],
@@ -23,7 +24,9 @@ const foodSelection = {
         
         Service.getFood().then(foodList);
 
-
+        vm.add = (food) => {
+            Service.addFood(food)
+        }
         
 
 

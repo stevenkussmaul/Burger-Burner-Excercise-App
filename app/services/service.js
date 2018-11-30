@@ -9,7 +9,14 @@ function Service ($http) {
             method: "GET"
         });
     }
-    
+    self.plate = [];
+    self.addFood = (food) => {
+        self.plate.push(angular.copy(food));
+        console.log(self.plate);
+    }
+    self.getPlate = () => {
+        return self.plate;
+    }
 }
 
 angular.module("App")

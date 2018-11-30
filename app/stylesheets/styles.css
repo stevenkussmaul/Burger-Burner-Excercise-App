@@ -1,0 +1,36 @@
+body {
+    display: flex;
+
+}
+
+.food-selection {
+    flex: 40%;
+    display: inline-block;
+}
+
+.right {
+    display: inline-block;
+    flex: 40%;
+}
+
+.plate-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+}
+
+.plate_item {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    background-color: magenta;
+    display: block;
+
+}
+
+.plate {
+    width: 8em;
+    height: 2em;
+    background-color: black;
+}
