@@ -80,12 +80,13 @@ const foodSelection = {
             console.log(vm.nuggets);
 
         }
-            Service.getNuggets().then(nuggetsObj);
-            vm.add = (food) => {
-                Service.addFood(food)
-            }
 
-        
+        Service.getNuggets().then(nuggetsObj);
+        vm.add = (food) => {
+            Service.addFood(food)
+        }
+
+
     }]
 
 }
