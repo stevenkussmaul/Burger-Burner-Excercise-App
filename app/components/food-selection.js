@@ -3,19 +3,19 @@
 const foodSelection = {
     template: `
 
-    <section class="food-list" ng-click="$ctrl.add(food.fields.item_name)" ng-repeat="food in $ctrl.listOfFood">
+    <section class="food-list" ng-click="$ctrl.add(food)">
        
-    <p> {{ food.name }} </p>
+    <p> {{ $ctrl.bigMac.name }} </p>
+    <p> {{ $ctrl.coke.name }} </p>
+    <p> {{ $ctrl.fries.name }} </p>
+    <p> {{ $ctrl.pie.name }} </p>
+    <p> {{ $ctrl.nuggets.name }} </p>
 
     </section>
     `,
     bindings: [],
     controller: ["Service", function (Service) {
         const vm = this;
-
-
-
-
 
         function bigMacObj(result) {
             vm.bigMacName = result.data.item_name;
@@ -82,10 +82,10 @@ const foodSelection = {
         }
 
         Service.getNuggets().then(nuggetsObj);
+
         vm.add = (food) => {
             Service.addFood(food)
         }
-
 
     }]
 
@@ -94,8 +94,3 @@ const foodSelection = {
 angular.module("App")
     .component("foodSelection", foodSelection);
 
-//     <section ng-repeat="food in $ctrl.listOfFood track by $index">
-//     <p>{{ food.name }}</p>
-
-
-// </section>
