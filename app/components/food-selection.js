@@ -3,8 +3,10 @@
 const foodSelection = {
     template: `
 
-    <section ng-repeat="food in $ctrl.listOfFood track by $index">
+    <section class="food-list" ng-click="$ctrl.add(food.fields.item_name)" ng-repeat="food in $ctrl.listOfFood">
+       
     <p> {{ food.name }} </p>
+
     </section>
     `,
     bindings: [],
@@ -78,10 +80,14 @@ const foodSelection = {
             console.log(vm.nuggets);
 
 
-        }
+        
+        
+
 
         Service.getNuggets().then(nuggetsObj);
-
+        vm.add = (food) => {
+            Service.addFood(food)
+        }
 
     }]
 }
