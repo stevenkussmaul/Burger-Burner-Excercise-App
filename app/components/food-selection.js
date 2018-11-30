@@ -13,7 +13,7 @@ const foodSelection = {
         
         function foodList(result) {
             vm.listOfFood = result.data.hits;
-
+ 
             console.log(vm.listOfFood);
 
             console.log(vm.listOfFood["0"].fields.item_name);
