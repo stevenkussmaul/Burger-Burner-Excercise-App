@@ -3,14 +3,57 @@
 function Service ($http) {
     const self = this;
 
-    self.getFood = () => {
+    const Api_Key_Steve = "a06e909f350bbd724442d3327180b22d"
+    const App_ID_Steve = "406b24c1"
+
+    const API_Key_Christina = "351815a6f3a11f22a457ea5541ee668b"
+    const API_ID_Christina = "65a4ae7f"
+
+
+    self.getBigMac = () => {
         return $http({
-            url: `https://api.nutritionix.com/v1_1/search/mcdonalds?results=0:20&fields=item_name,brand_name,item_id,nf_calories&appId=406b24c1&appKey=a06e909f350bbd724442d3327180b22d`,
+            url: `https://api.nutritionix.com/v1_1/item?id=513fc9e73fe3ffd40300109f&appId=${API_ID_Christina}&appKey=${API_Key_Christina}`,
             method: "GET"
         });
     }
-    
+
+    self.getCoke = () => {
+        return $http({
+            url: `https://api.nutritionix.com/v1_1/item?id=69240416cbc5de1fef6defb3&appId=${API_ID_Christina}&appKey=${API_Key_Christina}`,
+            method: "GET"
+        });
+    }
+
+    self.getFries = () => {
+        return $http({
+            url: `https://api.nutritionix.com/v1_1/item?id=513fc9e73fe3ffd403001121&appId=${API_ID_Christina}&appKey=${API_Key_Christina}`,
+            method: "GET"
+        });
+    }
+
+    self.getApplePie = () => {
+        return $http({
+            url: `https://api.nutritionix.com/v1_1/item?id=513fc9e73fe3ffd40300109a&appId=${API_ID_Christina}&appKey=${API_Key_Christina}`,
+            method: "GET"
+        });
+    }
+
+    self.getNuggets = () => {
+        return $http({
+            url: `https://api.nutritionix.com/v1_1/item?id=513fc9e73fe3ffd4030010a8&appId=${API_ID_Christina}&appKey=${API_Key_Christina}`,
+            method: "GET"
+        });
+    }
+    self.plate = [];
+    self.addFood = (food) => {
+        self.plate.push(angular.copy(food));
+        console.log(self.plate);
+    }
+    self.getPlate = () => {
+        return self.plate;
+    }
 }
+
 
 angular.module("App")
     .service("Service",Service)
