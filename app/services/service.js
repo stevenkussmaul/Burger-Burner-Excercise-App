@@ -47,6 +47,7 @@ function Service ($http) {
             method: "GET"
         });
     }
+
     self.plate = [];
     self.addFood = (food) => {
         self.plate.push(angular.copy(food));
@@ -54,6 +55,18 @@ function Service ($http) {
     }
     self.getPlate = () => {
         return self.plate;
+    }
+// method to add calories together to be used in activity.js
+    self.calorieTotal = () => {
+        self.sum = 1000;
+        console.log(self.sum);
+        return self.sum;
+        // for (let i=0; i < self.plate.length; i++) {
+        //     // cycle through array to get calories and add all together
+        //     sum += self.plate[i].cal; // is this correct??
+        //     console.log(sum);
+        //     return sum;
+        // }
     }
 }
 

@@ -3,7 +3,7 @@
 const foodSelection = {
     template: `
 
-    <section class="food-list" ng-click="$ctrl.add(food)">
+    <section class="food-list" ng-click="$ctrl.add()">
        
     <p> {{ $ctrl.bigMac.name }} </p>
     <p> {{ $ctrl.coke.name }} </p>
@@ -26,9 +26,7 @@ const foodSelection = {
                 src: "/img/bigMac.jpg"
             };
             console.log(vm.bigMac);
-
-            vm.listOfFood = [vm.bigMac, vm.coke, vm.fries, vm.pie, vm.nuggets];
-            console.log(vm.listOfFood)
+            // console.log(vm.listOfFood)
             console.log(vm.listOfFood[0].name)
         }
         Service.getBigMac().then(bigMacObj);
@@ -82,6 +80,8 @@ const foodSelection = {
         }
 
         Service.getNuggets().then(nuggetsObj);
+
+        vm.listOfFood = [vm.bigMac, vm.coke, vm.fries, vm.pie, vm.nuggets];
 
         vm.add = (food) => {
             Service.addFood(food)
