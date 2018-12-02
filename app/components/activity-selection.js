@@ -19,25 +19,22 @@ const activitySelection = {
             vm.walkingCalories = 80; 
             let distance = calorieTotal/vm.walkingCalories;
             console.log(distance);
+            $location.path("/results");
             return distance;
-            // route to final page
-            // $location.path('/path/to/final-screen');
         };
         vm.bearCrawl = (calorieTotal) => {
             vm.bearcrawlCalories = 200;
             let distance = calorieTotal/vm.bearcrawlCalories;
             console.log(distance);
+            $location.path("/results");
             return distance;
-            // route to final page
-            // $location.path('/path/to/final-screen');
         };
         vm.hopping = (calorieTotal) => {
             vm.hoppingCalories = 300;
             let distance = calorieTotal/vm.hoppingCalories;
             console.log(distance);
+            $location.path("/results");
             return distance;
-            // route to final page
-            // $location.path('/path/to/final-screen');
         };
     }]
 
