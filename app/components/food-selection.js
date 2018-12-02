@@ -24,16 +24,20 @@ const foodSelection = {
             <section class="plate">
             </section>
         </section>
+        <button ng-click="$ctrl.goActivity();">Go</button>
     </section>
 
 
     `,
     bindings: [],
-    controller: ["Service", function (Service) {
+    controller: ["Service", "$location", function (Service, $location) {
         const vm = this;
 
         vm.listOfFood = [];
 
+        vm.goActivity = () => {
+            $location.path("/activity-selection");
+        };
         
         Service.getBigMac().then(function(result) {
             vm.bigMacObj = result;

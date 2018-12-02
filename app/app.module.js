@@ -1,18 +1,18 @@
 "use strict";
 
 angular.module("App", ["ngRoute"])
-    .config(function($routeProvider) {
+    .config(["$routeProvider", function($routeProvider) {
         $routeProvider
         .when("/", {
-            templateUrl : "food-selection.js"
+            template: "<food-selection></food-selection>"
         })
-        .when("/exercise-select", {
-            templateUrl : "exercise.js"
+        .when("/activity-selection", {
+            template: "<activity-selection></activity-selection>"
         })
         .when("/results", {
-            templateUrl : "results.js"
+            template: "<results></results>"
         })
         .otherwise("/", {
-            templateUrl : "food-selection.js"
+            template: "<food-selection></food-selection>"
         });
-    });
+    }]);
