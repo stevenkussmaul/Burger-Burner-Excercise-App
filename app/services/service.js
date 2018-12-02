@@ -9,9 +9,13 @@ function Service ($http, $q) {
     const API_Key_Christina = "351815a6f3a11f22a457ea5541ee668b"
     const API_ID_Christina = "65a4ae7f"
 
+
     const API_Key_Andy = "cde9ecce359832533378e10a19e686d1"
     const API_Key_Andy_2 = "c18ae83e69b94a5a398054f4418f681b"
     const API_ID_Andy = "fcb77a4d"
+
+    const API_Key_Betsy = "d3995095c3be44e58b5ff665f5acba04"
+    const API_ID_Betsy = "d22fcc12"
 
     const API_ID = API_ID_Steven
     const API_Key = API_Key_Steven
@@ -62,6 +66,7 @@ function Service ($http, $q) {
             return self.bigMac;
 
         })
+
     }
 
 
@@ -129,6 +134,7 @@ function Service ($http, $q) {
                     }
                     return self.fries;
                 })
+
     }
 
      //call to API_v2.0
@@ -152,6 +158,7 @@ function Service ($http, $q) {
                     }
                     return self.applePie;
                 })
+
     }
 
     //call to API_v2.0

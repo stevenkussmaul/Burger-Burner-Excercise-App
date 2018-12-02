@@ -2,6 +2,7 @@
 
 const foodSelection = {
     template: `
+
     
     <section class="buttons">
         <button>view 1</button>
@@ -116,13 +117,9 @@ const foodSelection = {
 
 
     }]
+
 }
 
 angular.module("App")
     .component("foodSelection", foodSelection);
 
-//     <section ng-repeat="food in $ctrl.listOfFood track by $index">
-//     <p>{{ food.name }}</p>
-
-
-// </section>
