@@ -3,19 +3,16 @@
 const results = {
     template: `
 
-    
-    <section class="buttons">
-        <button>view 1</button>
-        <button>view 2</button>
-        <button>view 2</button>
+    {{ 2+2 }}
+    <section class="distance">
+        <p>{{ $ctrl.distance }}</p>
     </section>
 
 
     `,
-    bindings: [],
     controller: ["Service", "$location", function (Service, $location) {
         const vm = this;
-
+        vm.distance = Service.getDistance();
 
     }]
 }
