@@ -11,7 +11,7 @@ const plate = {
 `,
     controller: ["Service", function (Service) {
         const vm = this;
-        vm.plate = Service.getPlate();
+        // vm.plate = Service.getPlate();
     }]
 }
 
