@@ -186,7 +186,7 @@ function Service ($http, $q) {
     
     self.plate = [];
     self.addFood = (food) => {
-        self.plate.push(angular.copy(food));
+        self.plate.unshift(angular.copy(food));
         console.log(self.plate);
     }
     self.getPlate = () => {

@@ -4,20 +4,20 @@ const foodSelection = {
     template: `
     
     <section class="buttons">
-    <button>view 1</button>
-    <button>view 2</button>
-    <button>view 2</button>
-</section>
+        <button>view 1</button>
+        <button>view 2</button>
+        <button>view 2</button>
+    </section>
 
-<section class="selection-plate-container">
-        <section class="left" ng-click="$ctrl.add(food.fields.item_name)" ng-repeat="food in $ctrl.listOfFood track by $index">
+    <section class="selection-plate-container">
+        <section class="left" ng-repeat="food in $ctrl.listOfFood track by $index">
             <p> {{ food.name }} </p>
-            <button>Add {{food.name}} to plate</button>
+            <button ng-click="$ctrl.add(food)">Add {{food.name}} to plate</button>
         </section>
 
         <section class="right">
             <section ng-repeat="food in $ctrl.plate track by $index" class="plate-container">
-                <p class="plate_item">{{ food.fields.item_name }}</p>
+                <p class="plate_item">{{ food.name}}</p>
             </section>
 
             <section class="plate">
