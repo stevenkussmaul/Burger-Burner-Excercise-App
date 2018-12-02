@@ -31,6 +31,7 @@ const foodSelection = {
     bindings: [],
     controller: ["Service", function (Service) {
         const vm = this;
+
         vm.listOfFood = [];
 
         
@@ -108,6 +109,8 @@ const foodSelection = {
         //     console.log(vm.nuggets);
         // }
         // Service.getNuggets().then(nuggetsObj);
+
+        vm.listOfFood = [vm.bigMac, vm.coke, vm.fries, vm.pie, vm.nuggets];
 
         vm.add = (food) => {
             Service.addFood(food)

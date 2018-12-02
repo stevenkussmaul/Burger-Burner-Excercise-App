@@ -35,3 +35,23 @@
     height: 2em;
     background-color: black;
 }
+
+
+/* activity styles */
+.walking {
+    height: 200px;
+    width: 200px;
+    background-color: palegreen;
+}
+
+.bear-crawl {
+    height: 200px;
+    width: 200px;
+    background-color: tomato;
+}
+
+.hopping {
+    height: 200px;
+    width: 200px;
+    background-color: mediumorchid;
+}

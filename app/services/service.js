@@ -184,13 +184,7 @@ function Service ($http, $q) {
                 })
     }
 
-    // self.getNuggets = () => {
-    //     return $http({
-    //         url: `https://api.nutritionix.com/v1_1/item?id=513fc9e73fe3ffd4030010a8&appId=${API_ID}&appKey=${API_Key}`,
-    //         method: "GET"
-    //     });
-    // }
-    
+
     self.plate = [];
     self.addFood = (food) => {
         self.plate.unshift(angular.copy(food));
@@ -198,6 +192,19 @@ function Service ($http, $q) {
     }
     self.getPlate = () => {
         return self.plate;
+    }
+
+// method to get calorie total to be used in activity-selection.js
+    self.calorieTotal = () => {
+        // cycle through array to get calories and add all together
+        // for (let i=0; i < self.plate.length; i++) {
+        //     self.sum += self.plate[i].cal; // is this correct??
+        //     console.log(self.sum);
+        //     return self.sum;
+        // }
+        // self.sum = 1000;
+        // console.log(self.sum);
+        // return self.sum;
     }
 }
 
