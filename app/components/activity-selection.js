@@ -30,7 +30,6 @@ const activitySelection = {
             return distance;
             // route to final page
             // $location.path('/path/to/final-screen');
-
         };
         vm.hopping = (calorieTotal) => {
             vm.hoppingCalories = 300;
