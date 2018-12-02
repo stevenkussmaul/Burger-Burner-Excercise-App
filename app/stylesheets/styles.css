@@ -1,15 +1,16 @@
-body {
+.selection-plate-container {
     display: flex;
+    flex-direction: row;
 
 }
 
-.food-selection {
+.left {
     flex: 40%;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 .right {
-    display: inline-block;
+    /* display: inline-block; */
     flex: 40%;
 }
 
