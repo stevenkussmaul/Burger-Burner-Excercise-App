@@ -32,7 +32,7 @@
 }
 
 .no-animation {
-    animation: none !important;
+    transition: none !important;
 }
 
 #item0 {
@@ -42,18 +42,8 @@
     display: block;
     position: absolute;
     bottom: 70px;
-    animation: dropInZero 2s;
-    animation-direction: alternate-reverse;
-    animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes dropInZero {
-    from {
-        transform: translateY(10em);
-    }
-    to {
-        transform: translateY(1em);
-    }
+    transition: transform 2s ease-in-out;
+    transform: translateY(-500px);
 }
 
 #item1 {
@@ -62,19 +52,11 @@
     background-color: magenta;
     display: block;
     position: absolute;
-    top: 1px;
-    animation: dropInOne 2s;
-    animation-fill-mode: forwards;
+    bottom: 140px;
+    transition: transform 2s ease-in-out;
+    transform: translateY(-400px);
 }
 
-@-webkit-keyframes dropInOne {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(670%);
-    }
-}
 
 #item2 {
     width: 4em;
@@ -82,18 +64,9 @@
     background-color: magenta;
     display: block;
     position: absolute;
-    top: 1px;
-    animation: dropInTwo 2s;
-    animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes dropInTwo {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(570%);
-    }
+    bottom: 70px;
+    transition: transform 2s ease-in-out;
+    transform: translateY(-300px);
 }
 
 #item3 {
@@ -102,18 +75,9 @@
     background-color: magenta;
     display: block;
     position: absolute;
-    top: 1px;
-    animation: dropInThree 2s;
-    animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes dropInThree {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(470%);
-    }
+    bottom: 70px;
+    transition: transform 2s ease-in-out;
+    transform: translateY(-200px);
 }
 
 .plate {

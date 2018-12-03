@@ -192,7 +192,7 @@ function animeDirective() {
                             // direction: 'alternate',
                             loop: true,
                             duration: 210,
-                            offset: 1000,
+                            offset: 500,
                             easing: 'easeInOutCirc'
                         })
                         .add({
@@ -280,7 +280,7 @@ function animeDirective() {
                             // direction: 'alternate',
                             loop: true,
                             duration: 210,
-                            offset: '-=1800',
+                            offset: 1000,
                             easing: 'easeInOutCirc'
                         })
                         .add({
@@ -368,7 +368,7 @@ function animeDirective() {
                             // direction: 'alternate',
                             loop: true,
                             duration: 210,
-                            offset: '-=1800',
+                            offset: 1500,
                             easing: 'easeInOutCirc'
                         })
 
