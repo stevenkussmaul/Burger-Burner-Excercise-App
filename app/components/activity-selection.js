@@ -4,7 +4,7 @@ const activitySelection = {
     template: `
         <section ng-click="$ctrl.walking($ctrl.calorieTotal);" class="walking">Walking</section>
         <section ng-click="$ctrl.bearCrawl($ctrl.calorieTotal);" class="bear-crawl">Bear Crawling</section>
-        <section ng-click="$ctrl.hopping($ctrl.calorieTotal);" class="hopping">Hopping</section>
+        <section ng-click="$ctrl.skipping($ctrl.calorieTotal);" class="skipping">Skipping</section>
     `,
     bindings: [],
     controller: ["$location", "Service", function ($location, Service) {
@@ -14,6 +14,16 @@ const activitySelection = {
         
         vm.walking = (calorieTotal) => {
             Service.getWalking(calorieTotal);
+            $location.path("/results");
+        }
+
+        vm.bearCrawl = (calorieTotal) => {
+            Service.getBearCrawl(calorieTotal);
+            $location.path("/results");
+        }
+
+        vm.skipping = (calorieTotal) => {
+            Service.getSkipping(calorieTotal); //gets total distance needed while doing this activity
             $location.path("/results");
         }
 
@@ -35,9 +45,9 @@ const activitySelection = {
         //     $location.path("/results");
         //     return distance;
         // };
-        // vm.hopping = (calorieTotal) => {
-        //     vm.hoppingCalories = 300;
-        //     let distance = calorieTotal/vm.hoppingCalories;
+        // vm.skipping = (calorieTotal) => {
+        //     vm.skippingCalories = 300;  //300 calories burned per mile of skipping
+        //     let distance = calorieTotal/vm.skippingCalories;
         //     console.log(distance);
         //     $location.path("/results");
         //     return distance;

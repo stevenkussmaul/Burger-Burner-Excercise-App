@@ -135,19 +135,37 @@
 }
 
 .bear-crawl {
-    height: 200px;
-    width: 200px;
-    background-color: tomato;
+    height: 240px;
+    width: 160px;
+
+    background: url('../images/sprite_skip.png') left center;
+    background-size: 1000% 100%;
+
+    animation-name: activity;
+    animation-duration: 1.8s;
+    animation-timing-function: steps(2);
+    animation-delay: 100ms;
+
+    animation-iteration-count: infinite;
 }
 
-.hopping {
-    height: 200px;
-    width: 200px;
-    background-color: mediumorchid;
+.skipping {
+    height: 240px;
+    width: 160px;  /* each frame is 320 wide, 10 frames total, we are scaling it to 50% */
+
+    background: url('../images/sprite_skip.png') left center;
+    background-size: 1000% 100%;
+
+    animation-name: activity;
+    animation-duration: 1.5s;
+    animation-timing-function: steps(2);
+    animation-delay: 50ms;
+
+    animation-iteration-count: infinite;
 }
 
 @keyframes activity {
-    100% {background-position: -640px}
+    100% {background-position: -1280px}
 }
 
 @keyframes movement {
