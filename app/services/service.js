@@ -207,8 +207,8 @@ function Service ($http, $q) {
     }
 
     self.walkingCalories;  
-    self.bearcrawlCalories;
-    self.hoppingCalories;
+    self.bearCrawlCalories;
+    self.skippingCalories;
     self.distance = 0;
 
     self.getDistance = () => {
@@ -216,11 +216,28 @@ function Service ($http, $q) {
       };
 
     self.getWalking = (calorieTotal) => {
-            self.walkingCalories = 80; 
-            self.distance = calorieTotal/self.walkingCalories;
-            console.log(self.distance);
-            return self.distance;
+        self.walkingCalories = 80; 
+        self.distance = calorieTotal/self.walkingCalories;
+        console.log(self.distance);
+        return self.distance;
     }
+
+    self.getBearCrawl = (calorieTotal) => {
+        self.bearCrawlCalories = 200;
+        self.distance = calorieTotal/self.bearCrawlCalories;
+        console.log(self.distance);
+        // $location.path("/results");
+        return self.distance;
+    };
+
+    self.getSkipping = (calorieTotal) => {
+        self.skippingCalories = 300;  //300 calories burned per mile of skipping
+        self.distance = calorieTotal/self.skippingCalories;
+        console.log(self.distance);
+        // $location.path("/results");
+        return self.distance;
+    };
+
 
 }
 
