@@ -50,17 +50,15 @@
 
 /* activity styles */
 .walking {
-    height: 160px;
-    width: 240px;
+    height: 240px;
+    width: 160px;
 
-    background-image: url('../images/sprite_walk.png');
-    background-size: 1200%, 100%;
-    background-position:  left;
-    background-repeat: no-repeat;
+    background: url('../images/sprite_walk.png') left center;
+    background-size: 1200% 100%;
 
     animation-name: activity;
-    animation-duration: 5s;
-    /* animation-timing-function: steps(2); */
+    animation-duration: 2s;
+    animation-timing-function: steps(2);
     animation-iteration-count: infinite;
 }
 
@@ -77,8 +75,7 @@
 }
 
 @keyframes activity {
-    0% {background-position: 320px;}
-    50% {background-position: 640px;}
+    100% {background-position: -640px}
 }
 
 @keyframes movement {
