@@ -50,9 +50,18 @@
 
 /* activity styles */
 .walking {
-    height: 200px;
-    width: 200px;
-    background-color: palegreen;
+    height: 160px;
+    width: 240px;
+
+    background-image: url('../images/sprite_walk.png');
+    background-size: 1200%, 100%;
+    background-position:  left;
+    background-repeat: no-repeat;
+
+    animation-name: activity;
+    animation-duration: 5s;
+    /* animation-timing-function: steps(2); */
+    animation-iteration-count: infinite;
 }
 
 .bear-crawl {
@@ -65,4 +74,18 @@
     height: 200px;
     width: 200px;
     background-color: mediumorchid;
+}
+
+@keyframes activity {
+    0% {background-position: 320px;}
+    50% {background-position: 640px;}
+}
+
+@keyframes movement {
+    from {
+        background-position: left;
+    }
+    to {
+        background-position: right;
+    }
 }
