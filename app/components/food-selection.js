@@ -16,13 +16,13 @@ const foodSelection = {
             <button ng-click="$ctrl.add(food)">Add {{food.name}} to plate</button>
         </section>
 
-        <section class="right">
-            <section ng-repeat="food in $ctrl.plate track by $index" class="plate-container">
-                <p class="plate_item">{{ food.name}}</p>
-            </section>
+    <section class="right">
+        <section ng-repeat="food in $ctrl.plate track by $index" class="plate-container">
+            <p class="plate_item">{{ food.name}}</p>
+        </section>
 
-            <section class="plate">
-            </section>
+        <section class="plate">
+        </section>
         </section>
         <button ng-click="$ctrl.goActivity();">Go</button>
     </section>

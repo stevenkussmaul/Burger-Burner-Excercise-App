@@ -70,25 +70,25 @@ function Service ($http, $q) {
     // }
 
 
-    // // //call to API_v1_1
-    // // self.getBigMac = () => {
-    // //     return $http({
-    // //         url: `https://api.nutritionix.com/v1_1/item?id=513fc9e73fe3ffd40300109f&appId=${API_ID}&appKey=${API_Key}`,
-    // //         method: "GET",
-    // //     }).then((result) => {
-    // //         self.bigMacName = "big mac" //result.data.item_name;
-    // //         self.bigMacCal = 1000 //result.data.nf_calories;
-    // //         self.bigMac = {
-    // //             name: vm.bigMacName,
-    // //             cal: vm.bigMacCal,
-    // //             src: "/img/bigMac.jpg"
-    // //         }
-    // //         console.log(self.bigMac);
+    // //call to API_v1_1
+    // self.getBigMac = () => {
+    //     return $http({
+    //         url: `https://api.nutritionix.com/v1_1/item?id=513fc9e73fe3ffd40300109f&appId=${API_ID}&appKey=${API_Key}`,
+    //         method: "GET",
+    //     }).then((result) => {
+    //         self.bigMacName = "big mac" //result.data.item_name;
+    //         self.bigMacCal = 1000 //result.data.nf_calories;
+    //         self.bigMac = {
+    //             name: vm.bigMacName,
+    //             cal: vm.bigMacCal,
+    //             src: "/img/bigMac.jpg"
+    //         }
+    //         console.log(self.bigMac);
             
-    // //     return self.bigMac;
+    //     return self.bigMac;
 
-    // //     })
-    // // }
+    //     })
+    // }
 
     // //call to API_v2.0
     // self.getCoke = () => {
