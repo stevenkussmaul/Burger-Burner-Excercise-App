@@ -19,4 +19,3 @@ const results = {
 
 angular.module("App")
         .component("results", results);
-

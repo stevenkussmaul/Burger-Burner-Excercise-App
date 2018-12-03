@@ -24,8 +24,9 @@ const foodSelection = {
                 <p id="item{{$index}}" ng-repeat="food in $ctrl.plate track by $index" class="plate_item">{{ food.name}}</p>
             </section>
 
-            <section class="plate">
-            </section>
+
+        <section class="plate">
+        </section>
         </section>
       
     </section>
