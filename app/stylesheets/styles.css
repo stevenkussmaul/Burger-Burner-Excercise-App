@@ -1,3 +1,9 @@
+.title {
+    font-family: 'Bungee', cursive;
+    text-align: center;
+    font-size: 3rem;
+}
+
 .main-container {
     display: flex;
     flex-direction: row;
@@ -168,11 +174,65 @@
     100% {background-position: -1280px}
 }
 
+.results-wrapper {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.distance {
+    height: 12rem;
+    width: 50%;
+    background-color: #DD1A08;
+
+    
+}
+
+.movement-container {
+
+    position: absolute;
+    top: 10rem;
+    right: 50vw;
+    transform: translate(50%,50%);
+    border: 3px solid gold;
+
+
+    width: 40%;
+    /* height: 100px; */
+
+}
+
+.skyline-container {
+    background: linear-gradient(270deg, #246655, #5a2466);
+    background-size: 400% 400%;
+    animation: skyline 6s ease infinite;
+    border-radius: 50%;
+    width: 150%;
+}
+@keyframes skyline { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.sprite {
+
+    height: 240px;
+    width: 160px;  /* each frame is 320 wide, 10 frames total, we are scaling it to 50% */
+
+    background: url('../images/sprite_skip.png') left center;
+    background-size: 1000% 100%;
+
+    animation-name: movement;
+    animation-duration: 2s;
+    animation-timing-function: steps(10);
+    animation-delay: 0;
+
+    animation-iteration-count: infinite;
+
+}
+
 @keyframes movement {
-    from {
-        background-position: left;
-    }
-    to {
-        background-position: right;
-    }
+    100% {background-position: -3200px}
+
 }
