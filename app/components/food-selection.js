@@ -10,21 +10,24 @@ const foodSelection = {
         <button>view 2</button>
     </section>
 
-    <section class="selection-plate-container">
-        <section class="left" ng-repeat="food in $ctrl.listOfFood track by $index">
-            <p> {{ food.name }} </p>
-            <button ng-click="$ctrl.add(food)">Add {{food.name}} to plate</button>
+    <section class="main-container">
+        <section class="left">
+            <section anime-directive ng-repeat="food in $ctrl.listOfFood track by $index">
+                <p> {{ food.name }} </p>
+                <button ng-click="$ctrl.add(food)">Add {{food.name}} to plate</button>
+            </section>
+            <button ng-click="$ctrl.goActivity();">Go</button>
         </section>
 
         <section class="right">
-            <section ng-repeat="food in $ctrl.plate track by $index" class="plate-container">
-                <p class="plate_item">{{ food.name}}</p>
+            <section class="plate-container">
+                <p id="item{{$index}}" ng-repeat="food in $ctrl.plate track by $index" class="plate_item">{{ food.name}}</p>
             </section>
 
             <section class="plate">
             </section>
         </section>
-        <button ng-click="$ctrl.goActivity();">Go</button>
+      
     </section>
 
 
@@ -54,7 +57,7 @@ const foodSelection = {
         vm.goActivity = () => {
             $location.path("/activity-selection");
         };
-        
+
         // Service.getBigMac().then(function(result) {
         //     vm.bigMacObj = result;
         //     vm.listOfFood[0] = vm.bigMacObj            
