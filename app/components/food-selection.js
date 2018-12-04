@@ -15,7 +15,7 @@ const foodSelection = {
 
         <section class="right">
             <section class="plate-container">
-                <p class="food-item" id="item{{$index}}" ng-repeat="food in $ctrl.plate track by $index" class="plate_item">{{ food.name}}</p>
+                <img class="food-item" id="item{{$index}}" ng-repeat="food in $ctrl.plate track by $index" src="{{ food.src}}">
             </section>
 
 
