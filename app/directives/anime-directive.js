@@ -5,13 +5,41 @@ function animeDirective() {
         replace: false,
         link: function ($scope, $element, $attrs) {
             $element.on("click", () => {
-                // setTimeout(
-                //     function () {
-                //         console.log("timeout ran");
-                //         var element = $element[0].parentElement.nextElementSibling.children[0].children[0];
-                //         var angElement = angular.element(element);
-                //         angElement.addClass("no-animation");
-                //     }, 2000);
+                function foodWobble() {
+                    $element.toggleClass("food-shake")
+                    anime({
+                        targets: '.food-shake',
+                        rotate: [
+                            { value: ['0.4', '-0.4'], duration: 210 },
+                            { value: ['0.6', '-0.6'], duration: 205 },
+                            { value: ['0.8', '-0.8'], duration: 200 },
+                            { value: ['1', '-1'], duration: 195 },
+                            { value: ['1.2', '-1.2'], duration: 185 },
+                            { value: ['1', '-1'], duration: 190 },
+                            { value: ['0.8', '-0.8'], duration: 195 },
+                            { value: ['0.6', '-0.6'], duration: 200 },
+                            { value: ['0.4', '-0.4'], duration: 205 },
+                            { value: ['0.2', '-0.2'], duration: 210 }
+                        ],
+                        translateX: [
+                            { value: [0.1, -0.1], duration: 210 },
+                            { value: [0.2, -0.2], duration: 210 },
+                            { value: [0.3, -0.3], duration: 210 },
+                            { value: [0.4, -0.4], duration: 210 },
+                            { value: [0.7, -0.7], duration: 210 },
+                            { value: [0.4, -0.4], duration: 210 },
+                            { value: [0.3, -0.3], duration: 210 },
+                            { value: [0.2, -0.2], duration: 210 },
+                            { value: [0.1, -0.1], duration: 210 },
+                            { value: [0, -0], duration: 210 }
+                        ],
+                        easing: 'easeInOutCirc'
+                    });
+                    setTimeout(function() {
+                        $element.toggleClass("food-shake"), 5000
+                    })
+                }
+                foodWobble();
                 const plate = document.querySelector(".plate");
                 plateWobble(plate.attributes[0].value);
                 
