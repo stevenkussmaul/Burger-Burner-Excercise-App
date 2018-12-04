@@ -23,61 +23,25 @@
 }
 
 .plate-container {
-    display: flex;
-    flex-direction: column-reverse;
+    /* display: flex;
+    flex-direction: column-reverse; */
     position: relative;
     /* bottom: -500px; */
     height: 100%;
-    align-items: center;
+    /* align-items: center; */
 }
 
-.no-animation {
+/* .no-animation {
     transition: none !important;
-}
+} */
 
-#item0 {
-    width: 4em;
-    height: 4em;
+.food-item {
+    width: 65px;
+    height: 65px;
     background-color: magenta;
     display: block;
     position: absolute;
-    bottom: 70px;
-    transition: transform 2s ease-in-out;
-    transform: translateY(-500px);
-}
-
-#item1 {
-    width: 4em;
-    height: 4em;
-    background-color: magenta;
-    display: block;
-    position: absolute;
-    bottom: 140px;
-    transition: transform 2s ease-in-out;
-    transform: translateY(-400px);
-}
-
-
-#item2 {
-    width: 4em;
-    height: 4em;
-    background-color: magenta;
-    display: block;
-    position: absolute;
-    bottom: 210px;
-    transition: transform 2s ease-in-out;
-    transform: translateY(-300px);
-}
-
-#item3 {
-    width: 4em;
-    height: 4em;
-    background-color: magenta;
-    display: block;
-    position: absolute;
-    bottom: 280px;
-    transition: transform 2s ease-in-out;
-    transform: translateY(-200px);
+    margin-left: 60px;
 }
 
 .plate {
