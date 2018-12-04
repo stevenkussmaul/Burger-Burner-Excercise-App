@@ -131,18 +131,15 @@ body {
     text-align: center;
     background: url('../images/sprite_skip.png') left center;
     background-size: 1000% 100%;
-
     animation-name: activity;
     animation-duration: 1.5s;
     animation-timing-function: steps(2);
     animation-delay: 50ms;
-
     animation-iteration-count: infinite;
 }
 
 @keyframes activity {
     100% {background-position: -1280px}
-
 }
 
 .exercise-container {
@@ -155,36 +152,32 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .distance {
     text-align: center;
     height: 70%;
     width: 50%;
-    background-color:darkgrey;
+    background-color:#F1E9DB;
+    color: black;
+    border: 3px solid #DD1A08;
+}
 
-    border: 3px solid blue;
-
-
-    
+.results-text {
+    color: #07020D;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+   
 }
 
 .movement-container {
-
     display: flex;
     justify-content: center;
-
     /* position: absolute;
     top: 10rem;
     right: 50vw;
     transform: translate(50%,50%); */
-
-    border: 3px solid gold;
-
-
     width: 50%;
-
 }
 
 .skyline-container {
@@ -192,12 +185,12 @@ body {
     justify-content: center;
     /* background: linear-gradient(270deg, #246655, #5a2466); */
     background: linear-gradient(270deg,#39c6a2, #ff3a00);
-
     background-size: 400% 400%;
     animation: skyline 4s ease infinite;
     border-radius: 50%;
     width: 100%;
 }
+
 @keyframes skyline { 
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
@@ -220,7 +213,6 @@ body {
     animation-iteration-count: infinite;
 
 
-    border: 2px solid green;
 
 }
 

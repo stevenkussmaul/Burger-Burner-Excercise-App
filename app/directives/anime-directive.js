@@ -24,6 +24,7 @@ function animeDirective() {
                             { value: [0.3, -0.3], duration: 180 }
                         ],
                         easing: 'easeInOutCirc'
+
                     });
                     setTimeout(function() {
                         $element.toggleClass("food-shake"), 5000
