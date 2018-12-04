@@ -2,6 +2,7 @@
 
 const activitySelection = {
     template: `
+        <section class="title">BURGER BURNER</section>
         <section ng-click="$ctrl.walking($ctrl.calorieTotal);" class="walking">Walking</section>
         <section ng-click="$ctrl.bearCrawl($ctrl.calorieTotal);" class="bear-crawl">Bear Crawling</section>
         <section ng-click="$ctrl.skipping($ctrl.calorieTotal);" class="skipping">Skipping</section>
