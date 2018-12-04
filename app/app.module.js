@@ -12,9 +12,6 @@ angular.module("App", ["ngRoute"])
         .when("/results", {
             template: "<results></results>"
         })
-        .when("/foodSelection", {
-            template: "<results></results>"
-        })
         .otherwise("/", {
             template: "<food-selection></food-selection>"
         });
