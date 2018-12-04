@@ -5,32 +5,22 @@ function animeDirective() {
         replace: false,
         link: function ($scope, $element, $attrs) {
             $element.on("click", () => {
+                foodWobble();
                 function foodWobble() {
                     $element.toggleClass("food-shake")
                     anime({
                         targets: '.food-shake',
-                        rotate: [
-                            { value: ['0.8', '-0.8'], duration: 160 },
-                            { value: ['1', '-1'], duration: 155 },
-                            { value: ['1.2', '-1.2'], duration: 145 },
-                            { value: ['1', '-1'], duration: 150 },
-                            { value: ['0.8', '-0.8'], duration: 155 }
+                        scale: [ 
+                            { value: [1, 1.5], duration: 320 },
+                            { value: [1.5, 1], duration: 380 }
                         ],
-                        translateX: [
-                            { value: [0.3, -0.3], duration: 180 },
-                            { value: [0.4, -0.4], duration: 180 },
-                            { value: [0.7, -0.7], duration: 180 },
-                            { value: [0.4, -0.4], duration: 180 },
-                            { value: [0.3, -0.3], duration: 180 }
-                        ],
-                        easing: 'easeInOutCirc'
-
+                        easing: 'easeInOutQuad'
                     });
                     setTimeout(function() {
                         $element.toggleClass("food-shake"), 5000
                     })
                 }
-                foodWobble();
+                
                 const plate = document.querySelector(".plate");
                 plateWobble(plate.attributes[0].value);
                 

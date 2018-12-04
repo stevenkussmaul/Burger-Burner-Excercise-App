@@ -42,13 +42,9 @@ const results = {
             console.log(vm.distance);
         }
 
-
         vm.counter = $interval(function (){
             vm.countdown();
         }, 500) 
-
-
-
 
     }]
 }
