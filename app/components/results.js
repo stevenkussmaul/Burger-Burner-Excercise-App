@@ -9,9 +9,7 @@ const results = {
     <section class="results-wrapper">
     
         <section class="distance">
-           <p> you have <p>{{ $ctrl.distance }}</p> miles to {{ $ctrl.activitySelection }}! </p>
-
-           <p></p>
+           <p class="results-text"> You have {{ $ctrl.distance }} miles to {{ $ctrl.activitySelection }}! </p>
 
         </section>
 
