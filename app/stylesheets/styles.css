@@ -14,12 +14,24 @@ p, button {
     margin-top: 20px;
 }
 
+.go-btn{
+    height: 30px;
+    width: 80px;
+    background-color: #69D9DB;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: #07020D;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
 .title {
     font-family: 'Bungee', cursive;
     text-align: center;
     font-size: 42px;
     color: #F1E9DB;
     background-color: #DD1A08;
+    text-shadow: 2px 2px #07020D;
 }
 
 body {
