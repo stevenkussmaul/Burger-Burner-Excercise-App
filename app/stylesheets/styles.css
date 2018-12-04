@@ -64,7 +64,7 @@
     background-color: magenta;
     display: block;
     position: absolute;
-    bottom: 70px;
+    bottom: 210px;
     transition: transform 2s ease-in-out;
     transform: translateY(-300px);
 }
@@ -75,7 +75,7 @@
     background-color: magenta;
     display: block;
     position: absolute;
-    bottom: 70px;
+    bottom: 280px;
     transition: transform 2s ease-in-out;
     transform: translateY(-200px);
 }
