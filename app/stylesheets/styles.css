@@ -22,6 +22,11 @@ p, button {
     background-color: #DD1A08;
 }
 
+body {
+    background-color: black;
+    color: white;
+}
+
 .main-container {
     display: flex;
     flex-direction: row;
@@ -164,37 +169,49 @@ p, button {
 .results-wrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
 }
 
 .distance {
-    height: 12rem;
+    text-align: center;
+    height: 70%;
     width: 50%;
-    background-color: #DD1A08;
+    background-color:darkgrey;
+
+    border: 3px solid blue;
+
 
     
 }
 
 .movement-container {
 
-    position: absolute;
+    display: flex;
+    justify-content: center;
+
+    /* position: absolute;
     top: 10rem;
     right: 50vw;
-    transform: translate(50%,50%);
+    transform: translate(50%,50%); */
+
     border: 3px solid gold;
 
 
-    width: 40%;
-    /* height: 100px; */
+    width: 50%;
 
 }
 
 .skyline-container {
-    background: linear-gradient(270deg, #246655, #5a2466);
+    display: flex;
+    justify-content: center;
+    /* background: linear-gradient(270deg, #246655, #5a2466); */
+    background: linear-gradient(270deg,#39c6a2, #ff3a00);
+
     background-size: 400% 400%;
-    animation: skyline 6s ease infinite;
+    animation: skyline 4s ease infinite;
     border-radius: 50%;
-    width: 150%;
+    width: 100%;
 }
 @keyframes skyline { 
     0%{background-position:0% 50%}
@@ -211,12 +228,14 @@ p, button {
     background-size: 1000% 100%;
 
     animation-name: movement;
-    animation-duration: 2s;
+    animation-duration: 4s;
     animation-timing-function: steps(10);
     animation-delay: 0;
 
     animation-iteration-count: infinite;
 
+
+    border: 2px solid green;
 
 }
 

@@ -198,10 +198,13 @@ function Service ($http, $q) {
     self.sum = 0;
     self.calorieTotal = () => {
         // cycle through array to get calories and add all together
-        for (let i=0; i < self.plate.length; i++) {
-            console.log(self.plate[i].cal);
-            self.sum = self.sum + self.plate[i].cal; // is this correct??
-            console.log(self.sum);
+        if (self.sum === 0) {
+            for (let i=0; i < self.plate.length; i++) {
+                console.log(self.plate[i].cal);
+                
+                    self.sum = self.sum + self.plate[i].cal; // is this correct??
+                    console.log(self.sum);
+            }
         }
         return self.sum;
     }
@@ -210,6 +213,11 @@ function Service ($http, $q) {
     self.bearCrawlCalories;
     self.skippingCalories;
     self.distance = 0;
+    self.ActivityChoice;
+
+    self.getActivity = () => {
+        return self.activityChoice;
+    }
 
     self.getDistance = () => {
         return self.distance;
@@ -219,6 +227,8 @@ function Service ($http, $q) {
         self.walkingCalories = 80; 
         self.distance = calorieTotal/self.walkingCalories;
         console.log(self.distance);
+        self.activityChoice = "Walking";
+        console.log(self.activityChoice);
         return self.distance;
     }
 
@@ -226,6 +236,8 @@ function Service ($http, $q) {
         self.bearCrawlCalories = 200;
         self.distance = calorieTotal/self.bearCrawlCalories;
         console.log(self.distance);
+        self.activityChoice = "Crawling";
+        console.log(self.activityChoice);
         // $location.path("/results");
         return self.distance;
     };
@@ -234,7 +246,8 @@ function Service ($http, $q) {
         self.skippingCalories = 300;  //300 calories burned per mile of skipping
         self.distance = calorieTotal/self.skippingCalories;
         console.log(self.distance);
-        // $location.path("/results");
+        self.activityChoice = "Skipping";
+        console.log(self.activityChoice);
         return self.distance;
     };
 
