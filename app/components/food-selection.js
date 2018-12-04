@@ -3,20 +3,14 @@
 const foodSelection = {
     template: `
 
-    
-    <section class="buttons">
-        <button>view 1</button>
-        <button>view 2</button>
-        <button>view 2</button>
-    </section>
+    <section class="title">BURGER BURNER</section>
 
     <section class="main-container">
         <section class="left">
-            <section anime-directive ng-repeat="food in $ctrl.listOfFood track by $index">
-                <p> {{ food.name }} </p>
-                <button ng-click="$ctrl.add(food)">Add {{food.name}} to plate</button>
+            <section class="food-choice" anime-directive ng-repeat="food in $ctrl.listOfFood track by $index">
+                <img ng-click="$ctrl.add(food)" src="{{ food.src }}" class="food-photos">
             </section>
-            <button ng-click="$ctrl.goActivity();">Go</button>
+            <button class="go-btn" ng-click="$ctrl.goActivity();">Go</button>
         </section>
 
         <section class="right">
@@ -41,17 +35,27 @@ const foodSelection = {
             {
                 name: "bigmac",
                 cal: 500,
-                src: "hello"
+                src: "app/images/big-mac.png"
             },
             {
                 name: "fries",
                 cal: 600,
-                src: "hello"
+                src: "app/images/fries.png"
             },
             {
-                name: "doublecheeseburger",
+                name: "apple pie",
                 cal: 700,
-                src: "hello"
+                src: "app/images/apple-pie.png"
+            },
+            {
+                name: "coke",
+                cal: 700,
+                src: "app/images/coke.png"
+            },
+            {
+                name: "nuggets",
+                cal: 700,
+                src: "app/images/nuggets.png"
             }
         ];
 
