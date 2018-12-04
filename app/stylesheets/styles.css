@@ -62,16 +62,12 @@ body {
 }
 
 .plate-container {
-    display: flex;
-    flex-direction: column-reverse;
+    /* display: flex;
+    flex-direction: column-reverse; */
     position: relative;
     /* bottom: -500px; */
     height: 100%;
-    align-items: center;
-}
-
-.no-animation {
-    transition: none !important;
+    /* align-items: center; */
 }
 
 #item0 {
@@ -108,15 +104,14 @@ body {
     transform: translateY(-300px);
 }
 
-#item3 {
-    width: 4em;
-    height: 4em;
+.food-item {
+    width: 65px;
+    height: 65px;
     background-color: magenta;
     display: block;
     position: absolute;
-    bottom: 380px;
-    transition: transform 2s ease-in-out;
-    transform: translateY(-200px);
+
+    margin-left: 60px;
 }
 
 .plate {

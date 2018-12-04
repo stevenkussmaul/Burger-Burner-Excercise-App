@@ -15,11 +15,11 @@ const foodSelection = {
 
         <section class="right">
             <section class="plate-container">
-                <p id="item{{$index}}" ng-repeat="food in $ctrl.plate track by $index" class="plate_item">{{ food.name}}</p>
+                <p class="food-item" id="item{{$index}}" ng-repeat="food in $ctrl.plate track by $index" class="plate_item">{{ food.name}}</p>
             </section>
 
 
-        <section class="plate">
+        <section count="0" class="plate">
         </section>
         </section>
       
