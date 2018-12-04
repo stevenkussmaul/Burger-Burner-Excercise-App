@@ -19,10 +19,12 @@ p, button {
     width: 80px;
     background-color: #69D9DB;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 1px solid #69D9DB;
     color: #07020D;
     font-size: 15px;
     margin-top: 20px;
+    box-shadow: 0px 0px 20px #F1E9DB;
+    font-family: 'Roboto', sans-serif;
 }
 
 .title {
@@ -70,48 +72,15 @@ body {
     /* align-items: center; */
 }
 
-#item0 {
-    width: 4em;
-    height: 4em;
-    background-color: magenta;
-    display: block;
-    position: absolute;
-    bottom: 150px;
-    transition: transform 2s ease-in-out;
-    transform: translateY(-500px);
-}
-
-#item1 {
-    width: 4em;
-    height: 4em;
-    background-color: magenta;
-    display: block;
-    position: absolute;
-    bottom: 220px;
-    transition: transform 2s ease-in-out;
-    transform: translateY(-400px);
-}
-
-
-#item2 {
-    width: 4em;
-    height: 4em;
-    background-color: magenta;
-    display: block;
-    position: absolute;
-    bottom: 300px;
-    transition: transform 2s ease-in-out;
-    transform: translateY(-300px);
-}
-
 .food-item {
-    width: 65px;
-    height: 65px;
-    background-color: magenta;
+    max-width: 150px;
+    max-height: 100px;
+    height: auto;
+    width: auto;
     display: block;
     position: absolute;
-
-    margin-left: 60px;
+    left: 25%;
+    transform: translateX(-50%);
 }
 
 .plate {
@@ -126,22 +95,25 @@ body {
 
 /* activity styles */
 .walking {
-    height: 240px;
-    width: 160px;
-
+    font-family: 'Roboto', sans-serif;
+    height: 180px;
+    width: 100px;
     background: url('../images/sprite_walk.png') left center;
     background-size: 1200% 100%;
-
     animation-name: activity;
     animation-duration: 2s;
     animation-timing-function: steps(2);
     animation-iteration-count: infinite;
+    margin-top: 20px;
+
+    text-align: center;
 }
 
 .bear-crawl {
-    height: 240px;
-    width: 160px;
-
+    font-family: 'Roboto', sans-serif;
+    height: 180px;
+    width: 100px;
+    text-align: center;
     background: url('../images/sprite_skip.png') left center;
     background-size: 1000% 100%;
 
@@ -154,9 +126,10 @@ body {
 }
 
 .skipping {
-    height: 240px;
-    width: 160px;  /* each frame is 320 wide, 10 frames total, we are scaling it to 50% */
-
+    font-family: 'Roboto', sans-serif;
+    height: 180px;
+    width: 100px;  /* each frame is 320 wide, 10 frames total, we are scaling it to 50% */
+    text-align: center;
     background: url('../images/sprite_skip.png') left center;
     background-size: 1000% 100%;
 
@@ -171,6 +144,12 @@ body {
 @keyframes activity {
     100% {background-position: -1280px}
 
+}
+
+.exercise-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .results-wrapper {
