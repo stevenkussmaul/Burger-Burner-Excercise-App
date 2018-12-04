@@ -1,3 +1,27 @@
+body {
+    background-color: #07020D;
+}
+
+p, button {
+    color: #F1E9DB;
+}
+
+.food-photos {
+    max-width: 100px;
+    max-height: 100px;
+    height: auto;
+    width: auto;
+    margin-top: 20px;
+}
+
+.title {
+    font-family: 'Bungee', cursive;
+    text-align: center;
+    font-size: 42px;
+    color: #F1E9DB;
+    background-color: #DD1A08;
+}
+
 .main-container {
     display: flex;
     flex-direction: row;
@@ -5,7 +29,11 @@
 }
 
 .left {
+    display: flex;
     flex: 50%;
+    flex-direction: column;
+    align-items: center;
+
     /* display: inline-block; */
 }
 
@@ -20,31 +48,67 @@
     display: flex;
     flex-direction: column-reverse;
     position: relative;
-    bottom: 100px;
-    height: auto;
+    /* bottom: -500px; */
+    height: 100%;
     align-items: center;
-
 }
 
-.plate_item {
+.no-animation {
+    transition: none !important;
+}
+
+#item0 {
     width: 4em;
     height: 4em;
-    border-radius: 50%;
     background-color: magenta;
     display: block;
     position: absolute;
- 
-    margin-bottom: 300px;
+    bottom: 150px;
+    transition: transform 2s ease-in-out;
+    transform: translateY(-500px);
+}
 
+#item1 {
+    width: 4em;
+    height: 4em;
+    background-color: magenta;
+    display: block;
+    position: absolute;
+    bottom: 220px;
+    transition: transform 2s ease-in-out;
+    transform: translateY(-400px);
+}
+
+
+#item2 {
+    width: 4em;
+    height: 4em;
+    background-color: magenta;
+    display: block;
+    position: absolute;
+    bottom: 300px;
+    transition: transform 2s ease-in-out;
+    transform: translateY(-300px);
+}
+
+#item3 {
+    width: 4em;
+    height: 4em;
+    background-color: magenta;
+    display: block;
+    position: absolute;
+    bottom: 380px;
+    transition: transform 2s ease-in-out;
+    transform: translateY(-200px);
 }
 
 .plate {
     position: absolute;
-    bottom: 50px;
+    bottom: 140px;
     right: 20px;
     width: 8em;
     height: 2em;
-    background-color: black;
+    background-color: #F1E9DB;
 }
 
 
@@ -63,26 +127,100 @@
 }
 
 .bear-crawl {
-    height: 200px;
-    width: 200px;
-    background-color: tomato;
+    height: 240px;
+    width: 160px;
+
+    background: url('../images/sprite_skip.png') left center;
+    background-size: 1000% 100%;
+
+    animation-name: activity;
+    animation-duration: 1.8s;
+    animation-timing-function: steps(2);
+    animation-delay: 100ms;
+
+    animation-iteration-count: infinite;
 }
 
-.hopping {
-    height: 200px;
-    width: 200px;
-    background-color: mediumorchid;
+.skipping {
+    height: 240px;
+    width: 160px;  /* each frame is 320 wide, 10 frames total, we are scaling it to 50% */
+
+    background: url('../images/sprite_skip.png') left center;
+    background-size: 1000% 100%;
+
+    animation-name: activity;
+    animation-duration: 1.5s;
+    animation-timing-function: steps(2);
+    animation-delay: 50ms;
+
+    animation-iteration-count: infinite;
 }
 
 @keyframes activity {
     100% {background-position: -1280px}
+
+}
+
+.results-wrapper {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.distance {
+    height: 12rem;
+    width: 50%;
+    background-color: #DD1A08;
+
+    
+}
+
+.movement-container {
+
+    position: absolute;
+    top: 10rem;
+    right: 50vw;
+    transform: translate(50%,50%);
+    border: 3px solid gold;
+
+
+    width: 40%;
+    /* height: 100px; */
+
+}
+
+.skyline-container {
+    background: linear-gradient(270deg, #246655, #5a2466);
+    background-size: 400% 400%;
+    animation: skyline 6s ease infinite;
+    border-radius: 50%;
+    width: 150%;
+}
+@keyframes skyline { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.sprite {
+
+    height: 240px;
+    width: 160px;  /* each frame is 320 wide, 10 frames total, we are scaling it to 50% */
+
+    background: url('../images/sprite_skip.png') left center;
+    background-size: 1000% 100%;
+
+    animation-name: movement;
+    animation-duration: 2s;
+    animation-timing-function: steps(10);
+    animation-delay: 0;
+
+    animation-iteration-count: infinite;
+
+
 }
 
 @keyframes movement {
-    from {
-        background-position: left;
-    }
-    to {
-        background-position: right;
-    }
+    100% {background-position: -3200px}
+
 }
