@@ -70,47 +70,12 @@ body {
     /* align-items: center; */
 }
 
-#item0 {
-    width: 4em;
-    height: 4em;
-    background-color: magenta;
-    display: block;
-    position: absolute;
-    bottom: 150px;
-    transition: transform 2s ease-in-out;
-    transform: translateY(-500px);
-}
-
-#item1 {
-    width: 4em;
-    height: 4em;
-    background-color: magenta;
-    display: block;
-    position: absolute;
-    bottom: 220px;
-    transition: transform 2s ease-in-out;
-    transform: translateY(-400px);
-}
-
-
-#item2 {
-    width: 4em;
-    height: 4em;
-    background-color: magenta;
-    display: block;
-    position: absolute;
-    bottom: 300px;
-    transition: transform 2s ease-in-out;
-    transform: translateY(-300px);
-}
-
 .food-item {
     width: 65px;
     height: 65px;
     background-color: magenta;
     display: block;
     position: absolute;
-
     margin-left: 60px;
 }
 
