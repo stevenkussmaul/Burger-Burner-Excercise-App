@@ -251,6 +251,10 @@ function Service ($http, $q) {
         return self.distance;
     };
 
+    self.goHome = () => {
+        $location.path("/");
+    }
+
 
 }
 
