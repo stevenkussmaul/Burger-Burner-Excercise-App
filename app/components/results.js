@@ -9,13 +9,16 @@ const results = {
     <section class="results-wrapper">
     
         <section class="distance">
-            you have <p>{{ $ctrl.distance }}</p> miles to {{ $ctrl.activity }}
+           <p> you have <p>{{ $ctrl.distance }}</p> miles to {{ $ctrl.activitySelection }}! </p>
+
+           <p></p>
+
         </section>
 
         <section class="movement-container">
             <section class="skyline-container">
                 <section class="sprite">
-                testy test
+
                 </section>
             </section>
         </section>
@@ -26,6 +29,11 @@ const results = {
     controller: ["Service", "$location", function (Service, $location) {
         const vm = this;
         vm.distance = Service.getDistance();
+        vm.activitySelection = Service.getActivity();
+
+        // vm.timer = Service.getTimeRemaining();
+
+
 
     }]
 }

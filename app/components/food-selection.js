@@ -3,13 +3,6 @@
 const foodSelection = {
     template: `
 
-    
-    <section class="buttons">
-        <button>view 1</button>
-        <button>view 2</button>
-        <button>view 2</button>
-    </section>
-
     <section class="main-container">
         <section class="left">
             <section anime-directive ng-repeat="food in $ctrl.listOfFood track by $index">
