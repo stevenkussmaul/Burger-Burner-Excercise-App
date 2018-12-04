@@ -158,6 +158,7 @@ p, button {
 
 @keyframes activity {
     100% {background-position: -1280px}
+
 }
 
 .results-wrapper {
@@ -215,6 +216,7 @@ p, button {
     animation-delay: 0;
 
     animation-iteration-count: infinite;
+
 
 }
 
