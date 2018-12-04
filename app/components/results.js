@@ -17,8 +17,9 @@ const results = {
 
         <section class="movement-container">
             <section class="skyline-container">
-                <section class="sprite">
-
+                <section class="skyline-background">
+                    <section class="sprite">
+                    </section>
                 </section>
             </section>
         </section>
