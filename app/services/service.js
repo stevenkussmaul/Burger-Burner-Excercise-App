@@ -1,6 +1,6 @@
 "use strict";
 
-function Service ($http, $q) {
+function Service ($http, $q, $location) {
     const self = this;
 
     // const API_Key_Steven = "a06e909f350bbd724442d3327180b22d"
@@ -252,7 +252,11 @@ function Service ($http, $q) {
     };
 
     self.goHome = () => {
+        console.log("YAY")
+        self.plate = [];
+        self.activityChoice = null;
         $location.path("/");
+        
     }
 
 

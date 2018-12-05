@@ -3,7 +3,7 @@
 const foodSelection = {
     template: `
 
-    <section class="title">BURGER BURNER</section>
+    <section ng-click= "$ctrl.homePage();" class="title">BURGER BURNER</section>
 
     <section class="main-container">
 
@@ -126,6 +126,11 @@ const foodSelection = {
         }
 
         vm.plate = Service.getPlate();
+
+        vm.homePage = () => {
+            Service.goHome();
+        }
+
 
     }]
 
