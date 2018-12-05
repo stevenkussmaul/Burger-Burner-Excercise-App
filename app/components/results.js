@@ -4,7 +4,7 @@ const results = {
     template: `
 
 
-    <section ng-click="$ctrl.goHome();" class="title">BURGER BURNER</section>
+    <section ng-click="$ctrl.homePage();" class="title">BURGER BURNER</section>
 
     <section class="results-wrapper">
     
@@ -132,6 +132,10 @@ const results = {
         } else if (vm.activitySelection === "skip") {
             animateSkip();
         };
+
+        vm.homePage = () => {
+            Service.goHome();
+        }
     }]
     
 }

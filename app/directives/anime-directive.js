@@ -88,7 +88,7 @@ function animeDirective() {
                                 { value: [0.1, -0.1], duration: 210 },
                                 { value: [0, -0], duration: 210 }
                             ],
-                            bottom: "240px",
+                            bottom: "210px",
                             duration: 210,
                             offset: 500,
                             easing: 'easeInOutCirc'
@@ -119,7 +119,7 @@ function animeDirective() {
                                 { value: [0.1, -0.1], duration: 210 },
                                 { value: [0, -0], duration: 210 }
                             ],
-                            bottom: "320px",
+                            bottom: "260px",
                             duration: 210,
                             offset: 500,
                             easing: 'easeInOutCirc'
@@ -151,7 +151,7 @@ function animeDirective() {
                                 { value: [0.1, -0.1], duration: 210 },
                                 { value: [0, -0], duration: 210 }
                             ],
-                            bottom: "390px",
+                            bottom: "310px",
                             duration: 210,
                             offset: 500,
                             easing: 'easeInOutCirc'
@@ -183,7 +183,7 @@ function animeDirective() {
                                 { value: [0.1, -0.1], duration: 210 },
                                 { value: [0, -0], duration: 210 }
                             ],
-                            bottom: "480px",
+                            bottom: "360px",
                             duration: 210,
                             offset: 500,
                             easing: 'easeInOutCirc'
@@ -215,7 +215,7 @@ function animeDirective() {
                                 { value: [0.1, -0.1], duration: 210 },
                                 { value: [0, -0], duration: 210 }
                             ],
-                            bottom: "560px",
+                            bottom: "410px",
                             duration: 210,
                             offset: 500,
                             easing: 'easeInOutCirc'

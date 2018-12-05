@@ -198,6 +198,8 @@ body {
 /* activity styles */
 .walking {
     font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #A39B8B;
     height: 180px;
     width: 120px;
     background: url('../images/sprite_walk.png') left center;
@@ -212,6 +214,8 @@ body {
 
 .bear-crawl {
     font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #A39B8B;
     height: 120px;
     width: 180px;
     text-align: center;
@@ -226,6 +230,8 @@ body {
 
 .skipping {
     font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #A39B8B;
     height: 180px;
     width: 120px;  /* each frame is 320 wide, 10 frames total, we are scaling it to 50% */
     text-align: center;
