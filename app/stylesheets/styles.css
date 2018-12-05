@@ -197,26 +197,26 @@ body {
     100%{background-position:0% 50%}
 }
 
-.sprite {
+#sprite {
 
     height: 240px;
     width: 160px;  /* each frame is 320 wide, 10 frames total, we are scaling it to 50% */
 
     background: url('../images/sprite_skip.png') left center;
-    background-size: 1000% 100%;
+    /* background-size: 1000% 100%;
 
     animation-name: movement;
     animation-duration: 4s;
     animation-timing-function: steps(10);
     animation-delay: 0;
 
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite; */
 
 
 
 }
-
+/* 
 @keyframes movement {
     100% {background-position: -3200px}
 
-}
+} */
