@@ -45,7 +45,6 @@ const foodSelection = {
 
         vm.hideInstructions = () => {
             vm.show = false;
-            vm.buttonShow = true;
         };
 
         vm.listOfFood = [
