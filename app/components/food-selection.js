@@ -14,6 +14,14 @@ const foodSelection = {
             <button class="go-btn" ng-click="$ctrl.goActivity();">Go</button>
         </section>
 
+        <section class="instructions" ng-show="$ctrl.show">
+            <h2>Are you ready to burn??</h2>
+            <p class="instructions-text">Let's see how far away you need to park in order to burn off those calories you're about to eat!</p>
+            <p class="instructions-text-2">Start by adding food to your plate.</p>
+            <p class="instructions-text-3">Next, choose your transportation style.</p>
+            <button class="play-btn" ng-click="$ctrl.hideInstructions();">Burn Those Burgers!!</button>
+        </section>
+
         <section class="right">
             <section class="plate-container">
                 <img class="food-item" id="item{{$index}}" ng-repeat="food in $ctrl.plate track by $index" src="{{ food.src}}">
@@ -32,6 +40,11 @@ const foodSelection = {
     bindings: [],
     controller: ["Service", "$location", function (Service, $location) {
         const vm = this;
+        vm.show = true;
+        vm.hideInstructions = () => {
+            vm.show = false;
+        };
+
 
         vm.listOfFood = [
             {
@@ -60,6 +73,8 @@ const foodSelection = {
                 src: "app/images/nuggets.png"
             }
         ];
+
+
 
         vm.goActivity = () => {
             $location.path("/activity-selection");
@@ -97,7 +112,6 @@ const foodSelection = {
         }
 
         vm.plate = Service.getPlate();
-
 
     }]
 

@@ -1,5 +1,92 @@
+* {
+    margin: 0;
+}
+
 body {
-    background-color: #07020D;
+    background-color: #291717;
+}
+
+.instructions {
+    height: 280px;
+    width: 300px;
+    background-color: #69D9DB;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 25vh;
+    z-index: 1000;
+    box-shadow: 0px 0px 13px 7px #6b6868;
+    border-radius: 5px;
+}
+
+.instructions-text {
+    position: absolute;
+    width: 280px;
+    z-index: 2000;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #726D61;
+    padding-top: 10px;
+    border-top: 1px dashed #F1E9DB;
+    font-family: 'Roboto', sans-serif;
+}
+
+.instructions-text-2 {
+    position: absolute;
+    width: 280px;
+    top: 110px;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    z-index: 2000;
+    color: #726D61;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    border-top: 1px dashed #F1E9DB;
+    font-family: 'Roboto', sans-serif;
+}
+
+.instructions-text-3 {
+    position: absolute;
+    width: 280px;
+    top: 140px;
+    margin-left: 10px;
+    margin-top: 33px;
+    z-index: 2000;
+    color: #726D61;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px dashed #F1E9DB;
+    border-bottom: 1px dashed #F1E9DB;
+    font-family: 'Roboto', sans-serif;
+}
+
+.play-btn {
+    position: absolute;
+    z-index: 2000;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 30px;
+    width: 85%;
+    background-color: #726D61;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    box-shadow: 4px 4px 12px 0px #6b6868;
+}
+
+h2 {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #726D61;
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 p, button {
@@ -39,14 +126,15 @@ p, button {
 .title {
     font-family: 'Bungee', cursive;
     text-align: center;
-    font-size: 42px;
+    font-size: 40px;
     color: #F1E9DB;
     background-color: #DD1A08;
     text-shadow: 2px 2px #07020D;
+    padding: 35px 0px 15px 0px;
 }
 
 body {
-    background-color: black;
+    background-color: #291717;
     color: white;
 }
 
