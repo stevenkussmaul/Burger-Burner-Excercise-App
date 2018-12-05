@@ -14,24 +14,12 @@ p, button {
     margin-top: 20px;
 }
 
-.go-btn{
-    height: 30px;
-    width: 80px;
-    background-color: #69D9DB;
-    border-radius: 5px;
-    border: 1px solid black;
-    color: #07020D;
-    font-size: 15px;
-    margin-top: 20px;
-}
-
 .title {
     font-family: 'Bungee', cursive;
     text-align: center;
     font-size: 42px;
     color: #F1E9DB;
     background-color: #DD1A08;
-    text-shadow: 2px 2px #07020D;
 }
 
 body {
@@ -62,21 +50,61 @@ body {
 }
 
 .plate-container {
-    /* display: flex;
-    flex-direction: column-reverse; */
+    display: flex;
+    flex-direction: column-reverse;
     position: relative;
     /* bottom: -500px; */
     height: 100%;
-    /* align-items: center; */
+    align-items: center;
 }
 
-.food-item {
-    width: 65px;
-    height: 65px;
+.no-animation {
+    transition: none !important;
+}
+
+#item0 {
+    width: 4em;
+    height: 4em;
     background-color: magenta;
     display: block;
     position: absolute;
-    margin-left: 60px;
+    bottom: 150px;
+    transition: transform 2s ease-in-out;
+    transform: translateY(-500px);
+}
+
+#item1 {
+    width: 4em;
+    height: 4em;
+    background-color: magenta;
+    display: block;
+    position: absolute;
+    bottom: 220px;
+    transition: transform 2s ease-in-out;
+    transform: translateY(-400px);
+}
+
+
+#item2 {
+    width: 4em;
+    height: 4em;
+    background-color: magenta;
+    display: block;
+    position: absolute;
+    bottom: 300px;
+    transition: transform 2s ease-in-out;
+    transform: translateY(-300px);
+}
+
+#item3 {
+    width: 4em;
+    height: 4em;
+    background-color: magenta;
+    display: block;
+    position: absolute;
+    bottom: 380px;
+    transition: transform 2s ease-in-out;
+    transform: translateY(-200px);
 }
 
 .plate {
@@ -185,10 +213,31 @@ body {
     border-radius: 50%;
     width: 100%;
 }
+
 @keyframes skyline { 
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
+}
+
+.skyline-background {
+    height: 270px;
+    width: 640px;
+
+    background: url('../images/sprite-background.png');
+    background-size: 1000% 100%;
+
+
+    animation-name: sky;
+    animation-duration: 6s;
+    animation-timing-function: steps(10);
+    /* animation-delay: ; */
+    animation-iteration-count: infinite;
+}
+
+@keyframes sky {
+    100% {background-position: -1280px}
+
 }
 
 .sprite {
@@ -200,18 +249,22 @@ body {
     background-size: 1000% 100%;
 
     animation-name: movement;
-    animation-duration: 4s;
-    animation-timing-function: steps(10);
+    animation-duration: 2.8s;
+    animation-timing-function: steps(9);
     animation-delay: 0;
 
     animation-iteration-count: infinite;
 
 
-    border: 2px solid green;
+    /* border: 2px solid green; */
 
 }
 
 @keyframes movement {
-    100% {background-position: -3200px}
-
+    from {
+        background-position: left;
+    }
+    to {
+        background-position: right;
+    }
 }
