@@ -16,7 +16,7 @@ function animeDirective() {
                 duration: 1000,
                 loop: true,
                 easing: 'easeInOutCirc',
-                delay: 3000
+                delay: 8000
             });
             $element.on("click", () => {
                 foodWobble();

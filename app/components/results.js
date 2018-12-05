@@ -2,8 +2,6 @@
 
 const results = {
     template: `
-
-
     <section ng-click="$ctrl.goHome();" class="title">BURGER BURNER</section>
 
     <section class="results-wrapper">
@@ -24,7 +22,6 @@ const results = {
         </section>
 
     </section>
-
     `,
     controller: ["Service", "$location", "$interval", function (Service, $location, $interval) {
         const vm = this;
