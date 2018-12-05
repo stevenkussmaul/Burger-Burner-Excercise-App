@@ -1,3 +1,7 @@
+* {
+    margin: 0px;
+}
+
 body {
     background-color: #07020D;
 }
@@ -118,7 +122,6 @@ body {
     animation-timing-function: steps(2);
     animation-iteration-count: infinite;
     margin-top: 20px;
-
     text-align: center;
 }
 
@@ -129,12 +132,10 @@ body {
     text-align: center;
     background: url('../images/sprite_crawl.png') left center;
     background-size: 600% 100%;
-
     animation-name: crawl;
     animation-duration: 1.8s;
     animation-timing-function: steps(2);
     animation-delay: 100ms;
-
     animation-iteration-count: infinite;
 }
 
@@ -175,39 +176,62 @@ body {
 .distance {
     text-align: center;
     height: 70%;
-    width: 50%;
+    width: 60%;
     background-color:#F1E9DB;
     color: black;
     border: 3px solid #DD1A08;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 15px;
 }
 
 .results-text {
     color: #07020D;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-   
 }
 
 .movement-container {
     display: flex;
     justify-content: center;
+    position: relative;
+    top: 100px;
     /* position: absolute;
     top: 10rem;
     right: 50vw;
     transform: translate(50%,50%); */
-    width: 50%;
+    width: 100%;
+    height: 300x;
 }
 
 .skyline-container {
     display: flex;
     justify-content: center;
+    
     /* background: linear-gradient(270deg, #246655, #5a2466); */
-    background: linear-gradient(270deg,#39c6a2, #ff3a00);
+    background: linear-gradient(270deg,#3fe4f0, #dd795b); 
     background-size: 400% 400%;
-    animation: skyline 4s ease infinite;
-    border-radius: 50%;
+    animation: skyline 8s ease infinite;
     width: 100%;
+    height: 300px;
 }
+
+.skyline-background {
+    background: url('../images/sprite-background.png');
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    animation-name: skyline-background;
+    animation-duration: 30s;
+    animation-timing-function: steps(60);
+    animation-delay: 0;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes skyline-background {
+    100% {background-position: -3200px}
+} 
+
 
 @keyframes skyline { 
     0%{background-position:0% 50%}
@@ -215,26 +239,65 @@ body {
     100%{background-position:0% 50%}
 }
 
-#sprite {
+#miles {
+    font-size: 50px;
+    font-family: 'Bungee', cursive;
+}
 
+#skip {
     height: 240px;
     width: 160px;  /* each frame is 320 wide, 10 frames total, we are scaling it to 50% */
-
     background: url('../images/sprite_skip.png') left center;
-    /* background-size: 1000% 100%;
+    background-size: cover;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 88px;
 
+    /* background-size: 1000% 100%;
     animation-name: movement;
     animation-duration: 4s;
     animation-timing-function: steps(10);
     animation-delay: 0;
-
     animation-iteration-count: infinite; */
-
-
-
 }
 /* 
 @keyframes movement {
     100% {background-position: -3200px}
 } */
+
+#crawl {
+    height: 160px;
+    width: 240px;  /* each frame is 320 wide, 10 frames total, we are scaling it to 50% */
+    background: url('../images/sprite_crawl.png') left center;
+    background-size: cover;
+    position: relative;
+    left: 50%;
+    top: 170px;
+    transform: translateX(-50%);
+
+    /* background-size: 1000% 100%;
+    animation-name: movement;
+    animation-duration: 4s;
+    animation-timing-function: steps(10);
+    animation-delay: 0;
+    animation-iteration-count: infinite; */
+}
+
+#walk {
+    height: 240px;
+    width: 160px;  /* each frame is 320 wide, 10 frames total, we are scaling it to 50% */
+    background: url('../images/sprite_walk.png') left center;
+    background-size: cover;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 88px;
+    /* background-size: 1000% 100%;
+    animation-name: movement;
+    animation-duration: 4s;
+    animation-timing-function: steps(10);
+    animation-delay: 0;
+    animation-iteration-count: infinite; */
+}
 

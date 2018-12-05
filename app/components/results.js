@@ -10,14 +10,14 @@ const results = {
     
         <section class="distance">
 
-           <p class="results-text"> You have {{ $ctrl.distance }} miles to {{ $ctrl.activitySelection }}! </p>
+           <p class="results-text"> You have  <br> <span id="miles"> {{ $ctrl.distance }} </span> <br> miles to {{ $ctrl.activitySelection }} to your car! </p>
 
         </section>
 
         <section class="movement-container">
             <section class="skyline-container">
                 <section class="skyline-background">
-                    <section id="sprite">
+                    <section id="{{ $ctrl.activitySelection }}">
                     </section>
                 </section>
             </section>
@@ -29,6 +29,7 @@ const results = {
     controller: ["Service", "$location", "$interval", function (Service, $location, $interval) {
         const vm = this;
         vm.distance = Service.getDistance();
+        vm.activitySelection = "walk";
         vm.activitySelection = Service.getActivity();
           
         vm.countdown = () => {            
@@ -53,16 +54,17 @@ const results = {
             clearInterval(tID);
         } //end of stopAnimate()
 
+       
 
-        function animateScript() {
+        function animateSkip() {
 
-            var position = 320; //start position for the image slicer
+            var position = 160; //start position for the image slicer
             const interval = 400; //100 ms of interval for the setInterval()
-            const diff = 320; //diff as a variable for position offset
+            const diff = 160; //diff as a variable for position offset
 
             tID = setInterval(() => {
 
-                document.getElementById("sprite").style.backgroundPosition =
+                document.getElementById("skip").style.backgroundPosition =
                     `-${position}px 0px`;
 
                 if (position < 3200) {
@@ -70,15 +72,68 @@ const results = {
                 }
                 //we increment the position by 320 each time
                 else {
-                    position = 320;
+                    position = 160;
                 }
                 //reset the position to 320px, once position exceeds 3200px
 
             }, interval); //end of setInterval
         } //end of animateScript()
 
-        animateScript();
+        function animateCrawl() {
+
+            var position = 240; //start position for the image slicer
+            const interval = 400; //100 ms of interval for the setInterval()
+            const diff = 240; //diff as a variable for position offset
+
+            tID = setInterval(() => {
+
+                document.getElementById("crawl").style.backgroundPosition =
+                    `-${position}px 0px`;
+
+                if (position < 2880) {
+                    position = position + diff;
+                }
+                //we increment the position by 320 each time
+                else {
+                    position = 240;
+                }
+                //reset the position to 320px, once position exceeds 3200px
+
+            }, interval); //end of setInterval
+        } //end of animateScript()
+
+        function animateWalk() {
+
+            var position = 160; //start position for the image slicer
+            const interval = 400; //100 ms of interval for the setInterval()
+            const diff = 160; //diff as a variable for position offset
+
+            tID = setInterval(() => {
+
+                document.getElementById("walk").style.backgroundPosition =
+                    `-${position}px 0px`;
+
+                if (position < 3840) {
+                    position = position + diff;
+                }
+                //we increment the position by 320 each time
+                else {
+                    position = 160;
+                }
+                //reset the position to 320px, once position exceeds 3200px
+
+            }, interval); //end of setInterval
+        } //end of animateScript()
+
+        if (vm.activitySelection === "walk") {
+            animateWalk();
+        } else if (vm.activitySelection === "crawl") {
+            animateCrawl();
+        } else if (vm.activitySelection === "skip") {
+            animateSkip();
+        };
     }]
+    
 }
 
 angular.module("App")
