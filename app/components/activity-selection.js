@@ -2,7 +2,7 @@
 
 const activitySelection = {
     template: `
-        <section class="title">BURGER BURNER</section>
+        <section ng-click="$ctrl.homePage();"  class="title">BURGER BURNER</section>
         <section class="exercise-container">
             <section ng-click="$ctrl.walking($ctrl.calorieTotal);" class="walking">Walk</section>
             <section ng-click="$ctrl.bearCrawl($ctrl.calorieTotal);" class="bear-crawl">Bear Crawl</section>
@@ -28,6 +28,10 @@ const activitySelection = {
         vm.skipping = (calorieTotal) => {
             Service.getSkipping(calorieTotal); //gets total distance needed while doing this activity
             $location.path("/results");
+        }
+
+        vm.homePage = () => {
+            Service.goHome();
         }
 
     }]
