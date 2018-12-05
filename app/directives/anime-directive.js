@@ -4,6 +4,20 @@ function animeDirective() {
         restrict: "A",
         replace: false,
         link: function ($scope, $element, $attrs) {
+            anime({
+                targets: '.food-choice',
+                rotate: [
+                    { value: ['1', '-1'], duration: 200 },
+                    { value: ['2', '-2'], duration: 200 },
+                    { value: ['3', '-3'], duration: 200 },
+                    { value: ['2', '-2'], duration: 200 },
+                    { value: ['1', '-1'], duration: 200 }
+                ],
+                duration: 1000,
+                loop: true,
+                easing: 'easeInOutCirc',
+                delay: 3000
+            });
             $element.on("click", () => {
                 foodWobble();
                 function foodWobble() {
@@ -23,7 +37,7 @@ function animeDirective() {
 
                 const plate = document.querySelector(".plate");
                 const count = plate.attributes[0].value;
-                
+
                 for (let i = 0; i <= count; i++) {
                     plateWobble(i);
                 }
@@ -255,6 +269,7 @@ function animeDirective() {
                     plate.attributes[0].value++;
                 }
             });
+
         }
     }
 
