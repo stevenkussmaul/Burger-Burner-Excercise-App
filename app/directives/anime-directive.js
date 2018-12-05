@@ -5,6 +5,7 @@ function animeDirective() {
         replace: false,
         link: function ($scope, $element, $attrs) {
             $element.on("click", () => {
+                
                 foodWobble();
                 function foodWobble() {
                     $element.toggleClass("food-shake")
