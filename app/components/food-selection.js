@@ -6,6 +6,7 @@ const foodSelection = {
     <section class="title">BURGER BURNER</section>
 
     <section class="main-container">
+
         <section class="left">
             <section class="food-choice" anime-directive ng-repeat="food in $ctrl.listOfFood track by $index">
                 <img ng-click="$ctrl.add(food)" src="{{ food.src }}" class="food-photos">
