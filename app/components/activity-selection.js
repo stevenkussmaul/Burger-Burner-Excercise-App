@@ -3,9 +3,11 @@
 const activitySelection = {
     template: `
         <section class="title">BURGER BURNER</section>
-        <section ng-click="$ctrl.walking($ctrl.calorieTotal);" class="walking">Walking</section>
-        <section ng-click="$ctrl.bearCrawl($ctrl.calorieTotal);" class="bear-crawl">Bear Crawling</section>
-        <section ng-click="$ctrl.skipping($ctrl.calorieTotal);" class="skipping">Skipping</section>
+        <section class="exercise-container">
+            <section ng-click="$ctrl.walking($ctrl.calorieTotal);" class="walking">Walk</section>
+            <section ng-click="$ctrl.bearCrawl($ctrl.calorieTotal);" class="bear-crawl">Bear Crawl</section>
+            <section ng-click="$ctrl.skipping($ctrl.calorieTotal);" class="skipping">Skip</section>
+        </section>
     `,
     bindings: [],
     controller: ["$location", "Service", function ($location, Service) {

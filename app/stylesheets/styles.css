@@ -14,6 +14,19 @@ p, button {
     margin-top: 20px;
 }
 
+.go-btn{
+    height: 30px;
+    width: 80px;
+    background-color: #69D9DB;
+    border-radius: 5px;
+    border: 1px solid #69D9DB;
+    color: #07020D;
+    font-size: 15px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 20px #F1E9DB;
+    font-family: 'Roboto', sans-serif;
+}
+
 .title {
     font-family: 'Bungee', cursive;
     text-align: center;
@@ -96,10 +109,11 @@ body {
     transform: translateY(-300px);
 }
 
-#item3 {
-    width: 4em;
-    height: 4em;
-    background-color: magenta;
+.food-item {
+    max-width: 150px;
+    max-height: 100px;
+    height: auto;
+    width: auto;
     display: block;
     position: absolute;
     bottom: 380px;
@@ -119,22 +133,25 @@ body {
 
 /* activity styles */
 .walking {
-    height: 240px;
-    width: 160px;
-
+    font-family: 'Roboto', sans-serif;
+    height: 180px;
+    width: 100px;
     background: url('../images/sprite_walk.png') left center;
     background-size: 1200% 100%;
-
     animation-name: activity;
     animation-duration: 2s;
     animation-timing-function: steps(2);
     animation-iteration-count: infinite;
+    margin-top: 20px;
+
+    text-align: center;
 }
 
 .bear-crawl {
-    height: 240px;
-    width: 160px;
-
+    font-family: 'Roboto', sans-serif;
+    height: 180px;
+    width: 100px;
+    text-align: center;
     background: url('../images/sprite_skip.png') left center;
     background-size: 1000% 100%;
 
@@ -147,59 +164,59 @@ body {
 }
 
 .skipping {
-    height: 240px;
-    width: 160px;  /* each frame is 320 wide, 10 frames total, we are scaling it to 50% */
-
+    font-family: 'Roboto', sans-serif;
+    height: 180px;
+    width: 100px;  /* each frame is 320 wide, 10 frames total, we are scaling it to 50% */
+    text-align: center;
     background: url('../images/sprite_skip.png') left center;
     background-size: 1000% 100%;
-
     animation-name: activity;
     animation-duration: 1.5s;
     animation-timing-function: steps(2);
     animation-delay: 50ms;
-
     animation-iteration-count: infinite;
 }
 
 @keyframes activity {
     100% {background-position: -1280px}
+}
 
+.exercise-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .results-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .distance {
     text-align: center;
     height: 70%;
     width: 50%;
-    background-color:darkgrey;
+    background-color:#F1E9DB;
+    color: black;
+    border: 3px solid #DD1A08;
+}
 
-    border: 3px solid blue;
-
-
-    
+.results-text {
+    color: #07020D;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+   
 }
 
 .movement-container {
-
     display: flex;
     justify-content: center;
-
     /* position: absolute;
     top: 10rem;
     right: 50vw;
     transform: translate(50%,50%); */
-
-    border: 3px solid gold;
-
-
     width: 50%;
-
 }
 
 .skyline-container {
@@ -207,7 +224,6 @@ body {
     justify-content: center;
     /* background: linear-gradient(270deg, #246655, #5a2466); */
     background: linear-gradient(270deg,#39c6a2, #ff3a00);
-
     background-size: 400% 400%;
     animation: skyline 4s ease infinite;
     border-radius: 50%;
@@ -256,7 +272,6 @@ body {
     animation-iteration-count: infinite;
 
 
-    /* border: 2px solid green; */
 
 }
 
