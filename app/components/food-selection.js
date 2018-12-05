@@ -48,7 +48,7 @@ const foodSelection = {
         // vm.showButton = () => {
         //     vm.plate = Service.getPlate();
         //     console.log("HIIIII");
-            
+
         // }
 
         // vm.showButton();
