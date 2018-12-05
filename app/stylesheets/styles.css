@@ -17,14 +17,23 @@ p, button {
 .go-btn{
     height: 30px;
     width: 80px;
-    background-color: #69D9DB;
     border-radius: 5px;
-    border: 1px solid #69D9DB;
     color: #07020D;
     font-size: 15px;
     margin-top: 20px;
-    box-shadow: 0px 0px 20px #F1E9DB;
     font-family: 'Roboto', sans-serif;
+}
+
+.go-btn {
+    -webkit-animation-name: Pulse;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes Pulse {
+    from { background-color: #69D9DB; -webkit-box-shadow: 0 0 9px #333; }
+    50% { background-color: #F1E9DB; -webkit-box-shadow: 0 0 18px #69D9DB; }
+    to { background-color: #69D9DB; -webkit-box-shadow: 0 0 9px #333; }
 }
 
 .title {
@@ -116,9 +125,7 @@ body {
     width: auto;
     display: block;
     position: absolute;
-    bottom: 380px;
-    transition: transform 2s ease-in-out;
-    transform: translateY(-200px);
+    margin-left: 30px;
 }
 
 .plate {
@@ -127,7 +134,12 @@ body {
     right: 20px;
     width: 8em;
     height: 2em;
-    background-color: #F1E9DB;
+    z-index: -1;
+}
+
+.plate-image {
+    height: 2em;
+    width: 8em;
 }
 
 
@@ -135,7 +147,7 @@ body {
 .walking {
     font-family: 'Roboto', sans-serif;
     height: 180px;
-    width: 100px;
+    width: 120px;
     background: url('../images/sprite_walk.png') left center;
     background-size: 1200% 100%;
     animation-name: activity;
@@ -149,13 +161,13 @@ body {
 
 .bear-crawl {
     font-family: 'Roboto', sans-serif;
-    height: 180px;
-    width: 100px;
+    height: 120px;
+    width: 180px;
     text-align: center;
-    background: url('../images/sprite_skip.png') left center;
-    background-size: 1000% 100%;
+    background: url('../images/sprite_crawl.png') left center;
+    background-size: 600% 100%;
 
-    animation-name: activity;
+    animation-name: crawl;
     animation-duration: 1.8s;
     animation-timing-function: steps(2);
     animation-delay: 100ms;
@@ -166,7 +178,7 @@ body {
 .skipping {
     font-family: 'Roboto', sans-serif;
     height: 180px;
-    width: 100px;  /* each frame is 320 wide, 10 frames total, we are scaling it to 50% */
+    width: 120px;  /* each frame is 320 wide, 10 frames total, we are scaling it to 50% */
     text-align: center;
     background: url('../images/sprite_skip.png') left center;
     background-size: 1000% 100%;
@@ -178,7 +190,11 @@ body {
 }
 
 @keyframes activity {
-    100% {background-position: -1280px}
+    100% {background-position: -960px}
+}
+
+@keyframes crawl {
+    100% {background-position: -1440px}
 }
 
 .exercise-container {
@@ -236,50 +252,26 @@ body {
     100%{background-position:0% 50%}
 }
 
-.skyline-background {
-    height: 270px;
-    width: 640px;
-
-    background: url('../images/sprite-background.png');
-    background-size: 1000% 100%;
-
-
-    animation-name: sky;
-    animation-duration: 6s;
-    animation-timing-function: steps(10);
-    /* animation-delay: ; */
-    animation-iteration-count: infinite;
-}
-
-@keyframes sky {
-    100% {background-position: -1280px}
-
-}
-
-.sprite {
+#sprite {
 
     height: 240px;
     width: 160px;  /* each frame is 320 wide, 10 frames total, we are scaling it to 50% */
 
     background: url('../images/sprite_skip.png') left center;
-    background-size: 1000% 100%;
+    /* background-size: 1000% 100%;
 
     animation-name: movement;
     animation-duration: 2.8s;
     animation-timing-function: steps(9);
     animation-delay: 0;
 
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite; */
 
 
 
 }
-
+/* 
 @keyframes movement {
-    from {
-        background-position: left;
-    }
-    to {
-        background-position: right;
-    }
-}
+    100% {background-position: -3200px}
+} */
+

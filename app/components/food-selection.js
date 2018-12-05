@@ -6,6 +6,7 @@ const foodSelection = {
     <section class="title">BURGER BURNER</section>
 
     <section class="main-container">
+
         <section class="left">
             <section class="food-choice" anime-directive ng-repeat="food in $ctrl.listOfFood track by $index">
                 <img ng-click="$ctrl.add(food)" src="{{ food.src }}" class="food-photos">
@@ -20,8 +21,9 @@ const foodSelection = {
 
 
         <section count="0" class="plate">
+            <img class="plate-image" src="app/images/plate.png">
         </section>
-        </section>
+    </section>
       
     </section>
 
