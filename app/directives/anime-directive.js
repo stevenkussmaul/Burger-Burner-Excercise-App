@@ -10,20 +10,24 @@ function animeDirective() {
                     $element.toggleClass("food-shake")
                     anime({
                         targets: '.food-shake',
-                        scale: [ 
+                        scale: [
                             { value: [1, 1.5], duration: 320 },
                             { value: [1.5, 1], duration: 380 }
                         ],
                         easing: 'easeInOutQuad'
                     });
-                    setTimeout(function() {
+                    setTimeout(function () {
                         $element.toggleClass("food-shake"), 5000
                     })
                 }
-                
+
                 const plate = document.querySelector(".plate");
-                plateWobble(plate.attributes[0].value);
+                const count = plate.attributes[0].value;
                 
+                for (let i = 0; i <= count; i++) {
+                    plateWobble(i);
+                }
+
                 function plateWobble(count) {
                     const animations = [
                         {
@@ -52,7 +56,7 @@ function animeDirective() {
                                 { value: [0.1, -0.1], duration: 210 },
                                 { value: [0, -0], duration: 210 }
                             ],
-                            bottom: "165px",
+                            bottom: "160px",
                             duration: 210,
                             offset: 500,
                             easing: 'easeInOutCirc'
@@ -146,7 +150,7 @@ function animeDirective() {
                                 { value: [0.1, -0.1], duration: 210 },
                                 { value: [0, -0], duration: 210 }
                             ],
-                            bottom: "400px",
+                            bottom: "390px",
                             duration: 210,
                             offset: 500,
                             easing: 'easeInOutCirc'
@@ -217,6 +221,7 @@ function animeDirective() {
 
                         }
                     ];
+
                     anime({
                         targets: '.plate',
                         rotate: [
