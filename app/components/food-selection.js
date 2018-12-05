@@ -110,6 +110,12 @@ const foodSelection = {
         // vm.listOfFood = [vm.bigMac, vm.coke, vm.fries, vm.pie, vm.nuggets];
 
         vm.add = (food) => {
+
+            if (vm.plate >= 0) {
+                console.log("HI");
+                vm.buttonShow = true;
+            }
+
             Service.addFood(food)
             vm.plate = Service.getPlate();
             console.log(vm.plate.length);
