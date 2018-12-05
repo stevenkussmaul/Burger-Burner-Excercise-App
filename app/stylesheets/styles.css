@@ -182,16 +182,16 @@ body {
 
 .plate {
     position: absolute;
-    bottom: 140px;
-    right: 20px;
+    bottom: 160px;
+    right: 42px;
     width: 8em;
     height: 2em;
     z-index: -1;
 }
 
 .plate-image {
-    height: 2em;
-    width: 8em;
+    height: 4em;
+    width: 10em;
 }
 
 
