@@ -11,7 +11,7 @@ const foodSelection = {
             <section class="food-choice" anime-directive ng-repeat="food in $ctrl.listOfFood track by $index">
                 <img ng-click="$ctrl.add(food)" src="{{ food.src }}" class="food-photos">
             </section>
-            <button class="go-btn" ng-click="$ctrl.goActivity();">Go</button>
+            <button class="go-btn" ng-show="$ctrl.buttonShow" ng-click="$ctrl.goActivity();">Go</button>
         </section>
 
         <section class="instructions" ng-show="$ctrl.show">
@@ -41,10 +41,18 @@ const foodSelection = {
     controller: ["Service", "$location", function (Service, $location) {
         const vm = this;
         vm.show = true;
+        vm.buttonShow = false;
+        vm.showButton();
         vm.hideInstructions = () => {
             vm.show = false;
         };
-
+        vm.showButton = () => {
+            vm.plate = Service.getPlate();
+            if (vm.plate.length >= 1 && vm.plate.length < 7) {
+                console.log("HI")
+                vm.buttonShow = true;
+            }
+        }
 
         vm.listOfFood = [
             {
@@ -108,6 +116,7 @@ const foodSelection = {
         // vm.listOfFood = [vm.bigMac, vm.coke, vm.fries, vm.pie, vm.nuggets];
 
         vm.add = (food) => {
+
             Service.addFood(food)
         }
 
