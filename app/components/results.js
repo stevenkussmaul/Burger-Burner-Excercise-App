@@ -46,6 +46,7 @@ const results = {
             vm.countdown();
         }, 500) 
 
+
         var tID; //we will use this variable to clear the setInterval()
 
         function stopAnimate() {
@@ -77,8 +78,6 @@ const results = {
         } //end of animateScript()
 
         animateScript();
-
-
     }]
 }
 

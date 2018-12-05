@@ -79,7 +79,7 @@ body {
     width: auto;
     display: block;
     position: absolute;
-    margin-left: 60px;
+    margin-left: 30px;
 }
 
 .plate {
@@ -88,7 +88,12 @@ body {
     right: 20px;
     width: 8em;
     height: 2em;
-    background-color: #F1E9DB;
+    z-index: -1;
+}
+
+.plate-image {
+    height: 2em;
+    width: 8em;
 }
 
 
@@ -96,7 +101,7 @@ body {
 .walking {
     font-family: 'Roboto', sans-serif;
     height: 180px;
-    width: 100px;
+    width: 120px;
     background: url('../images/sprite_walk.png') left center;
     background-size: 1200% 100%;
     animation-name: activity;
@@ -110,13 +115,13 @@ body {
 
 .bear-crawl {
     font-family: 'Roboto', sans-serif;
-    height: 180px;
-    width: 100px;
+    height: 120px;
+    width: 180px;
     text-align: center;
-    background: url('../images/sprite_skip.png') left center;
-    background-size: 1000% 100%;
+    background: url('../images/sprite_crawl.png') left center;
+    background-size: 600% 100%;
 
-    animation-name: activity;
+    animation-name: crawl;
     animation-duration: 1.8s;
     animation-timing-function: steps(2);
     animation-delay: 100ms;
@@ -127,7 +132,7 @@ body {
 .skipping {
     font-family: 'Roboto', sans-serif;
     height: 180px;
-    width: 100px;  /* each frame is 320 wide, 10 frames total, we are scaling it to 50% */
+    width: 120px;  /* each frame is 320 wide, 10 frames total, we are scaling it to 50% */
     text-align: center;
     background: url('../images/sprite_skip.png') left center;
     background-size: 1000% 100%;
@@ -139,7 +144,11 @@ body {
 }
 
 @keyframes activity {
-    100% {background-position: -1280px}
+    100% {background-position: -960px}
+}
+
+@keyframes crawl {
+    100% {background-position: -1440px}
 }
 
 .exercise-container {
