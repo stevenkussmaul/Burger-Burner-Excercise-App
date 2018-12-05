@@ -30,31 +30,6 @@ const activitySelection = {
             $location.path("/results");
         }
 
-        // vm.walkingCalories;  
-        // vm.bearcrawlCalories;
-        // vm.hoppingCalories;
-        // // ng-click to call function for each activity choice    
-        // vm.walking = (calorieTotal) => {
-        //     vm.walkingCalories = 80; 
-        //     let distance = calorieTotal/vm.walkingCalories;
-        //     console.log(distance);
-        //     $location.path("/results");
-        //     return distance;
-        // };
-        // vm.bearCrawl = (calorieTotal) => {
-        //     vm.bearcrawlCalories = 200;
-        //     let distance = calorieTotal/vm.bearcrawlCalories;
-        //     console.log(distance);
-        //     $location.path("/results");
-        //     return distance;
-        // };
-        // vm.skipping = (calorieTotal) => {
-        //     vm.skippingCalories = 300;  //300 calories burned per mile of skipping
-        //     let distance = calorieTotal/vm.skippingCalories;
-        //     console.log(distance);
-        //     $location.path("/results");
-        //     return distance;
-        // };
     }]
 
 

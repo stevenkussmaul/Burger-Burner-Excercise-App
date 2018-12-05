@@ -21,8 +21,9 @@ const foodSelection = {
 
 
         <section count="0" class="plate">
+            <img class="plate-image" src="app/images/plate.png">
         </section>
-        </section>
+    </section>
       
     </section>
 
