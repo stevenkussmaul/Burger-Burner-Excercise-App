@@ -42,17 +42,11 @@ const foodSelection = {
         const vm = this;
         vm.show = true;
         vm.buttonShow = false;
-        vm.showButton();
+
         vm.hideInstructions = () => {
             vm.show = false;
+            vm.buttonShow = true;
         };
-        vm.showButton = () => {
-            vm.plate = Service.getPlate();
-            if (vm.plate.length >= 1 && vm.plate.length < 7) {
-                console.log("HI")
-                vm.buttonShow = true;
-            }
-        }
 
         vm.listOfFood = [
             {
@@ -116,8 +110,14 @@ const foodSelection = {
         // vm.listOfFood = [vm.bigMac, vm.coke, vm.fries, vm.pie, vm.nuggets];
 
         vm.add = (food) => {
-
             Service.addFood(food)
+            vm.plate = Service.getPlate();
+            console.log(vm.plate.length);
+            if (vm.plate.length === 5) {
+                setTimeout(function () {
+                    $location.path("/activity-selection"), 2000
+                })
+            }
         }
 
         vm.plate = Service.getPlate();
