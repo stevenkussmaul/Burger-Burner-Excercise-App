@@ -39,8 +39,9 @@ function animeDirective() {
                         $element.toggleClass("food-shake"), 5000
                     })
                 }
-
+                // sets element with the class of plate to the variable plate
                 const plate = document.querySelector(".plate");
+                // sets plate's first attribute value (count) to count
                 const count = plate.attributes[0].value;
 
                 for (let i = 0; i <= count; i++) {

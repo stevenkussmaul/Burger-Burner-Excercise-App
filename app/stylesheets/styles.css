@@ -104,7 +104,7 @@ p, button {
 
 .go-btn{
     height: 30px;
-    width: 80px;
+    width: 120px;
     border-radius: 5px;
     color: #07020D;
     font-size: 15px;
@@ -196,6 +196,32 @@ body {
 
 
 /* activity styles */
+.activity-header {
+    font-family: 'Bungee', cursive;
+    font-size: 24px;
+    word-spacing: 10px;
+    color: #291717;
+    margin-top: 30px;
+    text-shadow: -2px -2px 0 #69D9DB,
+    2px -2px 0 #69D9DB,
+    -2px 2px 0 #69D9DB,
+    2px 2px 0 #69D9DB; 
+}
+
+.walk-text {
+    transform: rotate(-90deg);
+    position: absolute;
+    font-family: 'Bungee', cursive;
+    color: #69D9DB;
+    /* text-shadow: -2px -2px 0 #69D9DB,
+    2px -2px 0 #69D9DB,
+    -2px 2px 0 #69D9DB,
+    2px 2px 0 #69D9DB; */
+    font-size: 30px;
+    left: 10px;
+    top: 225px;
+}
+
 .walking {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
@@ -208,8 +234,22 @@ body {
     animation-duration: 2s;
     animation-timing-function: steps(2);
     animation-iteration-count: infinite;
-    margin-top: 20px;
+    margin-top: 0px;
     text-align: center;
+}
+
+.crawl-text {
+    transform: rotate(-90deg);
+    position: absolute;
+    font-family: 'Bungee', cursive;
+    color: #69D9DB;
+    /* text-shadow: -2px -2px 0 #69D9DB,
+    2px -2px 0 #69D9DB,
+    -2px 2px 0 #69D9DB,
+    2px 2px 0 #69D9DB; */
+    font-size: 30px;
+    left: 0px;
+    top: 375px;
 }
 
 .bear-crawl {
@@ -226,6 +266,20 @@ body {
     animation-timing-function: steps(2);
     animation-delay: 100ms;
     animation-iteration-count: infinite;
+}
+
+.skip-text {
+    transform: rotate(-90deg);
+    position: absolute;
+    font-family: 'Bungee', cursive;
+    color: #69D9DB;
+    /* text-shadow: -2px -2px 0 #69D9DB,
+    2px -2px 0 #69D9DB,
+    -2px 2px 0 #69D9DB,
+    2px 2px 0 #69D9DB; */
+    font-size: 30px;
+    left: 15px;
+    top: 525px;
 }
 
 .skipping {
