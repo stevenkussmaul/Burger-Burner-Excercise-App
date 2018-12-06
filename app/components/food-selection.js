@@ -49,27 +49,27 @@ const foodSelection = {
         vm.listOfFood = [
             {
                 name: "bigmac",
-                cal: 500,
+                cal: 563,
                 src: "app/images/big-mac.png"
             },
             {
                 name: "fries",
-                cal: 600,
+                cal: 510,
                 src: "app/images/fries.png"
             },
             {
                 name: "apple pie",
-                cal: 700,
+                cal: 230,
                 src: "app/images/apple-pie.png"
             },
             {
                 name: "coke",
-                cal: 700,
+                cal: 150,
                 src: "app/images/coke.png"
             },
             {
                 name: "nuggets",
-                cal: 700,
+                cal: 440,
                 src: "app/images/nuggets.png"
             }
         ];

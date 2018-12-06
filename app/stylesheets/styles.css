@@ -15,7 +15,7 @@ body {
     color: #F1E9DB;
     background-color: #DD1A08;
     text-shadow: 2px 2px #07020D;
-    padding: 35px 0px 15px 0px;
+    padding: 20px 0px 15px 0px;
 }
 
 /* Food Selection Page */
@@ -36,7 +36,7 @@ p, button {
     color: #07020D;
     font-size: 15px;
     margin-top: 20px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Changa', sans-serif;
 }
 
 /* Go Button Animation- Glow */
@@ -59,8 +59,7 @@ h2 {
     color: #726D61;
     font-size: 24px;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
-}
+    font-family: 'Changa', sans-serif;}
 
 .instructions {
     height: 280px;
@@ -73,6 +72,7 @@ h2 {
     z-index: 1000;
     box-shadow: 0px 0px 13px 7px #6b6868;
     border-radius: 5px;
+    line-height: 20px;
 }
 
 .instructions-text {
@@ -86,8 +86,10 @@ h2 {
     color: #726D61;
     padding-top: 10px;
     border-top: 1px dashed #F1E9DB;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Changa', sans-serif;  
+    line-height: 20px;
 }
+
 
 .instructions-text-2 {
     position: absolute;
@@ -101,7 +103,8 @@ h2 {
     padding-top: 10px;
     margin-bottom: 20px;
     border-top: 1px dashed #F1E9DB;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Changa', sans-serif;
+    line-height: 20px;
 }
 
 .instructions-text-3 {
@@ -116,7 +119,8 @@ h2 {
     padding-bottom: 10px;
     border-top: 1px dashed #F1E9DB;
     border-bottom: 1px dashed #F1E9DB;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Changa', sans-serif;
+    line-height: 20px;
 }
 
 .play-btn {
@@ -130,7 +134,7 @@ h2 {
     background-color: #726D61;
     border: none;
     border-radius: 5px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Changa', sans-serif;
     font-size: 16px;
     box-shadow: 4px 4px 12px 0px #6b6868;
 }
@@ -229,7 +233,7 @@ h2 {
 }
 
 .walking {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Changa', sans-serif;
     font-size: 20px;
     color: #A39B8B;
     height: 180px;
@@ -259,7 +263,7 @@ h2 {
 }
 
 .bear-crawl {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Changa', sans-serif;
     font-size: 20px;
     color: #A39B8B;
     height: 120px;
@@ -289,7 +293,7 @@ h2 {
 }
 
 .skipping {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Changa', sans-serif;
     font-size: 20px;
     color: #A39B8B;
     height: 180px;
@@ -328,26 +332,18 @@ h2 {
 }
 
 .distance {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
     height: 150px;
     width: 150px;
     background-color:#F1E9DB;
     color: black;
     border: 3px solid #DD1A08;
-    /* border-radius: 5px; */
-    padding: 5px;
     margin: 15px;
 }
 
 .completed {
-    text-align: center;
     background-color:#F1E9DB;
     color: black;
     border: 3px solid #DD1A08;
-    padding: 5px;
     margin: 15px;
     height: 150px;
     width: 150px;
@@ -373,19 +369,19 @@ h2 {
 
 /* Countdown Number Text */
 #miles {
-    font-size: 50px;
+    font-size: 40px;
     font-family: 'Bungee', cursive;
 }
 
 .results-text {
-    position: absolute;
-    top: 29%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: #07020D;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Changa', sans-serif;
     font-size: 16px;
     text-align: center;
+    width: 130px;
+    height: 130px;
+    padding: 5px;
+    margin: 5px;
 }
 
 .movement-container {
