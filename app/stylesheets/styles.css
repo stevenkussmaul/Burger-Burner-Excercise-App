@@ -1,10 +1,65 @@
 * {
-
     margin: 0px;
 }
 
 body {
     background-color: #291717;
+    color: white;
+}
+ 
+/* Header on all pages*/
+.title {
+    font-family: 'Bungee', cursive;
+    text-align: center;
+    font-size: 40px;
+    color: #F1E9DB;
+    background-color: #DD1A08;
+    text-shadow: 2px 2px #07020D;
+    padding: 35px 0px 15px 0px;
+}
+
+/* Food Selection Page */
+
+p, button {
+    color: #F1E9DB;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.go-btn{
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    color: #07020D;
+    font-size: 15px;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Go Button Animation- Glow */
+.go-btn {
+    -webkit-animation-name: Pulse;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes Pulse {
+    from { background-color: #69D9DB; -webkit-box-shadow: 0 0 9px #333; }
+    50% { background-color: #F1E9DB; -webkit-box-shadow: 0 0 18px #69D9DB; }
+    to { background-color: #69D9DB; -webkit-box-shadow: 0 0 9px #333; }
+}
+/* Instructions Pop-Up */
+h2 {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #726D61;
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 .instructions {
@@ -80,18 +135,12 @@ body {
     box-shadow: 4px 4px 12px 0px #6b6868;
 }
 
-h2 {
-    position: relative;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: #726D61;
-    font-size: 24px;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-}
-
-p, button {
-    color: #F1E9DB;
+/* Food Selection Choice */
+.left {
+    display: flex;
+    flex: 50%;
+    flex-direction: column;
+    align-items: center;
 }
 
 .food-photos {
@@ -102,58 +151,7 @@ p, button {
     margin-top: 20px;
 }
 
-.go-btn{
-    height: 30px;
-    width: 80px;
-    border-radius: 5px;
-    color: #07020D;
-    font-size: 15px;
-    margin-top: 20px;
-    font-family: 'Roboto', sans-serif;
-}
-
-.go-btn {
-    -webkit-animation-name: Pulse;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes Pulse {
-    from { background-color: #69D9DB; -webkit-box-shadow: 0 0 9px #333; }
-    50% { background-color: #F1E9DB; -webkit-box-shadow: 0 0 18px #69D9DB; }
-    to { background-color: #69D9DB; -webkit-box-shadow: 0 0 9px #333; }
-}
-
-.title {
-    font-family: 'Bungee', cursive;
-    text-align: center;
-    font-size: 40px;
-    color: #F1E9DB;
-    background-color: #DD1A08;
-    text-shadow: 2px 2px #07020D;
-    padding: 35px 0px 15px 0px;
-}
-
-body {
-    background-color: #291717;
-    color: white;
-}
-
-.main-container {
-    display: flex;
-    flex-direction: row;
-
-}
-
-.left {
-    display: flex;
-    flex: 50%;
-    flex-direction: column;
-    align-items: center;
-
-    /* display: inline-block; */
-}
-
+/* Plate */
 .right {
     /* display: inline-block; */
     position: relative;
@@ -194,8 +192,15 @@ body {
     width: 10em;
 }
 
+/* Activity Selection Page */
 
-/* activity styles */
+/* Activity Styles */
+.exercise-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .walking {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
@@ -252,34 +257,80 @@ body {
     100% {background-position: -1440px}
 }
 
-.exercise-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
+/* Results Page */
 .results-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.results-container {
+    position: fixed;
+    width: 100%;
+    height: 300x;
+    top: 200px;
+}
+
 .distance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    height: 70%;
-    width: 60%;
+    height: 150px;
+    width: 150px;
     background-color:#F1E9DB;
     color: black;
     border: 3px solid #DD1A08;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     padding: 5px;
     margin: 15px;
 }
 
+.completed {
+    text-align: center;
+    background-color:#F1E9DB;
+    color: black;
+    border: 3px solid #DD1A08;
+    padding: 5px;
+    margin: 15px;
+    height: 150px;
+    width: 150px;
+    border-radius: none;
+    animation: results-box;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes results-box {
+    10% {height: 120px; width: 120px; border-radius: none;}
+    20% {height: 90px; width: 90px; border-radius: none;}
+    30% {height: 60px; width: 60px; border-radius: none;}
+    40% {height: 30px; width: 30px; border-radius: none;}
+    50% {height: 0px; width: 0px; border-radius: none;}
+    60% {height: 30px; width: 30px; border-radius: none;}
+    70% {height: 60px; width: 60px; border-radius: none;}
+    80% {height: 90px; width: 90px; border-radius: none;}
+    90% {height: 120px; width: 120px; border-radius: none;}
+    100% {height: 150px; width: 150px; border-radius: none;}
+}
+
+/* Countdown Number Text */
+#miles {
+    font-size: 50px;
+    font-family: 'Bungee', cursive;
+}
+
 .results-text {
+    position: absolute;
+    top: 29%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: #07020D;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    text-align: center;
 }
 
 .movement-container {
@@ -295,6 +346,7 @@ body {
     height: 300x;
 }
 
+/* Sky Color Change */
 .skyline-container {
     display: flex;
     justify-content: center;
@@ -307,6 +359,13 @@ body {
     height: 300px;
 }
 
+@keyframes skyline { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/* Skyline Animation */
 .skyline-background {
     background: url('../images/sprite-background.png');
     background-size: cover;
@@ -314,7 +373,7 @@ body {
     height: 300px;
     animation-name: skyline-background;
     animation-duration: 30s;
-    animation-timing-function: steps(60);
+    animation-timing-function: steps(500);
     animation-delay: 0;
     animation-iteration-count: infinite; 
 }
@@ -324,17 +383,7 @@ body {
 } 
 
 
-@keyframes skyline { 
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-
-#miles {
-    font-size: 50px;
-    font-family: 'Bungee', cursive;
-}
-
+/* Activity Animation on Results Page */
 #skip {
     height: 240px;
     width: 160px;  /* each frame is 320 wide, 10 frames total, we are scaling it to 50% */
