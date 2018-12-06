@@ -4,9 +4,10 @@ function animeDirective() {
         restrict: "A",
         replace: false,
         link: function ($scope, $element, $attrs) {
+            // animation for food-selection images wiggling every 8 seconds
             anime({
-                targets: '.food-choice',
-                rotate: [
+                targets: '.food-choice', // selects elements with class of food-choice
+                rotate: [ // tells element how much to rotate and over what duration, in keyframes
                     { value: ['1', '-1'], duration: 200 },
                     { value: ['2', '-2'], duration: 200 },
                     { value: ['3', '-3'], duration: 200 },
@@ -14,28 +15,33 @@ function animeDirective() {
                     { value: ['1', '-1'], duration: 200 }
                 ],
                 duration: 1000,
-                loop: true,
-                easing: 'easeInOutCirc',
-                delay: 3000
+                loop: true, // tells animation to continue looping
+                easing: 'easeInOutCirc', // indicates pacing (on a curve) of transition/movement
+                delay: 8000 // indicates how long to wait before beginning animation
             });
+            // dictates the click event, attached to whichever element is assigned this directive (in food-selection)
             $element.on("click", () => {
+                // calls foodWobble function
                 foodWobble();
+                // animation for foodWobble
                 function foodWobble() {
-                    $element.toggleClass("food-shake")
+                    $element.toggleClass("food-shake") // toggles on the class of food-shake
                     anime({
-                        targets: '.food-shake',
-                        scale: [
+                        targets: '.food-shake', // targets elements with class of food-shake
+                        scale: [ // tells element how much to scale and over what duration, in keyframes
                             { value: [1, 1.5], duration: 320 },
                             { value: [1.5, 1], duration: 380 }
                         ],
-                        easing: 'easeInOutQuad'
+                        easing: 'easeInOutQuad' //indicates pacing (on a curve) of transition/movement
                     });
-                    setTimeout(function () {
+                    // sets delay of 5 seconds on the toggle off of the class food-shake
+                    setTimeout(function () { 
                         $element.toggleClass("food-shake"), 5000
                     })
                 }
-
+                // sets element with the class of plate to the variable plate
                 const plate = document.querySelector(".plate");
+                // sets plate's first attribute value (count) to count
                 const count = plate.attributes[0].value;
 
                 for (let i = 0; i <= count; i++) {
