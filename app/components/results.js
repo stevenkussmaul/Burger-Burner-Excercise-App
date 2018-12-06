@@ -25,7 +25,6 @@ const results = {
         </section>
 
     </section>
-
     `,
     controller: ["Service", "$location", "$interval", function (Service, $location, $interval) {
         const vm = this;
@@ -64,8 +63,7 @@ const results = {
             clearInterval(tID);
         } //end of stopAnimate()
 
-       
-
+    
         function animateSkip() {
 
             var position = 160; //start position for the image slicer
