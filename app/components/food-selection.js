@@ -35,7 +35,6 @@ const foodSelection = {
       
     </section>
 
-
     `,
     bindings: [],
     controller: ["Service", "$location", function (Service, $location) {

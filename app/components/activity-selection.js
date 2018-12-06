@@ -35,8 +35,6 @@ const activitySelection = {
         }
 
     }]
-
-
 }
 
 angular
