@@ -10,7 +10,7 @@ const results = {
     
         <section class="distance">
 
-           <p class="results-text"> You have  <br> <span id="miles"> {{ $ctrl.distance }} </span> <br> miles to {{ $ctrl.activitySelection }} to your car! </p>
+           <p class="results-text"> You have <br> <span id="miles"> {{ $ctrl.distance }} </span> <br> miles to {{ $ctrl.activitySelection }} to your car! </p>
 
         </section>
         <section class="results-container">
@@ -46,7 +46,7 @@ const results = {
                 document.getElementsByClassName("results-text")[0].innerHTML = "";
                 document.getElementsByClassName("distance")[0].setAttribute("class", "completed");
                 
-                setTimeout(function(){document.getElementsByClassName("results-text")[0].innerHTML = "You burned off all the calories you ate!!"}, 2000);
+                setTimeout(function(){document.getElementsByClassName("results-text")[0].innerHTML = "Congratulations! You burned off all the calories you ate!"}, 2000);
 
             }
             console.log(vm.distance);
