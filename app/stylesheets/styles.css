@@ -20,6 +20,19 @@ body {
 
 /* Food Selection Page */
 
+.click-hint {
+    font-family: 'Bungee', cursive;
+    font-size: 20px;
+    word-spacing: 8px;
+    color: #291717;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    text-shadow: -2px -2px 0 #F1E9DB,
+    2px -2px 0 #F1E9DB,
+    -2px 2px 0 #F1E9DB,
+    2px 2px 0 #F1E9DB; 
+}
+
 p, button {
     color: #F1E9DB;
 }
@@ -212,17 +225,17 @@ h2 {
     word-spacing: 10px;
     color: #291717;
     margin-top: 30px;
-    text-shadow: -2px -2px 0 #69D9DB,
-    2px -2px 0 #69D9DB,
-    -2px 2px 0 #69D9DB,
-    2px 2px 0 #69D9DB; 
+    text-shadow: -2px -2px 0 #F1E9DB,
+    2px -2px 0 #F1E9DB,
+    -2px 2px 0 #F1E9DB,
+    2px 2px 0 #F1E9DB; 
 }
 
 .walk-text {
     transform: rotate(-90deg);
     position: absolute;
     font-family: 'Bungee', cursive;
-    color: #69D9DB;
+    color: #DD1A08;
     /* text-shadow: -2px -2px 0 #69D9DB,
     2px -2px 0 #69D9DB,
     -2px 2px 0 #69D9DB,
@@ -252,7 +265,7 @@ h2 {
     transform: rotate(-90deg);
     position: absolute;
     font-family: 'Bungee', cursive;
-    color: #69D9DB;
+    color: #DD1A08;
     /* text-shadow: -2px -2px 0 #69D9DB,
     2px -2px 0 #69D9DB,
     -2px 2px 0 #69D9DB,
@@ -282,7 +295,7 @@ h2 {
     transform: rotate(-90deg);
     position: absolute;
     font-family: 'Bungee', cursive;
-    color: #69D9DB;
+    color: #DD1A08;
     /* text-shadow: -2px -2px 0 #69D9DB,
     2px -2px 0 #69D9DB,
     -2px 2px 0 #69D9DB,
