@@ -17,10 +17,11 @@ function animeDirective() {
                 duration: 1000,
                 loop: true, // tells animation to continue looping
                 easing: 'easeInOutCirc', // indicates pacing (on a curve) of transition/movement
-                delay: 8000 // indicates how long to wait before beginning animation
+                delay: 4000 // indicates how long to wait before beginning animation
             });
             // dictates the click event, attached to whichever element is assigned this directive (in food-selection)
             $element.on("click", () => {
+
                 // calls foodWobble function
                 foodWobble();
                 // animation for foodWobble
@@ -36,14 +37,14 @@ function animeDirective() {
                     });
                     // sets delay of 5 seconds on the toggle off of the class food-shake
                     setTimeout(function () { 
-                        $element.toggleClass("food-shake"), 5000
+                        $element.toggleClass("food-shake"), 1000
                     })
                 }
                 // sets element with the class of plate to the variable plate
                 const plate = document.querySelector(".plate");
                 // sets plate's first attribute value (count) to count
                 const count = plate.attributes[0].value;
-
+                // cycles 0-count and runs plateWobble(0 - count)
                 for (let i = 0; i <= count; i++) {
                     plateWobble(i);
                 }
@@ -142,7 +143,6 @@ function animeDirective() {
                             duration: 210,
                             offset: 500,
                             easing: 'easeInOutCirc'
-
                         },
                         {
                             targets: '#item3',
@@ -174,7 +174,6 @@ function animeDirective() {
                             duration: 210,
                             offset: 500,
                             easing: 'easeInOutCirc'
-
                         },
                         {
                             targets: '#item4',
@@ -206,7 +205,6 @@ function animeDirective() {
                             duration: 210,
                             offset: 500,
                             easing: 'easeInOutCirc'
-
                         },
                         {
                             targets: '#item5',
@@ -238,7 +236,6 @@ function animeDirective() {
                             duration: 210,
                             offset: 500,
                             easing: 'easeInOutCirc'
-
                         }
                     ];
 

@@ -33,8 +33,8 @@ const results = {
         vm.activitySelection = Service.getActivity();
           
         vm.countdown = () => {            
-            vm.distanceRounded = (vm.distance-.2);
-            vm.distance = Math.round( vm.distanceRounded * 100 ) / 100;
+            vm.distanceRounded = (vm.distance-.5);
+            vm.distance = Math.round( vm.distanceRounded * 10 ) / 10;
             if (vm.distance <= 0) {
                 vm.distance = 0;
                 
