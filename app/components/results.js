@@ -38,6 +38,11 @@ const results = {
                 vm.distance = 0;
                 
                 $interval.cancel(vm.counter);
+                stopAnimate();
+
+                console.log(document.getElementsByClassName("skyline-background"));
+                document.getElementsByClassName("skyline-background")[0].style.animation = "none";
+
             }
             console.log(vm.distance);
         }
@@ -134,6 +139,11 @@ const results = {
         vm.homePage = () => {
             Service.goHome();
         }
+
+        // if (vm.distance === 0) {
+        //     console.log("yay")
+        //     stopAnimate();
+        // }
     }]
     
 }
