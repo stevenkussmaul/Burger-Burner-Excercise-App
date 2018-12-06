@@ -13,11 +13,12 @@ const results = {
            <p class="results-text"> You have  <br> <span id="miles"> {{ $ctrl.distance }} </span> <br> miles to {{ $ctrl.activitySelection }} to your car! </p>
 
         </section>
-
-        <section class="movement-container">
-            <section class="skyline-container">
-                <section class="skyline-background">
-                    <section id="{{ $ctrl.activitySelection }}">
+        <section class="results-container">
+            <section class="movement-container">
+                <section class="skyline-container">
+                    <section class="skyline-background">
+                        <section id="{{ $ctrl.activitySelection }}">
+                        </section>
                     </section>
                 </section>
             </section>
@@ -39,9 +40,13 @@ const results = {
                 
                 $interval.cancel(vm.counter);
                 stopAnimate();
-
                 console.log(document.getElementsByClassName("skyline-background"));
+                console.log(document.getElementsByClassName("distance"));
                 document.getElementsByClassName("skyline-background")[0].style.animation = "none";
+                document.getElementsByClassName("results-text")[0].innerHTML = "";
+                document.getElementsByClassName("distance")[0].setAttribute("class", "completed");
+                
+                setTimeout(function(){document.getElementsByClassName("results-text")[0].innerHTML = "You burned off all the calories you ate!!"}, 2000);
 
             }
             console.log(vm.distance);
@@ -62,7 +67,7 @@ const results = {
         function animateSkip() {
 
             var position = 160; //start position for the image slicer
-            const interval = 400; //100 ms of interval for the setInterval()
+            const interval = 200; //100 ms of interval for the setInterval()
             const diff = 160; //diff as a variable for position offset
 
             tID = setInterval(() => {
@@ -85,7 +90,7 @@ const results = {
         function animateCrawl() {
 
             var position = 240; //start position for the image slicer
-            const interval = 400; //100 ms of interval for the setInterval()
+            const interval = 200; //100 ms of interval for the setInterval()
             const diff = 240; //diff as a variable for position offset
 
             tID = setInterval(() => {
@@ -108,7 +113,7 @@ const results = {
         function animateWalk() {
 
             var position = 160; //start position for the image slicer
-            const interval = 400; //100 ms of interval for the setInterval()
+            const interval = 200; //100 ms of interval for the setInterval()
             const diff = 160; //diff as a variable for position offset
 
             tID = setInterval(() => {
