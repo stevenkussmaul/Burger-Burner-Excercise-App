@@ -18,58 +18,12 @@ body {
     padding: 20px 0px 15px 0px;
 }
 
-/* Food Selection Page */
-
-.click-hint {
-    font-family: 'Bungee', cursive;
-    font-size: 20px;
-    word-spacing: 8px;
-    color: #291717;
-    margin-top: 15px;
-    margin-bottom: 0px;
-    text-shadow: -2px -2px 0 #F1E9DB,
-    2px -2px 0 #F1E9DB,
-    -2px 2px 0 #F1E9DB,
-    2px 2px 0 #F1E9DB; 
-}
-
-p, button {
-    color: #F1E9DB;
-}
-
-.main-container {
-    display: flex;
-    flex-direction: row;
-}
-
-.go-btn{
-    height: 30px;
-    width: 80px;
-    border-radius: 5px;
-    color: #07020D;
-    font-size: 15px;
-    margin-top: 20px;
-    font-family: 'Changa', sans-serif;
-}
-
-/* Go Button Animation- Glow */
-.go-btn {
-    -webkit-animation-name: Pulse;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes Pulse {
-    from { background-color: #69D9DB; -webkit-box-shadow: 0 0 9px #333; }
-    50% { background-color: #F1E9DB; -webkit-box-shadow: 0 0 18px #69D9DB; }
-    to { background-color: #69D9DB; -webkit-box-shadow: 0 0 9px #333; }
-}
-/* Instructions Pop-Up */
-h2 {
+/* Instructions on Home Page */
+.instructions-heading {
     position: relative;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 10px;
-    color: #726D61;
+    color: #291717;
     font-size: 24px;
     text-align: center;
     font-family: 'Changa', sans-serif;}
@@ -78,6 +32,7 @@ h2 {
     height: 180px;
     width: 300px;
     background-color: #69D9DB;
+    color: #291717;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -96,7 +51,7 @@ h2 {
     margin-bottom: 0px;
     margin-left: 10px;
     margin-right: 10px;
-    color: #726D61;
+    color: #291717;
     padding-top: 10px;
     font-family: 'Changa', sans-serif;  
     line-height: 20px;
@@ -110,12 +65,65 @@ h2 {
     transform: translateX(-50%);
     height: 30px;
     width: 85%;
-    background-color: #726D61;
+    background-color: #362929;
     border: none;
     border-radius: 5px;
     font-family: 'Changa', sans-serif;
     font-size: 16px;
     box-shadow: 4px 4px 12px 0px #6b6868;
+}
+
+/* Food Selection Page */
+
+.click-hint {
+    font-family: 'Bungee', cursive;
+    font-size: 20px;
+    word-spacing: 8px;
+    color: #291717;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    text-shadow: -2px -2px 0 #F1E9DB,
+    2px -2px 0 #F1E9DB,
+    -2px 2px 0 #F1E9DB,
+    2px 2px 0 #F1E9DB; 
+}
+
+p, button {
+    color: #F1E9DB;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.go-btn{
+    height: 40px;
+    width: 80%;
+    border-radius: 5px;
+    color: #07020D;
+    font-size: 20px;
+    padding: 0;
+    margin-top: 15px;
+    font-family: 'Changa', sans-serif;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Go Button Animation- Glow */
+.go-btn {
+    -webkit-animation-name: Pulse;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes Pulse {
+    from { background-color: #69D9DB; -webkit-box-shadow: 0 0 9px #333; }
+    50% { background-color: #F1E9DB; -webkit-box-shadow: 0 0 18px #69D9DB; }
+    to { background-color: #69D9DB; -webkit-box-shadow: 0 0 9px #333; }
 }
 
 /* Food Selection Choice */
@@ -124,6 +132,7 @@ h2 {
     flex: 50%;
     flex-direction: column;
     align-items: center;
+    height: 500px;
 }
 
 .food-photos {
@@ -139,16 +148,12 @@ h2 {
     /* display: inline-block; */
     position: relative;
     flex: 50%;
-    height: 100vh;
+    height: 500px;
 }
 
 .plate-container {
-    /* display: flex;
-    flex-direction: column-reverse; */
     position: relative;
-    /* bottom: -500px; */
     height: 100%;
-    /* align-items: center; */
 }
 
 .food-item {
@@ -163,7 +168,7 @@ h2 {
 
 .plate {
     position: absolute;
-    bottom: 160px;
+    bottom: 70px;
     right: 42px;
     width: 8em;
     height: 2em;
@@ -189,6 +194,7 @@ h2 {
     font-family: 'Bungee', cursive;
     font-size: 24px;
     word-spacing: 10px;
+    text-align: center;
     color: #291717;
     margin-top: 30px;
     text-shadow: -2px -2px 0 #F1E9DB,

@@ -4,6 +4,9 @@ angular.module("App", ["ngRoute"])
     .config(["$routeProvider", function($routeProvider) {
         $routeProvider
         .when("/", {
+            template: "<home></home>"
+        })
+        .when("/food-selection", {
             template: "<food-selection></food-selection>"
         })
         .when("/activity-selection", {
