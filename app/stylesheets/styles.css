@@ -18,9 +18,10 @@ body {
     padding: 20px 0px 15px 0px;
 }
 
+
 /* Instructions on Home Page */
 .instructions-heading {
-    position: relative;
+   position: relative;
     margin-top: 20px;
     margin-bottom: 10px;
     color: #291717;
@@ -71,6 +72,54 @@ body {
     font-family: 'Changa', sans-serif;
     font-size: 16px;
     box-shadow: 4px 4px 12px 0px #6b6868;
+}
+
+
+/* Food Selection Page */
+
+.click-hint {
+    font-family: 'Bungee', cursive;
+    font-size: 20px;
+    word-spacing: 8px;
+    color: #291717;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    text-shadow: -2px -2px 0 #F1E9DB,
+    2px -2px 0 #F1E9DB,
+    -2px 2px 0 #F1E9DB,
+    2px 2px 0 #F1E9DB; 
+}
+
+p, button {
+    color: #F1E9DB;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.go-btn {
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    color: #07020D;
+    font-size: 15px;
+    margin-top: 20px;
+    font-family: 'Changa', sans-serif;
+}
+
+/* Go Button Animation- Glow */
+.go-btn {
+    -webkit-animation-name: Pulse;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes Pulse {
+    from { background-color: #69D9DB; -webkit-box-shadow: 0 0 9px #333; }
+    50% { background-color: #F1E9DB; -webkit-box-shadow: 0 0 18px #69D9DB; }
+    to { background-color: #69D9DB; -webkit-box-shadow: 0 0 9px #333; }
 }
 
 /* Food Selection Page */
@@ -127,6 +176,7 @@ p, button {
 }
 
 /* Food Selection Choice */
+
 .left {
     display: flex;
     flex: 50%;
@@ -141,6 +191,15 @@ p, button {
     height: auto;
     width: auto;
     margin-top: 20px;
+}
+
+.left {
+    display: flex;
+    flex: 50%;
+    flex-direction: column;
+    align-items: center;
+
+    /* display: inline-block; */
 }
 
 /* Plate */
@@ -177,7 +236,7 @@ p, button {
 
 .plate-image {
     height: 4em;
-    width: 10em;
+    width: 12 em;
 }
 
 /* Activity Selection Page */
