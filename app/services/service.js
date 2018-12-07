@@ -266,6 +266,12 @@ function Service ($http, $q, $location) {
         return self.plate;
     }
 
+    self.deleteFood = (index) => {
+        console.log(index);
+        self.plate.splice(index, 1);
+        console.log(self.plate);
+    }
+
 // method to get calorie total to be used in activity-selection.js
     self.sum = 0;
     self.calorieTotal = () => {
@@ -327,7 +333,7 @@ function Service ($http, $q, $location) {
         console.log("YAY")
         self.plate = [];
         self.activityChoice = null;
-        $location.path("/");
+        $location.path("/food-selection");
         
     }
 

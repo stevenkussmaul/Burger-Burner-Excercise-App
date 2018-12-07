@@ -74,50 +74,6 @@ body {
     box-shadow: 4px 4px 12px 0px #6b6868;
 }
 
-
-/* Food Selection Page */
-
-.click-hint {
-    font-family: 'Bungee', cursive;
-    font-size: 20px;
-    word-spacing: 8px;
-    color: #291717;
-    margin-top: 15px;
-    margin-bottom: 0px;
-    text-shadow: -2px -2px 0 #F1E9DB,
-    2px -2px 0 #F1E9DB,
-    -2px 2px 0 #F1E9DB,
-    2px 2px 0 #F1E9DB; 
-}
-
-.main-container {
-    display: flex;
-    flex-direction: row;
-}
-
-.go-btn {
-    height: 30px;
-    width: 80px;
-    border-radius: 5px;
-    color: #07020D;
-    font-size: 15px;
-    margin-top: 20px;
-    font-family: 'Changa', sans-serif;
-}
-
-/* Go Button Animation- Glow */
-.go-btn {
-    -webkit-animation-name: Pulse;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes Pulse {
-    from { background-color: #69D9DB; -webkit-box-shadow: 0 0 9px #333; }
-    50% { background-color: #F1E9DB; -webkit-box-shadow: 0 0 18px #69D9DB; }
-    to { background-color: #69D9DB; -webkit-box-shadow: 0 0 9px #333; }
-}
-
 /* Food Selection Page */
 
 .click-hint {
