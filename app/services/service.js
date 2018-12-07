@@ -27,7 +27,7 @@ function Service ($http, $q, $location) {
     const ID_applePie = "513fc9e73fe3ffd40300109a";
     const ID_nuggets = "513fc9e73fe3ffd4030010a8";
 
-    const API_version_2 = null;
+    const API_version_2 = false;
 
     if (API_version_2) {
 
@@ -154,7 +154,7 @@ function Service ($http, $q, $location) {
                     })
         }
 
-    } else if (!API_version_2) {
+    } else if (false) {
 
         //call to API_v1_1
         self.getBigMac = () => {
@@ -165,8 +165,8 @@ function Service ($http, $q, $location) {
                 self.bigMacName = result.data.item_name;
                 self.bigMacCal = result.data.nf_calories;
                 self.bigMac = {
-                    name: vm.bigMacName,
-                    cal: vm.bigMacCal,
+                    name: self.bigMacName,
+                    cal: self.bigMacCal,
                     src: "app/images/big-mac.png"
                 }
                 console.log(self.bigMac);
@@ -185,8 +185,8 @@ function Service ($http, $q, $location) {
                 self.cokeName = result.data.item_name;
                 self.cokeCal = result.data.nf_calories;
                 self.coke = {
-                    name: vm.cokeName,
-                    cal: vm.cokeMacCal,
+                    name: self.cokeName,
+                    cal: self.cokeMacCal,
                     src: "app/images/coke.png"
                 }
                 console.log(self.coke);
@@ -204,8 +204,8 @@ function Service ($http, $q, $location) {
                 self.friesName = result.data.item_name;
                 self.friesCal = result.data.nf_calories;
                 self.fries = {
-                    name: vm.friesName,
-                    cal: vm.friesCal,
+                    name: self.friesName,
+                    cal: self.friesCal,
                     src: "app/images/fries.png"
                 }
                 console.log(self.fries);
@@ -223,8 +223,8 @@ function Service ($http, $q, $location) {
                 self.applePieName = result.data.item_name;
                 self.applePieCal = result.data.nf_calories;
                 self.applePie = {
-                    name: vm.applePieName,
-                    cal: vm.applePieCal,
+                    name: self.applePieName,
+                    cal: self.applePieCal,
                     src: "app/images/apple-pie.png"
                 }
                 console.log(applePie);
@@ -242,8 +242,8 @@ function Service ($http, $q, $location) {
                 self.nuggetsName = result.data.item_name;
                 self.nuggetsCal = result.data.nf_calories;
                 self.nuggets = {
-                    name: vm.nuggetsName,
-                    cal: vm.nuggetsCal,
+                    name: self.nuggetsName,
+                    cal: self.nuggetsCal,
                     src: "app/images/nuggets.png"
                 }
                 console.log(self.nuggets);
