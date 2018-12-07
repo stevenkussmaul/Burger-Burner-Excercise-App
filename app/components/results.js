@@ -19,7 +19,7 @@ const results = {
         <section ng-show="$ctrl.buttonShow" class="btn-container">
             <button ng-click="$ctrl.homePage();" class="restart-btn">Restart</button>
         </section>
-
+        <img class="car" src="app/images/sprite_car.png">
         <section class="results-container">
             <section class="movement-container">
                 <section class="skyline-container">
@@ -48,6 +48,7 @@ const results = {
                 
                 $interval.cancel(vm.counter);
                 stopAnimate();
+                document.getElementsByClassName("car")[0].style.animation = "slide 1s forwards";
                 document.getElementsByClassName("skyline-background")[0].style.animation = "none";
                 document.getElementsByClassName("results-text")[0].innerHTML = "";
                 document.getElementsByClassName("distance")[0].setAttribute("class", "completed");
