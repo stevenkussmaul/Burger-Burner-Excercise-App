@@ -358,6 +358,22 @@ p, button {
 
 
 /* Results Page */
+.car {
+    width: 305px;
+    height: auto;
+    position: absolute;
+    z-index: 1000;
+    right: -306px;
+    bottom: 75px;
+    animation: none;
+    animation-duration: 1s;
+}
+
+@keyframes slide {
+    0% {right: -306px}
+    100% {right: -200px}
+}
+
 .results-wrapper {
     display: flex;
     flex-direction: column;
