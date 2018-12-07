@@ -42,7 +42,7 @@ p, button {
     flex-direction: row;
 }
 
-.go-btn{
+.go-btn {
     height: 30px;
     width: 80px;
     border-radius: 5px;
@@ -119,19 +119,21 @@ h2 {
 }
 
 /* Food Selection Choice */
-.left {
-    display: flex;
-    flex: 50%;
-    flex-direction: column;
-    align-items: center;
-}
-
 .food-photos {
     max-width: 100px;
     max-height: 100px;
     height: auto;
     width: auto;
     margin-top: 20px;
+}
+
+.left {
+    display: flex;
+    flex: 50%;
+    flex-direction: column;
+    align-items: center;
+
+    /* display: inline-block; */
 }
 
 /* Plate */
@@ -146,8 +148,10 @@ h2 {
     /* display: flex;
     flex-direction: column-reverse; */
     position: relative;
+    flex: 50%;
+
     /* bottom: -500px; */
-    height: 100%;
+    height: 100vh;
     /* align-items: center; */
 }
 
@@ -164,7 +168,7 @@ h2 {
 .plate {
     position: absolute;
     bottom: 160px;
-    right: 42px;
+    /* right: 42px; */
     width: 8em;
     height: 2em;
     z-index: -1;
@@ -172,7 +176,7 @@ h2 {
 
 .plate-image {
     height: 4em;
-    width: 10em;
+    width: 12 em;
 }
 
 /* Activity Selection Page */
