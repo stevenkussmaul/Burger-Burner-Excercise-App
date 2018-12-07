@@ -7,12 +7,19 @@ const results = {
     <section ng-click="$ctrl.homePage();" class="title">BURGER BURNER</section>
 
     <section class="results-wrapper">
+
+        <section class="progress-bar blue stripes">
+            <span style="width: 40%"></span>
+        </section>
     
         <section class="distance">
-
            <p class="results-text"> You have <br> <span id="miles"> {{ $ctrl.distance }} </span> <br> miles to {{ $ctrl.activitySelection }} to your car! </p>
-
         </section>
+
+        <section ng-show="$ctrl.buttonShow" class="btn-container">
+            <button ng-click="$ctrl.homePage();" class="restart-btn">Restart</button>
+        </section>
+
         <section class="results-container">
             <section class="movement-container">
                 <section class="skyline-container">
@@ -31,6 +38,7 @@ const results = {
         vm.distance = Service.getDistance();
         vm.activitySelection = "walk";
         vm.activitySelection = Service.getActivity();
+        vm.buttonShow = false;
           
         vm.countdown = () => {            
             vm.distanceRounded = (vm.distance-.5);
@@ -40,16 +48,16 @@ const results = {
                 
                 $interval.cancel(vm.counter);
                 stopAnimate();
-                console.log(document.getElementsByClassName("skyline-background"));
-                console.log(document.getElementsByClassName("distance"));
                 document.getElementsByClassName("skyline-background")[0].style.animation = "none";
                 document.getElementsByClassName("results-text")[0].innerHTML = "";
                 document.getElementsByClassName("distance")[0].setAttribute("class", "completed");
+                document.getElementsByClassName("completed")[0].setAttribute("id", "final-text");
+                setTimeout(function(){document.getElementsByClassName("completed")[0].innerHTML = "Congratulations! You burned off all the calories you ate"}, 1000);
+                vm.buttonShow = true;
                 
-                setTimeout(function(){document.getElementsByClassName("results-text")[0].innerHTML = "Congratulations! You burned off all the calories you ate!"}, 2000);
-
+                
             }
-            console.log(vm.distance);
+
         }
 
         vm.counter = $interval(function (){
@@ -145,10 +153,9 @@ const results = {
             Service.goHome();
         }
 
-        // if (vm.distance === 0) {
-        //     console.log("yay")
-        //     stopAnimate();
-        // }
+       
+
+       
     }]
     
 }
