@@ -328,10 +328,7 @@ function Service ($http, $q, $location) {
         self.plate = [];
         self.activityChoice = null;
         $location.path("/");
-        
-    }
-
-
+    };
 }
 
 

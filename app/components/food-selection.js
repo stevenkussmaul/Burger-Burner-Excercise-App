@@ -5,20 +5,20 @@ const foodSelection = {
 
     <section ng-click= "$ctrl.homePage();" class="title">BURGER BURNER</section>
 
+    <h2 class="click-hint">Click to add item to plate</h2>
+
     <section class="main-container">
 
         <section class="left">
             <section class="food-choice" anime-directive ng-repeat="food in $ctrl.listOfFood track by $index">
                 <img ng-click="$ctrl.add(food)" src="{{ food.src }}" class="food-photos">
             </section>
-            <button class="go-btn" ng-show="$ctrl.buttonShow" ng-click="$ctrl.goActivity();">Go</button>
+            <button class="go-btn" ng-show="$ctrl.buttonShow" ng-click="$ctrl.goActivity();">I'm Full</button>
         </section>
 
         <section class="instructions" ng-show="$ctrl.show">
             <h2>Are you ready to burn??</h2>
-            <p class="instructions-text">Let's see how far away you need to park in order to burn off those calories you're about to eat!</p>
-            <p class="instructions-text-2">Start by adding food to your plate.</p>
-            <p class="instructions-text-3">Next, choose your transportation style.</p>
+            <p class="instructions-text">Find out how far away you need to park in order to burn off those calories you're about to eat!</p>
             <button class="play-btn" ng-click="$ctrl.hideInstructions();">Burn Those Burgers!!</button>
         </section>
 
@@ -28,13 +28,12 @@ const foodSelection = {
             </section>
 
 
-        <section count="0" class="plate">
-            <img class="plate-image" src="app/images/plate.png">
+            <section count="0" class="plate">
+                <img class="plate-image" src="app/images/plate.png">
+            </section>
         </section>
-    </section>
       
     </section>
-
 
     `,
     bindings: [],
@@ -47,33 +46,33 @@ const foodSelection = {
             vm.show = false;
         };
 
-        // vm.listOfFood = [
-        //     {
-        //         name: "bigmac",
-        //         cal: 500,
-        //         src: "app/images/big-mac.png"
-        //     },
-        //     {
-        //         name: "fries",
-        //         cal: 600,
-        //         src: "app/images/fries.png"
-        //     },
-        //     {
-        //         name: "apple pie",
-        //         cal: 700,
-        //         src: "app/images/apple-pie.png"
-        //     },
-        //     {
-        //         name: "coke",
-        //         cal: 700,
-        //         src: "app/images/coke.png"
-        //     },
-        //     {
-        //         name: "nuggets",
-        //         cal: 700,
-        //         src: "app/images/nuggets.png"
-        //     }
-        // ];
+        vm.listOfFood = [
+            {
+                name: "bigmac",
+                cal: 563,
+                src: "app/images/big-mac.png"
+            },
+            {
+                name: "fries",
+                cal: 510,
+                src: "app/images/fries.png"
+            },
+            {
+                name: "apple pie",
+                cal: 230,
+                src: "app/images/apple-pie.png"
+            },
+            {
+                name: "coke",
+                cal: 150,
+                src: "app/images/coke.png"
+            },
+            {
+                name: "nuggets",
+                cal: 440,
+                src: "app/images/nuggets.png"
+            }
+        ];
 
 
 
@@ -111,11 +110,10 @@ const foodSelection = {
         vm.add = (food) => {
 
             if (vm.plate >= 0) {
-                console.log("HI");
                 vm.buttonShow = true;
             }
 
-            Service.addFood(food)
+            Service.addFood(food);
             vm.plate = Service.getPlate();
             console.log(vm.plate.length);
             if (vm.plate.length === 5) {
