@@ -7,26 +7,20 @@ const foodSelection = {
 
     <h2 class="click-hint">Click to add item to plate</h2>
 
-    <section class="main-container">
+    <button class="go-btn" ng-show="$ctrl.buttonShow" ng-click="$ctrl.goActivity();">I'm Full</button>
 
+    <section class="main-container">
+        
         <section class="left">
             <section class="food-choice" anime-directive ng-repeat="food in $ctrl.listOfFood track by $index">
                 <img ng-click="$ctrl.add(food)" src="{{ food.src }}" class="food-photos">
             </section>
-            <button class="go-btn" ng-show="$ctrl.buttonShow" ng-click="$ctrl.goActivity();">I'm Full</button>
-        </section>
-
-        <section class="instructions" ng-show="$ctrl.show">
-            <h2>Are you ready to burn??</h2>
-            <p class="instructions-text">Find out how far away you need to park in order to burn off those calories you're about to eat!</p>
-            <button class="play-btn" ng-click="$ctrl.hideInstructions();">Burn Those Burgers!!</button>
         </section>
 
         <section class="right">
             <section class="plate-container">
                 <img class="food-item" id="item{{$index}}" ng-repeat="food in $ctrl.plate track by $index" src="{{ food.src}}">
             </section>
-
 
             <section count="0" class="plate">
                 <img class="plate-image" src="app/images/plate.png">
@@ -39,12 +33,7 @@ const foodSelection = {
     bindings: [],
     controller: ["Service", "$location", function (Service, $location) {
         const vm = this;
-        vm.show = true;
         vm.buttonShow = false;
-
-        vm.hideInstructions = () => {
-            vm.show = false;
-        };
 
         vm.listOfFood = [
             {
