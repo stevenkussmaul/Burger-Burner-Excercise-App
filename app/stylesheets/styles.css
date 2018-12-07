@@ -131,7 +131,7 @@ p, button {
     color: #F1E9DB;
     background-color: #DD1A08;
     text-shadow: 2px 2px #07020D;
-    padding: 35px 0px 15px 0px;
+    padding: 20px 0px 15px 0px;
 }
 
 body {
@@ -165,8 +165,10 @@ body {
     /* display: flex;
     flex-direction: column-reverse; */
     position: relative;
+    flex: 50%;
+
     /* bottom: -500px; */
-    height: 100%;
+    height: 100vh;
     /* align-items: center; */
 }
 
@@ -183,7 +185,7 @@ body {
 .plate {
     position: absolute;
     bottom: 160px;
-    right: 42px;
+    /* right: 42px; */
     width: 8em;
     height: 2em;
     z-index: -1;
@@ -191,7 +193,7 @@ body {
 
 .plate-image {
     height: 4em;
-    width: 10em;
+    width: 12 em;
 }
 
 
@@ -275,6 +277,7 @@ body {
     padding: 5px;
     margin: 15px;
 }
+
 
 .results-text {
     color: #07020D;
