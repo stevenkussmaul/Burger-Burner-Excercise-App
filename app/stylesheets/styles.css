@@ -74,6 +74,18 @@ body {
     box-shadow: 4px 4px 12px 0px #6b6868;
 }
 
+#flame {
+    position: absolute;
+    z-index: 3000;
+    /* bottom: -50%; */
+}
+
+#flame_yellow {
+    position: absolute;
+    z-index: 4000;
+    bottom: -50%;
+}
+
 
 /* Food Selection Page */
 

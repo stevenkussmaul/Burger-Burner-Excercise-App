@@ -43,22 +43,26 @@ const results = {
         vm.countdown = () => {            
             vm.distanceRounded = (vm.distance-.5);
             vm.distance = Math.round( vm.distanceRounded * 10 ) / 10;
+            if (vm.distance === 1) {
+                document.getElementsByClassName("car")[0].style.animation = "slide 1s forwards";
+                // vm.distanceRounded = (vm.distance-.5);
+                // vm.distance = Math.round( vm.distanceRounded * 10 ) / 10;
+                
+            } 
             if (vm.distance <= 0) {
                 vm.distance = 0;
                 
                 $interval.cancel(vm.counter);
                 stopAnimate();
-                document.getElementsByClassName("car")[0].style.animation = "slide 1s forwards";
                 document.getElementsByClassName("skyline-background")[0].style.animation = "none";
                 document.getElementsByClassName("results-text")[0].innerHTML = "";
                 document.getElementsByClassName("distance")[0].setAttribute("class", "completed");
                 document.getElementsByClassName("completed")[0].setAttribute("id", "final-text");
                 setTimeout(function(){document.getElementsByClassName("completed")[0].innerHTML = "Congratulations! You burned off all the calories you ate"}, 1000);
-                vm.buttonShow = true;
-                
-                
+                vm.buttonShow = true;    
             }
 
+           
         }
 
         vm.counter = $interval(function (){
