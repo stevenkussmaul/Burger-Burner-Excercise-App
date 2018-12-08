@@ -35,39 +35,58 @@ body {
 
 .intro--are {
     font-size: 8em;
-    top: -0.8em;
+    top: 2em;
+
+    /* top: -0.8em; */
+    
 }
 
-.intro--you {
+.intro--u {
     color: #3fe4f0;
     font-size: 8em;
     top: -0.8em;
+    top: -1em;
     left: 2.18em;
+    /* display: none; */
+
 }
 
 .intro--ready {
     color: #F1E9DB;
     font-size: 6.5em;
     top: 0.2em;
+    left: -4em;
+    /* display: none; */
 }
 
 .intro--to {
     font-size: 6em;
     top: 1.16em;
+    right: -4em;
+    /* display: none; */
+
 }
 
 .intro--burn {
     color: #3fe4f0;
     font-size: 8em;
+    scale: 0;
     top: 1.23em;
+    top: 3em;
     left: -0.03em;
+    /* display: none; */
+
 }
 
 .intro--qs {
     color: #F1E9DB;
     font-size: 12.1em;
+    /* font-size: 40em; */
     top: 1.02em;
+    top: 3em;
     left:-0.03em;
+    /* display: none; */
+
 }
 
 

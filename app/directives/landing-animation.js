@@ -23,16 +23,76 @@ function landingAnimation() {
                 loop: true
             });
 
-            document.querySelector('.title').setAttribute()
+            // document.querySelector('.title').setAttribute()
 
-            // landingTimeline
-            //     .add({
-            //         targets: '#flame',
-            //         translateY: -250,
-            //         easing: 'easeOutBack',
-            //         delay: 4000,
-            //         duration: 2000
-            //     });
+            landingTimeline
+                .add({
+                    targets: '.intro--are',
+                    top: '-0.8em',
+                    // delay: 2000,
+                    duration: 3000,
+                    easing: 'easeInOutQuad'
+                })
+                .add({
+                    targets: '.intro--u',
+                    top: '-0.8em',
+                    // delay: 1000,
+                    duration: 500,
+                    offset: '-=100',
+
+                    easing: 'easeInOutQuad'
+                })
+                .add({
+                    targets: '.intro--ready',
+                    left: '0em',
+                    // delay: 1000,
+                    duration: 500,
+                    offset: '-=100',
+
+                    easing: 'easeInOutQuad'
+                })
+                .add({
+                    targets: '.intro--to',
+                    left: '0em',
+                    // rotate: '1turn',
+                    // delay: 1000,
+                    duration: 500,
+                    offset: '-=200',
+
+                    easing: 'easeInOutQuad'
+                })
+                .add({
+                    targets: '.intro--burn',
+                    // left: '0em',
+                    top: '1.23em',
+                    // scale: [ { value: -2 }, { value: 2 }, { value: 1 } ],
+                    // rotate: '1turn',
+                    // delay: 1000,
+                    duration: 500,
+                    offset: '-=100',
+
+                    easing: 'easeInOutQuad'
+                })
+                .add({
+                    targets: '.intro--qs',
+                    top: '1.02em',
+                    // left: '0em',
+                    // fontSize: [ { value: '5em' }, { value: '8em' }, { value: '12.1em' } ],
+                    // scale: [ { value: -2 }, { value: 2 }, { value: 1 } ],
+                    // rotate: '1turn',
+                    // delay: 1000,
+                    duration: 500,
+                    offset: '-=450',
+                    easing: 'easeInOutQuad'
+                });
+
+                // .add({
+                //     targets: '#flame',
+                //     translateY: -250,
+                //     easing: 'easeOutBack',
+                //     delay: 4000,
+                //     duration: 2000
+                // });
 
 
             // anime({
