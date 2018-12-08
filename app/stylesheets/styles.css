@@ -20,6 +20,11 @@ body {
 
 
 /* Instructions on Home Page */
+
+.landing--container {
+    width: 100%;
+}
+
 .instructions-heading {
    position: relative;
     margin-top: 20px;
@@ -77,13 +82,13 @@ body {
 #flame {
     position: absolute;
     z-index: 3000;
-    /* bottom: -50%; */
+    bottom: -20%;
 }
 
 #flame_yellow {
     position: absolute;
     z-index: 4000;
-    bottom: -50%;
+    bottom: -40%;
 }
 
 
