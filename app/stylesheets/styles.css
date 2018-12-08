@@ -21,11 +21,58 @@ body {
 
 /* Instructions on Home Page */
 
-.landing--container {
+.landing-container {
     width: 100%;
 }
 
-.instructions-heading {
+.intro {
+    position: absolute;
+    font-family: 'Bungee', cursive;
+    color: #A39B8B;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.intro--are {
+    font-size: 8em;
+    top: -0.8em;
+}
+
+.intro--you {
+    color: #3fe4f0;
+    font-size: 8em;
+    top: -0.8em;
+    left: 2.18em;
+}
+
+.intro--ready {
+    color: #F1E9DB;
+    font-size: 6.5em;
+    top: 0.2em;
+}
+
+.intro--to {
+    font-size: 6em;
+    top: 1.16em;
+}
+
+.intro--burn {
+    color: #3fe4f0;
+    font-size: 8em;
+    top: 1.23em;
+    left: -0.03em;
+}
+
+.intro--qs {
+    color: #F1E9DB;
+    font-size: 12.1em;
+    top: 1.02em;
+    left:-0.03em;
+}
+
+
+
+/* .instructions-heading {
    position: relative;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -77,18 +124,18 @@ body {
     font-family: 'Changa', sans-serif;
     font-size: 16px;
     box-shadow: 4px 4px 12px 0px #6b6868;
-}
+} */
 
-#flame {
+#flame--upper {
     position: absolute;
     z-index: 3000;
-    bottom: -20%;
+    bottom: -40%;
 }
 
-#flame_yellow {
+#flame--lower {
     position: absolute;
     z-index: 4000;
-    bottom: -40%;
+    bottom: -60%;
 }
 
 

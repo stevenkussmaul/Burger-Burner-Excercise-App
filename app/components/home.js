@@ -6,11 +6,10 @@ const home = {
         const vm = this;
         vm.go = () => {
             $location.path("/food-selection");
-        }
-        
+        };
     }]
-}
+};
 
-angular.module("App")
+angular
+    .module("App")
     .component("home", home);
-
