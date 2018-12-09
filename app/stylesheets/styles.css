@@ -22,12 +22,24 @@ body {
 
 /* Instructions on Home Page */
 
-#home-title{
-    display: none;
+#home--title{
+    opacity: 0;
+    font-family: 'Bungee', cursive;
+    text-align: center;
+    /* font-size: 0px; */
+    font-size: 40px;
+    /* height: 0px; */
+    /* width: 0px; */
+    color: #F1E9DB;
+    background-color: #DD1A08;
+    text-shadow: 2px 2px #07020D;
+    padding: 20px 0px 15px 0px;
+    z-index: 1;
 }
 
-.landing-container {
-    width: 100%;
+.landing--container {
+    width: 100vw;
+    height: 100vh;
 }
 
 .intro {
@@ -97,71 +109,81 @@ body {
 }
 
 
-
-/* .instructions-heading {
+/* 
+.instructions-heading {
    position: relative;
     margin-top: 20px;
     margin-bottom: 10px;
     color: #291717;
     font-size: 24px;
     text-align: center;
-    font-family: 'Changa', sans-serif;}
+    font-family: 'Changa', sans-serif;} */
 
 .instructions {
-    height: 180px;
-    width: 300px;
-    background-color: #69D9DB;
+    /* opactiy: 0; */
+    height: 0px;
+    width: 0px;
+    /* height: 180px; */
+    /* width: 300px; */
+    background-color: rgba(255,255,255, 0.5);
     color: #291717;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: 30vh;
     z-index: 1000;
-    box-shadow: 0px 0px 13px 7px #6b6868;
+    box-shadow: 0px 0px 13px 1px rgba(107, 104, 104, 0.5);
     border-radius: 5px;
     line-height: 20px;
 }
 
-.instructions-text {
-    position: absolute;
+.instructions__text {
+    opacity: 0;
+    margin: 1em auto;
+    font-size: 1.4em;
+    /* position: absolute; */
     width: 280px;
-    z-index: 2000;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    margin-right: 10px;
+    /* z-index: 2000; */
+    /* margin-top: 1em; */
+    /* margin-bottom: 0px; */
+    /* margin-left: 0.5em; */
+    /* margin-right: 0.5em; */
     color: #291717;
-    padding-top: 10px;
-    font-family: 'Changa', sans-serif;  
-    line-height: 20px;
+    /* padding-top: 10px; */
+    font-family: 'Changa', sans-serif;
+    /* line-height: 20px; */
+    text-align: center;
 }
 
-.play-btn {
+.instructions__btn {
+    opacity: 0;
     position: absolute;
     z-index: 2000;
     bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
-    height: 30px;
-    width: 85%;
+    height: 0px;
+    width: 0%;
+    /* height: 30px; */
+    /* width: 85%; */
     background-color: #362929;
     border: none;
     border-radius: 5px;
     font-family: 'Changa', sans-serif;
     font-size: 16px;
-    box-shadow: 4px 4px 12px 0px #6b6868;
-} */
+    box-shadow: 0px 0px 13px 1px rgba(107, 104, 104, 0.5);
+}
 
-#flame--upper {
+.flame--upper {
     position: absolute;
-    z-index: 3000;
+    z-index: 3;
     bottom: -40%;
 }
 
-#flame--lower {
+.flame--lower {
     position: absolute;
-    z-index: 4000;
-    bottom: -68%;
+    z-index: 4;
+    bottom: -66%;
 }
 
 

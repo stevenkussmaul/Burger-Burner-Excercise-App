@@ -11,10 +11,10 @@ function landingAnimation() {
             let flameBox = ' M 150.212 250 L 114.212 250 L 81.36 250 L 36.212 250 L 0 250 L 0 350 L 375 349.823 L 375 250 L 346.212 250 L 300.212 250 L 264 250 L 217.68 250 L 187.712 250 L 150.212 250 Z ';
             
             let landingTimeline = anime.timeline(); 
-            let showTitle = false;
+            // let showTitle = false;
 
             let flameLoop = anime({
-                targets: '#flame',
+                targets: '.flame',
                 d: [
                     { value: [flameOne, flameTwo], duration: 100 },
                     { value: [flameThree, flameFour], duration: 100 },
@@ -30,8 +30,12 @@ function landingAnimation() {
                 .add({
                     targets: '.intro--are',
                     top: '-0.8em',
+                    scaley: [
+                        { value: 10, duration: 1800, delay: 500, easing: 'easeOutExpo' },
+                        { value: 1, duration: 900, elasticity: 300 }
+                    ],
                     // delay: 2000,
-                    duration: 3000,
+                    duration: 2000,
                     easing: 'easeInOutQuad'
                 })
                 .add({
@@ -84,7 +88,8 @@ function landingAnimation() {
                     // delay: 1000,
                     duration: 500,
                     offset: '-=450',
-                    easing: 'easeInOutQuad'
+                    easing: 'easeInOutQuad',
+                    // elasticity: 100
                 })
                 .add({
                     targets: '.intro',
@@ -94,32 +99,91 @@ function landingAnimation() {
                     duration: 2000
                 })
                 .add({
-                    targets: '#flame',
+                    targets: '.flame--upper', 
                     translateY: -350,
                     easing: 'easeInQuad',
                     // delay: 4000,
                     offset: '-=2500',
-                    duration: 1500
+                    duration: 300
                 })
                 .add({
-                    targets: '#flame',
+                    targets: '.flame--lower', 
+                    translateY: -340,
                     fill: '#DD1A08',
+                    easing: 'easeInOutQuad',
+                    // delay: 4000,
+                    offset: '-=2400',
+                    duration: 200
+                })
+                .add({
+                    targets: '.flame--upper',
+                    fill: '#ff0000',
                     easing: 'easeInQuad',
                     // delay: 4000,
                     offset: '-=2000',
                     duration: 2000
                 })
                 .add({
-                    targets: 'body',
-                    backgroundColor: '#DD1A08',
+                    targets: '.landing--container',
+                    backgroundColor: '#ff0000',
+                    offset: '-=2400',
                     duration: 1000
                 })
                 .add({
-                    targets: '#flame',
-                    stroke: '#DD1A08',
-                    duration: 1000,
-                    offset: '-=800'
+                    targets: '#home--title',
+                    // fontSize: '40px',
+                    // padding: '20px 0px 15px 0px',
+                    opacity: 1,
+                    zIndex: 5,
+                    offset: '-=1000',
+                    elasticity: 100,
+                    duration: 500
                 })
+                .add({
+                    targets: '.instructions',
+                    height: '180px',
+                    width: '300px',
+                    duration: 800,
+                    elasticity: 100,
+                    offset: '-=300'
+                })
+                .add({
+                    targets: '.instructions__text',
+                    opacity: 1,
+                    duration: 500,
+                    offset: '-=300'
+
+                })
+                .add({
+                    targets: '.instructions__btn',
+                    opacity: 1,
+                    height: '30px',
+                    width: '85%',
+                    duration: 800,
+                    elasticity: 100,
+                    offset: '-=300'
+                })
+
+                // .add({
+                //     targets: '.flame',
+                //     stroke: '#DD1A08',
+                //     duration: 1000,
+                //     offset: '-=800'
+                // })
+                
+                // flameLoop = false;
+
+                // .add({
+                //     targets: 'body',
+                //     backgroundColor: '#DD1A08',
+                //     duration: 1000
+                // })
+                // .add({
+                //     targets: '#flame',
+                //     stroke: '#DD1A08',
+                //     duration: 1000,
+                //     offset: '-=800'
+                // })
 
 
                 // .add({
