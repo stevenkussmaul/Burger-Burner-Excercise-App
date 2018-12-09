@@ -58,7 +58,7 @@ function landingAnimation() {
                 })
                 .add({
                     targets: '.intro--to',
-                    left: '0em',
+                    right: '2.5em',
                     // rotate: '1turn',
                     // delay: 1000,
                     duration: 500,
@@ -141,7 +141,7 @@ function landingAnimation() {
                 })
                 .add({
                     targets: '.instructions',
-                    height: '180px',
+                    height: '200px',
                     width: '300px',
                     duration: 800,
                     elasticity: 100,
@@ -159,6 +159,7 @@ function landingAnimation() {
                     opacity: 1,
                     height: '30px',
                     width: '85%',
+                    fontSize: '16px',
                     duration: 800,
                     elasticity: 100,
                     offset: '-=300'

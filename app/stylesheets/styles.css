@@ -157,9 +157,10 @@ body {
 
 .instructions__btn {
     opacity: 0;
-    position: absolute;
-    z-index: 2000;
-    bottom: 15px;
+    /* margin: 1 auto; */
+    position: relative;
+    /* z-index: 2000; */
+    /* bottom: 15px; */
     left: 50%;
     transform: translateX(-50%);
     height: 0px;
@@ -170,7 +171,8 @@ body {
     border: none;
     border-radius: 5px;
     font-family: 'Changa', sans-serif;
-    font-size: 16px;
+    font-size: 0px;
+    padding-top: 0;
     box-shadow: 0px 0px 13px 1px rgba(107, 104, 104, 0.5);
 }
 
