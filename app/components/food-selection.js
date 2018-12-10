@@ -12,14 +12,14 @@ const foodSelection = {
     <section class="main-container">
         
         <section class="left">
-            <section class="food-choice" anime-directive ng-repeat="food in $ctrl.listOfFood track by $index">
+            <section anime-directive class="food-choice" ng-repeat="food in $ctrl.listOfFood track by $index">
                 <img ng-click="$ctrl.add(food)" src="{{ food.src }}" class="food-photos">
             </section>
         </section>
 
         <section class="right">
             <section class="plate-container">
-                <img anime-directive class="food-item" id="item{{$index}}" ng-repeat="food in $ctrl.plate track by $index" src="{{ food.src}}" ng-click="$ctrl.delete($index);">
+                <img class="food-item" id="item{{$index}}" ng-repeat="food in $ctrl.plate track by $index" src="{{ food.src}}" ng-click="$ctrl.delete($index);">
             </section>
 
             <section count="0" class="plate">
