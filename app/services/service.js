@@ -333,8 +333,7 @@ function Service ($http, $q, $location) {
         console.log("YAY")
         self.plate = [];
         self.activityChoice = null;
-        $location.path("/food-selection");
-        
+        $location.path("/food-selection");        
     }
 
 
