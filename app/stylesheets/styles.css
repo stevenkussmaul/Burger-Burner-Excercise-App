@@ -262,12 +262,12 @@ p, button {
 .food-choice {
     transform: scale(1);
     animation-name: scale;
-    animation-duration: .5s;
+    animation-duration: .3s;
     animation-iteration-count: 2;
     animation-fill-mode: backwards;
     animation-play-state: running; 
     animation-iteration-count: 2;
-    animation-delay: .5s;
+    animation-delay: .3s;
 }
 
 @keyframes scale {
@@ -458,14 +458,14 @@ p, button {
     position: absolute;
     z-index: 1000;
     right: -306px;
-    bottom: 75px;
+    bottom: 15px;
     animation: none;
     animation-duration: 1s;
 }
 
 @keyframes slide {
     0% {right: -306px}
-    100% {right: -200px}
+    100% {right: -210px}
 }
 
 .results-wrapper {
