@@ -11,7 +11,7 @@ const foodSelection = {
 
         <section class="left">
             <section class="food-choice" anime-directive ng-repeat="food in $ctrl.listOfFood track by $index">
-                <img ng-click="$ctrl.add(food)" src="{{ food.src }}" class="food-photos">
+                <img ng-click="$ctrl.add(food)" src="{{food.src}}" class="food-photos">
             </section>
             <button class="go-btn" ng-show="$ctrl.buttonShow" ng-click="$ctrl.goActivity();">I'm Full</button>
         </section>
@@ -46,66 +46,116 @@ const foodSelection = {
             vm.show = false;
         };
 
-        vm.listOfFood = [
-            {
-                name: "bigmac",
-                cal: 563,
-                src: "app/images/big-mac.png"
-            },
-            {
-                name: "fries",
-                cal: 510,
-                src: "app/images/fries.png"
-            },
-            {
-                name: "apple pie",
-                cal: 230,
-                src: "app/images/apple-pie.png"
-            },
-            {
-                name: "coke",
-                cal: 150,
-                src: "app/images/coke.png"
-            },
-            {
-                name: "nuggets",
-                cal: 440,
-                src: "app/images/nuggets.png"
-            }
-        ];
+        vm.listOfFood = Service.getListOfFood();
 
-
-
-        vm.goActivity = () => {
-            $location.path("/activity-selection");
-        };
-
-        Service.getBigMac().then(function(result) {
-            vm.bigMacObj = result;
-            vm.listOfFood[0] = vm.bigMacObj            
+        Service.getFoodData().then(result => {
+            console.log(result);
         });
+        // Service.getBigMac().then(result => {
+        //     vm.foodData = result;
+        //     console.log(vm.foodData);
+        // });
+        // vm.listOfFood = Service.getListOfFood();
+        // console.log(vm.listOfFood);
 
-        Service.getCoke().then(function(result) {
-            vm.cokeObj = result;
-            vm.listOfFood[1] = vm.cokeObj            
-        });
+        // vm.listOfFood = [
+        //     {
+        //         name: "bigmac",
+        //         cal: 563,
+        //         src: "app/images/big-mac.png"
+        //     },
+        //     {
+        //         name: "fries",
+        //         cal: 510,
+        //         src: "app/images/fries.png"
+        //     },
+        //     {
+        //         name: "apple pie",
+        //         cal: 230,
+        //         src: "app/images/apple-pie.png"
+        //     },
+        //     {
+        //         name: "coke",
+        //         cal: 150,
+        //         src: "app/images/coke.png"
+        //     },
+        //     {
+        //         name: "nuggets",
+        //         cal: 440,
+        //         src: "app/images/nuggets.png"
+        //     }
+        // ];
 
-        Service.getFries().then(function(result) {
-            vm.friesObj = result;
-            vm.listOfFood[2] = vm.friesObj            
-        });
 
-        Service.getApplePie().then(function(result) {
-            vm.ApplePieObj = result;
-            vm.listOfFood[3] = vm.ApplePieObj            
-        });
+        // vm.listOfFood = [vm.bigMac, vm.coke, vm.fries, vm.pie, vm.nuggets]
+        // vm.listOfFood = [];
+        // vm.listOfFood[0] = result1;  
 
-        Service.getNuggets().then(function(result) {
-            vm.nuggetsObj = result;
-            vm.listOfFood[4] = vm.nuggetsObj           
-        });
 
-        vm.listOfFood = [vm.bigMac, vm.coke, vm.fries, vm.pie, vm.nuggets];
+
+
+
+
+
+        // let result1 = Service.getBigMac();
+        // vm.bigMacObj = result1;
+        // vm.listOfFood[0] = vm.bigMacObj
+
+
+
+        // .then(function(result) {
+
+            
+        //     self.bigMacData = result;
+        //     self.bigMacName = result.data.foods[0].food_name;
+        //     self.bigMacCal = result.data.foods[0].nf_calories;
+        //     self.bigMac = {
+        //         name: self.bigMacName,
+        //         cal: self.bigMacCal,
+        //         src: "app/images/big-mac.png"
+        //     }
+        //     // console.log(result);
+        //     // console.log(self.bigMac);
+        //     // console.log(self.bigMacName);
+        //     // console.log(self.bigMacCal);
+            
+        //     // return self.bigMac;
+        //     // vm.bigMacObj = result;
+        //     vm.listOfFood[0] = vm.bigMac
+        // }).catch((err) => {
+        //     Service.catchFunction(err);
+
+        // });
+
+        // Service.getCoke().then(function(result) {
+        //     vm.cokeObj = result;
+        //     vm.listOfFood[1] = vm.cokeObj   
+        //     // console.log(result);         
+        // })
+
+        // Service.getFries().then(function(result) {
+        //     vm.friesObj = result;
+        //     vm.listOfFood[2] = vm.friesObj            
+        // });
+
+        // Service.getApplePie().then(function(result) {
+        //     vm.ApplePieObj = result;
+        //     vm.listOfFood[3] = vm.ApplePieObj            
+        // });
+
+        // Service.getNuggets().then(function(result) {
+        //     vm.nuggetsObj = result;
+        //     vm.listOfFood[4] = vm.nuggetsObj           
+        // });
+
+
+
+        // if (vm.listOfFood === [undefined,undefined,undefined,undefined,undefined]) {
+        //     vm.listOfFood = [vm.bigMac, vm.coke, vm.fries, vm.pie, vm.nuggets]
+
+        //     vm.listOfFoodFallback = vm.listOfFood;
+        // }
+        // console.log(vm.listOfFood);
 
         vm.add = (food) => {
 
@@ -128,7 +178,9 @@ const foodSelection = {
         vm.homePage = () => {
             Service.goHome();
         }
-
+        vm.goActivity = () => {
+            $location.path("/activity-selection");
+        };
 
     }]
 
