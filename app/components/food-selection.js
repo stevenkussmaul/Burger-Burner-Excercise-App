@@ -12,19 +12,14 @@ const foodSelection = {
     <section class="main-container">
         
         <section class="left">
-<<<<<<< HEAD
             <section class="food-choice" anime-directive ng-repeat="food in $ctrl.listOfFood track by $index">
                 <img ng-click="$ctrl.add(food)" src="{{food.src}}" class="food-photos">
-=======
-            <section anime-directive class="food-choice" ng-repeat="food in $ctrl.listOfFood track by $index">
-                <img ng-click="$ctrl.add(food)" src="{{ food.src }}" class="food-photos">
->>>>>>> master
             </section>
         </section>
 
         <section class="right">
             <section class="plate-container">
-                <img class="food-item" id="item{{$index}}" ng-repeat="food in $ctrl.plate track by $index" src="{{ food.src}}" ng-click="$ctrl.delete($index);">
+                <img class="food-item" id="item{{$index}}" ng-repeat="food in $ctrl.plate track by $index" src="{{food.src}}" ng-click="$ctrl.delete($index);">
             </section>
 
             <section count="0" class="plate">
@@ -39,6 +34,15 @@ const foodSelection = {
     controller: ["Service", "$location", function (Service, $location) {
         const vm = this;
         vm.buttonShow = false;
+
+    //    vm.listOfFood = Service.getFoodItems()
+    //         .then((response) => {
+    //             console.log(response.data)
+    //             vm.listOfFood = response.data})
+    //         .catch((err) => {
+    //             console.log(err)
+    //             console.log("bad API request");
+    //         })
 
         vm.listOfFood = [
             {
@@ -73,33 +77,6 @@ const foodSelection = {
         vm.goActivity = () => {
             $location.path("/activity-selection");
         };
-
-        // Service.getBigMac().then(function(result) {
-        //     vm.bigMacObj = result;
-        //     vm.listOfFood[0] = vm.bigMacObj            
-        // });
-
-        // Service.getCoke().then(function(result) {
-        //     vm.cokeObj = result;
-        //     vm.listOfFood[1] = vm.cokeObj            
-        // });
-
-        // Service.getFries().then(function(result) {
-        //     vm.friesObj = result;
-        //     vm.listOfFood[2] = vm.friesObj            
-        // });
-
-        // Service.getApplePie().then(function(result) {
-        //     vm.ApplePieObj = result;
-        //     vm.listOfFood[3] = vm.ApplePieObj            
-        // });
-
-        // Service.getNuggets().then(function(result) {
-        //     vm.nuggetsObj = result;
-        //     vm.listOfFood[4] = vm.nuggetsObj           
-        // });
-
-        // vm.listOfFood = [vm.bigMac, vm.coke, vm.fries, vm.pie, vm.nuggets];
 
         vm.add = (food) => {
 

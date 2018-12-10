@@ -1,6 +1,12 @@
 "use strict";
-const http = require("http");
+const express = require("express");
+const app = express();
+const food = require("./routes.js");
 
-app.use("/",routes)
+app.use(express.json());
+app.use(express.static("./"));
+app.use("/",food);
 
-app.listen(3000, )
+app.listen(3000, () => {
+    console.log("server is on 3000");
+});
