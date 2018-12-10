@@ -221,7 +221,7 @@ p, button {
     flex: 50%;
     flex-direction: column;
     align-items: center;
-    height: 600px;
+    height: 500px;
 }
 
 .food-photos {
@@ -264,7 +264,7 @@ p, button {
     /* display: inline-block; */
     position: relative;
     flex: 50%;
-    height: 100vh;
+    height: 500px;
 }
 
 .plate-container {
@@ -818,6 +818,7 @@ p, button {
 
 }
 
+/* Desktop Media Queries */
 @media only screen and (min-width: 1224px) {
 
     .title {
@@ -835,9 +836,14 @@ p, button {
     .left {
         flex-direction: row;
         flex-wrap: wrap;
-        width: 1000px;
+        width: 800px;
+        height: 550px;
         flex: none;
         justify-content: space-evenly;
+    }
+
+    .right {
+        height: 550px;
     }
 
     .food-photos {
@@ -845,12 +851,35 @@ p, button {
         max-height: 220px;
         height: auto;
         width: auto;
-        margin-top: 20px;
+        margin-top: 60px;
         margin-left: 60px;
+    }
+
+    .plate-container {
+        z-index: 5000;
+    }
+
+    .plate-image {
+        height: 5em;
+    }
+
+    .plate {
+        margin-left: 185px;
+        bottom: 60px;
+    }
+
+    .food-item {
+        margin-left: 245px;
+        max-height: 100px;
+        max-width: 100px;
     }
 
     .go-btn {
         width: 500px;
+    }
+
+    .movement-container {
+        top: 20px;
     }
 
     .activity-header {
@@ -920,4 +949,12 @@ p, button {
         font-size: 60px;
     }
 
+    .car {
+        bottom: 140px;
+    }
+    
+    @keyframes slide {
+        0% {right: -306px}
+        100% {right: 150px}
+    }
 }
