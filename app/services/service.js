@@ -332,43 +332,36 @@ function Service ($http, $q, $location) {
     //                         cal: self.friesCal,
     //                         src: "app/images/fries.png"
     //                     }
-    //                     foodItems[2] = self.coke;
     //                     return self.fries;
-    //                 }).catch((err) => {
-    // self.catchFunction(err);
-    //             });
+    //                 })
 
     //     }
 
-        //call to API_v2.0
-//         self.getApplePie = () => {
+    //     //call to API_v2.0
+    //     self.getApplePie = () => {
 
-//             return $http({
-//                 url: `https://trackapi.nutritionix.com/v2/search/item?nix_item_id=${ID_applePie}`,
-//                 method: "GET",
-//                 headers: {
-//                     "x-app-id": API_ID[API_ID_Index],
-//                     "x-app-key": API_Key[API_Key_Index]
-//                 }
-//                 })
-//                 .then((result) => {
-//                         self.applePieData = result;
-//                         self.applePieName = result.data.foods[0].food_name;
-//                         self.applePieCal = result.data.foods[0].nf_calories;
-//                         self.applePie = {
-//                             name: self.applePieName,
-//                             cal: self.applePieCal,
-//                             src: "app/images/apple-pie.png"
-//                         }
-//                         foodItems[3] = self.coke;
-//                         return self.applePie;
-//                 }).catch((err) => {
-// self.catchFunction(err);
-//                 });
+    //         return $http({
+    //             url: `https://trackapi.nutritionix.com/v2/search/item?nix_item_id=${ID_applePie}`,
+    //             method: "GET",
+    //             headers: {
+    //                 "x-app-id": API_ID,
+    //                 "x-app-key": API_Key
+    //             }
+    //             }).then((result) => {
+    //                     self.applePieData = result;
+    //                     self.applePieName = result.data.foods[0].food_name;
+    //                     self.applePieCal = result.data.foods[0].nf_calories;
+    //                     self.applePie = {
+    //                         name: self.applePieName,
+    //                         cal: self.applePieCal,
+    //                         src: "app/images/apple-pie.png"
+    //                     }
+    //                     return self.applePie;
+    //                 })
 
-//         }
+    //     }
 
-        //call to API_v2.0
+    //     //call to API_v2.0
     //     self.getNuggets = () => {
 
     //         return $http({
@@ -388,16 +381,108 @@ function Service ($http, $q, $location) {
     //                         cal: self.nuggetsCal,
     //                         src: "app/images/nuggets.png"
     //                     }
-    //                     foodItems[4] = self.coke;
     //                     return self.nuggets;
-    //             }).catch((err) => {
-    // self.catchFunction(err);
-    //             });
+    //                 })
     //     }
 
-    // } else if (!API_version_2) {
-        
-    // }
+    // } else if (false) {
+
+    //     //call to API_v1_1
+    //     self.getBigMac = () => {
+    //         return $http({
+    //             url: `https://api.nutritionix.com/v1_1/item?id=${ID_bigMac}&appId=${API_ID}&appKey=${API_Key}`,
+    //             method: "GET",
+    //         }).then((result) => {
+    //             self.bigMacName = result.data.item_name;
+    //             self.bigMacCal = result.data.nf_calories;
+    //             self.bigMac = {
+    //                 name: self.bigMacName,
+    //                 cal: self.bigMacCal,
+    //                 src: "app/images/big-mac.png"
+    //             }
+    //             console.log(self.bigMac);
+                
+    //         return self.bigMac;
+    
+    //         })
+    //     }
+
+    //     //call to API_v1_1
+    //     self.getCoke = () => {
+    //         return $http({
+    //             url: `https://api.nutritionix.com/v1_1/item?id=${ID_coke}&appId=${API_ID}&appKey=${API_Key}`,
+    //             method: "GET",
+    //         }).then((result) => {
+    //             self.cokeName = result.data.item_name;
+    //             self.cokeCal = result.data.nf_calories;
+    //             self.coke = {
+    //                 name: self.cokeName,
+    //                 cal: self.cokeMacCal,
+    //                 src: "app/images/coke.png"
+    //             }
+    //             console.log(self.coke);
+                
+    //         return self.coke;
+    
+    //         })
+    //     }
+
+    //     self.getFries = () => {
+    //         return $http({
+    //             url: `https://api.nutritionix.com/v1_1/item?id=${ID_fries}&appId=${API_ID}&appKey=${API_Key}`,
+    //             method: "GET",
+    //         }).then((result) => {
+    //             self.friesName = result.data.item_name;
+    //             self.friesCal = result.data.nf_calories;
+    //             self.fries = {
+    //                 name: self.friesName,
+    //                 cal: self.friesCal,
+    //                 src: "app/images/fries.png"
+    //             }
+    //             console.log(self.fries);
+                
+    //         return self.fries;
+    
+    //         })
+    //     }
+
+    //     self.getApplePie = () => {
+    //         return $http({
+    //             url: `https://api.nutritionix.com/v1_1/item?id=${ID_applePie}&appId=${API_ID}&appKey=${API_Key}`,
+    //             method: "GET",
+    //         }).then((result) => {
+    //             self.applePieName = result.data.item_name;
+    //             self.applePieCal = result.data.nf_calories;
+    //             self.applePie = {
+    //                 name: self.applePieName,
+    //                 cal: self.applePieCal,
+    //                 src: "app/images/apple-pie.png"
+    //             }
+    //             console.log(applePie);
+                
+    //         return self.applePie;
+    
+    //         })
+    //     }
+
+    //     self.getNuggets = () => {
+    //         return $http({
+    //             url: `https://api.nutritionix.com/v1_1/item?id=${ID_nuggets}&appId=${API_ID}&appKey=${API_Key}`,
+    //             method: "GET",
+    //         }).then((result) => {
+    //             self.nuggetsName = result.data.item_name;
+    //             self.nuggetsCal = result.data.nf_calories;
+    //             self.nuggets = {
+    //                 name: self.nuggetsName,
+    //                 cal: self.nuggetsCal,
+    //                 src: "app/images/nuggets.png"
+    //             }
+    //             console.log(self.nuggets);
+                
+    //         return self.nuggets;
+    
+    //         })
+    //     }
 
     // self.listOfFood = [self.getBigMac(),self.getCoke(),self.getFries(),self.getApplePie(),self.getNuggets()]
     // console.log(self.foodItems);
@@ -413,10 +498,16 @@ function Service ($http, $q, $location) {
     self.plate = [];
     self.addFood = (food) => {
         self.plate.push(angular.copy(food));
-        console.log(self.plate);
+        console.log(angular.element(document.querySelector('#item0'))); // trying to find a way to adjust sizing by the food choice... adding sizing to #item[i] if food.src === *ANDY*
     }
     self.getPlate = () => {
         return self.plate;
+    }
+
+    self.deleteFood = (index) => {
+        console.log(index);
+        self.plate.splice(index, 1);
+        console.log(self.plate);
     }
 
 // method to get calorie total to be used in activity-selection.js
@@ -442,6 +533,10 @@ function Service ($http, $q, $location) {
 
     self.getActivity = () => {
         return self.activityChoice;
+    }
+
+    self.getCalories = () => {
+        return self.sum;
     }
 
     self.getDistance = () => {
@@ -480,8 +575,7 @@ function Service ($http, $q, $location) {
         console.log("YAY")
         self.plate = [];
         self.activityChoice = null;
-        $location.path("/");
-        
+        $location.path("/food-selection");        
     }
 
 

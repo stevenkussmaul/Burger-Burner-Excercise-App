@@ -5,28 +5,27 @@ const foodSelection = {
 
     <section ng-click= "$ctrl.homePage();" class="title">BURGER BURNER</section>
 
-    <h2 class="click-hint">Click to add item to plate</h2>
+    <h2 class="click-hint">Click to add / delete items</h2>
+
+    <button class="go-btn" ng-show="$ctrl.buttonShow" ng-click="$ctrl.goActivity();">I'm Full</button>
 
     <section class="main-container">
-
+        
         <section class="left">
+<<<<<<< HEAD
             <section class="food-choice" anime-directive ng-repeat="food in $ctrl.listOfFood track by $index">
                 <img ng-click="$ctrl.add(food)" src="{{food.src}}" class="food-photos">
+=======
+            <section anime-directive class="food-choice" ng-repeat="food in $ctrl.listOfFood track by $index">
+                <img ng-click="$ctrl.add(food)" src="{{ food.src }}" class="food-photos">
+>>>>>>> master
             </section>
-            <button class="go-btn" ng-show="$ctrl.buttonShow" ng-click="$ctrl.goActivity();">I'm Full</button>
-        </section>
-
-        <section class="instructions" ng-show="$ctrl.show">
-            <h2>Are you ready to burn??</h2>
-            <p class="instructions-text">Find out how far away you need to park in order to burn off those calories you're about to eat!</p>
-            <button class="play-btn" ng-click="$ctrl.hideInstructions();">Burn Those Burgers!!</button>
         </section>
 
         <section class="right">
             <section class="plate-container">
-                <img class="food-item" id="item{{$index}}" ng-repeat="food in $ctrl.plate track by $index" src="{{ food.src}}">
+                <img class="food-item" id="item{{$index}}" ng-repeat="food in $ctrl.plate track by $index" src="{{ food.src}}" ng-click="$ctrl.delete($index);">
             </section>
-
 
             <section count="0" class="plate">
                 <img class="plate-image" src="app/images/plate.png">
@@ -39,99 +38,51 @@ const foodSelection = {
     bindings: [],
     controller: ["Service", "$location", function (Service, $location) {
         const vm = this;
-        vm.show = true;
         vm.buttonShow = false;
 
-        vm.hideInstructions = () => {
-            vm.show = false;
+        vm.listOfFood = [
+            {
+                name: "bigmac",
+                cal: 563,
+                src: "app/images/big-mac.png"
+            },
+            {
+                name: "fries",
+                cal: 510,
+                src: "app/images/fries.png"
+            },
+            {
+                name: "apple pie",
+                cal: 230,
+                src: "app/images/apple-pie.png"
+            },
+            {
+                name: "coke",
+                cal: 150,
+                src: "app/images/coke.png"
+            },
+            {
+                name: "nuggets",
+                cal: 440,
+                src: "app/images/nuggets.png"
+            }
+        ];
+
+
+
+        vm.goActivity = () => {
+            $location.path("/activity-selection");
         };
 
-        vm.listOfFood = Service.getListOfFood();
-
-        Service.getFoodData().then(result => {
-            console.log(result);
-        });
-        // Service.getBigMac().then(result => {
-        //     vm.foodData = result;
-        //     console.log(vm.foodData);
-        // });
-        // vm.listOfFood = Service.getListOfFood();
-        // console.log(vm.listOfFood);
-
-        // vm.listOfFood = [
-        //     {
-        //         name: "bigmac",
-        //         cal: 563,
-        //         src: "app/images/big-mac.png"
-        //     },
-        //     {
-        //         name: "fries",
-        //         cal: 510,
-        //         src: "app/images/fries.png"
-        //     },
-        //     {
-        //         name: "apple pie",
-        //         cal: 230,
-        //         src: "app/images/apple-pie.png"
-        //     },
-        //     {
-        //         name: "coke",
-        //         cal: 150,
-        //         src: "app/images/coke.png"
-        //     },
-        //     {
-        //         name: "nuggets",
-        //         cal: 440,
-        //         src: "app/images/nuggets.png"
-        //     }
-        // ];
-
-
-        // vm.listOfFood = [vm.bigMac, vm.coke, vm.fries, vm.pie, vm.nuggets]
-        // vm.listOfFood = [];
-        // vm.listOfFood[0] = result1;  
-
-
-
-
-
-
-
-        // let result1 = Service.getBigMac();
-        // vm.bigMacObj = result1;
-        // vm.listOfFood[0] = vm.bigMacObj
-
-
-
-        // .then(function(result) {
-
-            
-        //     self.bigMacData = result;
-        //     self.bigMacName = result.data.foods[0].food_name;
-        //     self.bigMacCal = result.data.foods[0].nf_calories;
-        //     self.bigMac = {
-        //         name: self.bigMacName,
-        //         cal: self.bigMacCal,
-        //         src: "app/images/big-mac.png"
-        //     }
-        //     // console.log(result);
-        //     // console.log(self.bigMac);
-        //     // console.log(self.bigMacName);
-        //     // console.log(self.bigMacCal);
-            
-        //     // return self.bigMac;
-        //     // vm.bigMacObj = result;
-        //     vm.listOfFood[0] = vm.bigMac
-        // }).catch((err) => {
-        //     Service.catchFunction(err);
-
+        // Service.getBigMac().then(function(result) {
+        //     vm.bigMacObj = result;
+        //     vm.listOfFood[0] = vm.bigMacObj            
         // });
 
         // Service.getCoke().then(function(result) {
         //     vm.cokeObj = result;
-        //     vm.listOfFood[1] = vm.cokeObj   
-        //     // console.log(result);         
-        // })
+        //     vm.listOfFood[1] = vm.cokeObj            
+        // });
 
         // Service.getFries().then(function(result) {
         //     vm.friesObj = result;
@@ -148,14 +99,7 @@ const foodSelection = {
         //     vm.listOfFood[4] = vm.nuggetsObj           
         // });
 
-
-
-        // if (vm.listOfFood === [undefined,undefined,undefined,undefined,undefined]) {
-        //     vm.listOfFood = [vm.bigMac, vm.coke, vm.fries, vm.pie, vm.nuggets]
-
-        //     vm.listOfFoodFallback = vm.listOfFood;
-        // }
-        // console.log(vm.listOfFood);
+        // vm.listOfFood = [vm.bigMac, vm.coke, vm.fries, vm.pie, vm.nuggets];
 
         vm.add = (food) => {
 
@@ -171,6 +115,10 @@ const foodSelection = {
                     $location.path("/activity-selection"), 2000
                 })
             }
+        }
+
+        vm.delete = (index) => {
+            Service.deleteFood(index);
         }
 
         vm.plate = Service.getPlate();
