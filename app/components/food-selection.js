@@ -31,7 +31,7 @@ const foodSelection = {
 
     `,
     bindings: [],
-    controller: ["Service", "$location", function (Service, $location) {
+    controller: ["Service", "$location", "$timeout", function (Service, $location, $timeout) {
         const vm = this;
         vm.buttonShow = false;
 
@@ -48,27 +48,27 @@ const foodSelection = {
             {
                 name: "bigmac",
                 cal: 563,
-                src: "app/images/big-mac.png"
+                src: "app/images/big-mac_final.png"
             },
             {
                 name: "fries",
                 cal: 510,
-                src: "app/images/fries.png"
+                src: "app/images/fries_final.png"
             },
             {
-                name: "apple pie",
+                name: "sundae",
                 cal: 230,
-                src: "app/images/apple-pie.png"
+                src: "app/images/sundae_final.png"
             },
             {
                 name: "coke",
                 cal: 150,
-                src: "app/images/coke.png"
+                src: "app/images/coke_final.png"
             },
             {
                 name: "nuggets",
                 cal: 440,
-                src: "app/images/nuggets.png"
+                src: "app/images/nuggets_final.png"
             }
         ];
 
@@ -87,10 +87,10 @@ const foodSelection = {
             Service.addFood(food);
             vm.plate = Service.getPlate();
             console.log(vm.plate.length);
-            if (vm.plate.length === 5) {
-                setTimeout(function () {
-                    $location.path("/activity-selection"), 2000
-                })
+            if (vm.plate.length === 6) {
+                $timeout(function () {
+                    $location.path("/activity-selection")
+                }, 1000)
             }
         }
 

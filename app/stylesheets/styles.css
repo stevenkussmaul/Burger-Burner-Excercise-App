@@ -54,70 +54,43 @@ body {
 
 .intro--are {
     font-size: 8em;
-    top: 2em;
-
-    /* top: -0.8em; */
-    
+    top: 3em;
 }
 
 .intro--u {
     color: #3fe4f0;
     font-size: 8em;
-    top: -0.8em;
-    top: -1em;
+    top: -2em;
     left: 2.18em;
-    /* display: none; */
-
 }
 
 .intro--ready {
     color: #F1E9DB;
     font-size: 6.5em;
-    top: 0.2em;
-    left: -4em;
-    /* display: none; */
+    top: 0.79em;
+    left: 3em;
 }
 
 .intro--to {
     font-size: 6em;
-    top: 1.16em;
+    top: 1.73em;
     right: -4em;
-    /* display: none; */
-
 }
 
 .intro--burn {
     color: #3fe4f0;
     font-size: 8em;
     scale: 0;
-    top: 1.23em;
-    top: 3em;
-    left: -0.03em;
-    /* display: none; */
-
+    top: 4em;
+    left: -0.02em;
 }
 
 .intro--qs {
     color: #F1E9DB;
     font-size: 12.1em;
-    /* font-size: 40em; */
-    top: 1.02em;
     top: 3em;
-    left:-0.03em;
-    /* display: none; */
-
+    left:-0.02em;
 }
-
-
-/* 
-.instructions-heading {
-   position: relative;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color: #291717;
-    font-size: 24px;
-    text-align: center;
-    font-family: 'Changa', sans-serif;} */
 
 .instructions {
     /* opactiy: 0; */
@@ -252,8 +225,8 @@ p, button {
 }
 
 .food-photos {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 65px;
+    max-height: 65px;
     height: auto;
     width: auto;
     margin-top: 20px;
@@ -298,13 +271,13 @@ p, button {
 }
 
 .food-item {
-    max-width: 150px;
-    max-height: 100px;
+    max-width: 65px;
+    max-height: 65px;
     height: auto;
     width: auto;
     display: block;
     position: absolute;
-    margin-left: 38px;
+    margin-left: 50px;
 }
 
 .plate {
@@ -313,7 +286,7 @@ p, button {
     width: 8em;
     height: 2em;
     z-index: -1;
-    margin-left: 30px;
+    margin-left: 0px;
 }
 
 .plate-image {
@@ -747,9 +720,11 @@ p, button {
     animation-iteration-count: infinite; */
 }
 
+/* Tablet Media Queries */
 @media only screen and (min-width: 768px) {
     .click-hint {
         margin-top: 35px;
+        font-size: 32px;
     }
 
     .go-btn {
@@ -769,21 +744,28 @@ p, button {
     }
 
     .food-photos {
-        max-height: 130px;
-        max-width: 130px;
+        max-height: 120px;
+        max-width: 120px;
     }
 
     .food-item {
-        margin-left: 80px;
+        margin-left: 125px;
+        max-height: 120px;
+        max-width: 120px;
     }
 
     .plate {
         margin-left: 70px;
         bottom: 25px;
     }
+    
+    .plate-image {
+        height: 5.5em;
+    }
 
     .activity-header {
         margin-top: 50px;
+        font-size: 36px;
     }
 
     .walking {
@@ -831,5 +813,10 @@ p, button {
         height: 40px;
         width: 160px;
     }
+
+}
+
+ /* Desktop Media Queries */
+@media only screen and (min-width: 1200px) {
 
 }
