@@ -45,7 +45,7 @@ function animeDirective() {
                                 { value: [0.1, -0.1], duration: 210 },
                                 { value: [0, -0], duration: 210 }
                             ],
-                            bottom: "160px",
+                            bottom: "75px",
                             duration: 210,
                             offset: 500,
                             easing: 'easeInOutCirc'
@@ -76,7 +76,7 @@ function animeDirective() {
                                 { value: [0.1, -0.1], duration: 210 },
                                 { value: [0, -0], duration: 210 }
                             ],
-                            bottom: "210px",
+                            bottom: "140px",
                             duration: 210,
                             offset: 500,
                             easing: 'easeInOutCirc'
@@ -107,7 +107,7 @@ function animeDirective() {
                                 { value: [0.1, -0.1], duration: 210 },
                                 { value: [0, -0], duration: 210 }
                             ],
-                            bottom: "260px",
+                            bottom: "205px",
                             duration: 210,
                             offset: 500,
                             easing: 'easeInOutCirc'
@@ -138,7 +138,7 @@ function animeDirective() {
                                 { value: [0.1, -0.1], duration: 210 },
                                 { value: [0, -0], duration: 210 }
                             ],
-                            bottom: "310px",
+                            bottom: "270px",
                             duration: 210,
                             offset: 500,
                             easing: 'easeInOutCirc'
@@ -169,7 +169,7 @@ function animeDirective() {
                                 { value: [0.1, -0.1], duration: 210 },
                                 { value: [0, -0], duration: 210 }
                             ],
-                            bottom: "360px",
+                            bottom: "335px",
                             duration: 210,
                             offset: 500,
                             easing: 'easeInOutCirc'
@@ -200,7 +200,7 @@ function animeDirective() {
                                 { value: [0.1, -0.1], duration: 210 },
                                 { value: [0, -0], duration: 210 }
                             ],
-                            bottom: "410px",
+                            bottom: "400px",
                             duration: 210,
                             offset: 500,
                             easing: 'easeInOutCirc'
