@@ -140,7 +140,7 @@ body {
 .instructions__text {
     opacity: 0;
     margin: 1em auto;
-    font-size: 1.4em;
+    font-size: 1.5em;
     /* position: absolute; */
     width: 280px;
     /* z-index: 2000; */
@@ -192,8 +192,8 @@ body {
 
 .click-hint {
     font-family: 'Bungee', cursive;
-    font-size: 20px;
-    word-spacing: 8px;
+    font-size: 21px;
+    word-spacing: 4px;
     color: #291717;
     text-align: center;
     margin-top: 15px;
@@ -283,14 +283,6 @@ p, button {
     100% {transform: scale(1);}
 }
 
-.left {
-    display: flex;
-    flex: 50%;
-    flex-direction: column;
-    align-items: center;
-
-    /* display: inline-block; */
-}
 
 /* Plate */
 .right {
@@ -312,16 +304,16 @@ p, button {
     width: auto;
     display: block;
     position: absolute;
-    margin-left: 30px;
+    margin-left: 38px;
 }
 
 .plate {
     position: absolute;
     bottom: 70px;
-    right: 42px;
     width: 8em;
     height: 2em;
     z-index: -1;
+    margin-left: 30px;
 }
 
 .plate-image {
@@ -473,7 +465,7 @@ p, button {
 }
 
 .results-go-btn {
-    height: 30px;
+    height: 35px;
     width: 150px;
     background-color: #69D9DB;
     color: black;
@@ -482,7 +474,7 @@ p, button {
     left: 50%;
     transform: translateX(-50%);
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .car {
@@ -563,12 +555,13 @@ p, button {
 }
 
 .distance {
-    height: 150px;
+    height: 135px;
     width: 150px;
     background-color:#F1E9DB;
     color: black;
     border: 3px solid #DD1A08;
     margin: 10px;
+    padding: 5px;
 }
 
 .completed {
@@ -576,7 +569,7 @@ p, button {
     color: black;
     border: 3px solid #DD1A08;
     margin: 15px;
-    height: 150px;
+    height: 135px;
     width: 150px;
     border-radius: none;
     animation: results-box;
@@ -586,35 +579,38 @@ p, button {
 }
 
 @keyframes results-box {
-    10% {height: 120px; width: 120px; border-radius: none;}
-    20% {height: 90px; width: 90px; border-radius: none;}
-    30% {height: 60px; width: 60px; border-radius: none;}
-    40% {height: 30px; width: 30px; border-radius: none;}
+    10% {height: 135px; width: 150px; border-radius: none;}
+    20% {height: 95px; width: 110px; border-radius: none;}
+    30% {height: 55px; width: 70px; border-radius: none;}
+    40% {height: 15px; width: 30px; border-radius: none;}
     50% {height: 0px; width: 0px; border-radius: none;}
-    60% {height: 15px; width: 30px; border-radius: none;}
-    70% {height: 30px; width: 60px; border-radius: none;}
-    80% {height: 45px; width: 90px; border-radius: none;}
-    90% {height: 60px; width: 120px; border-radius: none;}
-    100% {height: 75px; width: 150px; border-radius: none;}
+    60% {height: 20px; width: 30px; border-radius: none;}
+    70% {height: 40px; width: 60px; border-radius: none;}
+    80% {height: 60px; width: 90px; border-radius: none;}
+    90% {height: 80px; width: 120px; border-radius: none;}
+    100% {height: 100px; width: 150px; border-radius: none;}
 }
 
 #final-text {
     color: #07020D;
     font-family: 'Changa', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
-    line-height: 20px;
-    width: 130px;
-    height: 130px;
+    line-height: 25px;
+    width: 150px;
+    height: 135px;
     padding: 5px;
     margin: 5px;
 }
 
 .restart-btn {
     height: 40px;
-    width: 80px;
-    font-size: 16px;
+    width: 100px;
+    font-size: 20px;
     margin-top:3px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #DD1A08;
     color: #F1E9DB;
     border-radius: 5px;
@@ -634,8 +630,9 @@ p, button {
 .results-text {
     color: #07020D;
     font-family: 'Changa', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
+    line-height: 1.2;
     width: 130px;
     height: 130px;
     padding: 5px;
@@ -750,3 +747,89 @@ p, button {
     animation-iteration-count: infinite; */
 }
 
+@media only screen and (min-width: 768px) {
+    .click-hint {
+        margin-top: 35px;
+    }
+
+    .go-btn {
+        margin-top: 35px;
+    }
+    
+    .main-container {
+        margin-top: 115px;
+    }
+
+    .left {
+        height: auto;
+    }
+
+    .right {
+        height: auto;
+    }
+
+    .food-photos {
+        max-height: 130px;
+        max-width: 130px;
+    }
+
+    .food-item {
+        margin-left: 80px;
+    }
+
+    .plate {
+        margin-left: 70px;
+        bottom: 25px;
+    }
+
+    .activity-header {
+        margin-top: 50px;
+    }
+
+    .walking {
+        margin-top: 30px;
+    }
+
+    .bear-crawl {
+        margin-top: 30px;
+    }
+
+    .skipping {
+        margin-top: 30px;
+    }
+
+    .skip-text {
+        font-size: 40px;
+        top: 620px;
+        left: 94px;
+    }
+
+    .crawl-text {
+        font-size: 40px;
+        top: 440px;
+        left: 76px;
+    }
+
+    .walk-text {
+        font-size: 40px;
+        left: 13px;
+        top: 270px;
+        left: 90px;
+    }
+
+    .results-intro {
+        height: 200px;
+        width: 280px;
+        font-size: 24px;
+    }
+
+    .results-intro p {
+        font-size: 24px;
+    }
+
+    .results-go-btn {
+        height: 40px;
+        width: 160px;
+    }
+
+}
