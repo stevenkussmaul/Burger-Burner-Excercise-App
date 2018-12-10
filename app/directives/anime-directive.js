@@ -17,6 +17,7 @@ function animeDirective() {
                 }
 
                 function plateWobble(count) {
+                    // array of animations
                     const animations = [
                         {
                             targets: '#item0',

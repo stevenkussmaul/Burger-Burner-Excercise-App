@@ -2,11 +2,14 @@
 
 const results = {
     template: `
-
-
     <section ng-click="$ctrl.homePage();" class="title">BURGER BURNER</section>
 
-    <section class="results-wrapper">
+    <section class="results-intro" ng-show="$ctrl.introShow">
+            <p>You need to park {{$ctrl.totalDistance}} miles away in order to burn off {{$ctrl.calorieSum}} calories.</p>
+            <button class="results-go-btn" ng-click="$ctrl.showPage();">Burn it off!</button>
+    </section>
+
+    <section class="results-wrapper" ng-show="$ctrl.pageShow">
         <section class="progress-bar-container">
             <section class="results-plate">
                 <img class="results-item" ng-repeat="food in $ctrl.plate track by $index" src="{{ food.src}}">
@@ -23,7 +26,9 @@ const results = {
         <section ng-show="$ctrl.buttonShow" class="btn-container">
             <button ng-click="$ctrl.homePage();" class="restart-btn">Restart</button>
         </section>
+
         <img class="car" src="app/images/sprite_car.png">
+        
         <section class="results-container">
             <section class="movement-container">
                 <section class="skyline-container">
@@ -39,12 +44,24 @@ const results = {
     `,
     controller: ["Service", "$location", "$interval", function (Service, $location, $interval) {
         const vm = this;
+        vm.introShow = true;
+        vm.pageShow = false;
+        
+        vm.showPage = () => {
+            vm.pageShow = true;
+            vm.introShow = false;
+            vm.counter = $interval(function (){
+                vm.countdown();
+            }, 500) 
+        }
+
         vm.totalDistance = Service.getDistance();
         vm.activitySelection = Service.getActivity();
         vm.calorieSum = Service.getCalories();
         console.log(vm.calorieSum);
         vm.buttonShow = false;
         vm.decrementDistance = vm.totalDistance;
+        vm.distance = vm.totalDistance;
         
         vm.countdown = () => {      
             vm.element = document.getElementById("progress");  
@@ -73,9 +90,9 @@ const results = {
            
         }
 
-        vm.counter = $interval(function (){
-            vm.countdown();
-        }, 500) 
+        // vm.counter = $interval(function (){
+        //     vm.countdown();
+        // }, 500) 
 
         var tID; //we will use this variable to clear the setInterval()
 
