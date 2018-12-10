@@ -46,13 +46,13 @@ const results = {
         const vm = this;
         vm.introShow = true;
         vm.pageShow = false;
-        
+
         vm.showPage = () => {
             vm.pageShow = true;
             vm.introShow = false;
-            vm.counter = $interval(function (){
+            vm.counter = $interval(function () {
                 vm.countdown();
-            }, 500) 
+            }, 500)
         }
 
         vm.totalDistance = Service.getDistance();
@@ -62,15 +62,15 @@ const results = {
         vm.buttonShow = false;
         vm.decrementDistance = vm.totalDistance;
         vm.distance = vm.totalDistance;
-        
-        vm.countdown = () => {      
-            vm.element = document.getElementById("progress");  
-            vm.decrementDistance = (vm.decrementDistance-.5);
-            vm.distance = Math.round( vm.decrementDistance * 10 ) / 10;
-            vm.width = ((vm.distance / vm.totalDistance)*100); 
+
+        vm.countdown = () => {
+            vm.element = document.getElementById("progress");
+            vm.decrementDistance = (vm.decrementDistance - .5);
+            vm.distance = Math.round(vm.decrementDistance * 10) / 10;
+            vm.width = ((vm.distance / vm.totalDistance) * 100);
 
             if (vm.distance <= 0) {
-                vm.element.style.width = (100 - vm.width) + '%'; 
+                vm.element.style.width = (100 - vm.width) + '%';
                 vm.distance = 0;
                 $interval.cancel(vm.counter);
                 stopAnimate();
@@ -79,15 +79,15 @@ const results = {
                 document.getElementsByClassName("results-text")[0].innerHTML = "";
                 document.getElementsByClassName("distance")[0].setAttribute("class", "completed");
                 document.getElementsByClassName("completed")[0].setAttribute("id", "final-text");
-                setTimeout(function(){document.getElementsByClassName("completed")[0].innerHTML = `Congratulations! You burned off all the calories you ate!`}, 1000);
+                setTimeout(function () { document.getElementsByClassName("completed")[0].innerHTML = `Congratulations! You burned off all the calories you ate!` }, 1000);
                 vm.buttonShow = true;
-            } else { 
-                vm.element.style.width = (100 - vm.width) + '%'; 
+            } else {
+                vm.element.style.width = (100 - vm.width) + '%';
                 console.log(vm.width);
                 // vm.distanceRounded--;
-                } 
+            }
 
-           
+
         }
 
         // vm.counter = $interval(function (){
@@ -100,7 +100,7 @@ const results = {
             clearInterval(tID);
         } //end of stopAnimate()
 
-    
+
         function animateSkip() {
 
             var position = 160; //start position for the image slicer
@@ -178,7 +178,7 @@ const results = {
 
         } else if (vm.activitySelection === "skip") {
             animateSkip();
-  
+
         };
 
         vm.homePage = () => {
@@ -187,15 +187,15 @@ const results = {
 
 
         vm.plate = Service.getPlate();
-        
 
-       
 
-       
+
+
+
     }]
-    
+
 }
 
 angular.module("App")
-        .component("results", results);
+    .component("results", results);
 
