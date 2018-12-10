@@ -163,7 +163,9 @@ function landingAnimation() {
                     duration: 800,
                     elasticity: 100,
                     offset: '-=300'
-                })
+                });
+
+            
 
                 // .add({
                 //     targets: '.flame',

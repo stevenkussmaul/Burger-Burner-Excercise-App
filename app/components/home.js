@@ -5,7 +5,7 @@ const home = {
     controller: ["Service", "$location", function (Service, $location) {
         const vm = this;
         vm.go = () => {
-            $location.path("/food-selection"); // shouldn't this go in the service?
+            $location.path("/food-selection"); 
         };
     }]
 };
