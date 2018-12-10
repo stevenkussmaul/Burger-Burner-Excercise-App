@@ -16,10 +16,100 @@ body {
     background-color: #DD1A08;
     text-shadow: 2px 2px #07020D;
     padding: 20px 0px 15px 0px;
+    z-index: 1;
 }
 
 
 /* Instructions on Home Page */
+
+#home--title{
+    opacity: 0;
+    font-family: 'Bungee', cursive;
+    text-align: center;
+    /* font-size: 0px; */
+    font-size: 40px;
+    /* height: 0px; */
+    /* width: 0px; */
+    color: #F1E9DB;
+    background-color: #DD1A08;
+    text-shadow: 2px 2px #07020D;
+    padding: 20px 0px 15px 0px;
+    z-index: 1;
+}
+
+.landing--container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.intro {
+    position: absolute;
+    font-family: 'Bungee', cursive;
+    color: #A39B8B;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin: 0;
+    z-index: 2;
+}
+
+.intro--are {
+    font-size: 8em;
+    top: 2em;
+
+    /* top: -0.8em; */
+    
+}
+
+.intro--u {
+    color: #3fe4f0;
+    font-size: 8em;
+    top: -0.8em;
+    top: -1em;
+    left: 2.18em;
+    /* display: none; */
+
+}
+
+.intro--ready {
+    color: #F1E9DB;
+    font-size: 6.5em;
+    top: 0.2em;
+    left: -4em;
+    /* display: none; */
+}
+
+.intro--to {
+    font-size: 6em;
+    top: 1.16em;
+    right: -4em;
+    /* display: none; */
+
+}
+
+.intro--burn {
+    color: #3fe4f0;
+    font-size: 8em;
+    scale: 0;
+    top: 1.23em;
+    top: 3em;
+    left: -0.03em;
+    /* display: none; */
+
+}
+
+.intro--qs {
+    color: #F1E9DB;
+    font-size: 12.1em;
+    /* font-size: 40em; */
+    top: 1.02em;
+    top: 3em;
+    left:-0.03em;
+    /* display: none; */
+
+}
+
+
+/* 
 .instructions-heading {
    position: relative;
     margin-top: 20px;
@@ -27,51 +117,75 @@ body {
     color: #291717;
     font-size: 24px;
     text-align: center;
-    font-family: 'Changa', sans-serif;}
+    font-family: 'Changa', sans-serif;} */
 
 .instructions {
-    height: 180px;
-    width: 300px;
-    background-color: #69D9DB;
+    /* opactiy: 0; */
+    height: 0px;
+    width: 0px;
+    /* height: 180px; */
+    /* width: 300px; */
+    background-color: rgba(255,255,255, 0.5);
     color: #291717;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: 30vh;
     z-index: 1000;
-    box-shadow: 0px 0px 13px 7px #6b6868;
+    box-shadow: 0px 0px 13px 1px rgba(107, 104, 104, 0.5);
     border-radius: 5px;
     line-height: 20px;
 }
 
-.instructions-text {
-    position: absolute;
+.instructions__text {
+    opacity: 0;
+    margin: 1em auto;
+    font-size: 1.4em;
+    /* position: absolute; */
     width: 280px;
-    z-index: 2000;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    margin-right: 10px;
+    /* z-index: 2000; */
+    /* margin-top: 1em; */
+    /* margin-bottom: 0px; */
+    /* margin-left: 0.5em; */
+    /* margin-right: 0.5em; */
     color: #291717;
-    padding-top: 10px;
-    font-family: 'Changa', sans-serif;  
-    line-height: 20px;
+    /* padding-top: 10px; */
+    font-family: 'Changa', sans-serif;
+    /* line-height: 20px; */
+    text-align: center;
 }
 
-.play-btn {
-    position: absolute;
-    z-index: 2000;
-    bottom: 15px;
+.instructions__btn {
+    opacity: 0;
+    /* margin: 1 auto; */
+    position: relative;
+    /* z-index: 2000; */
+    /* bottom: 15px; */
     left: 50%;
     transform: translateX(-50%);
-    height: 30px;
-    width: 85%;
+    height: 0px;
+    width: 0%;
+    /* height: 30px; */
+    /* width: 85%; */
     background-color: #362929;
     border: none;
     border-radius: 5px;
     font-family: 'Changa', sans-serif;
-    font-size: 16px;
-    box-shadow: 4px 4px 12px 0px #6b6868;
+    font-size: 0px;
+    padding-top: 0;
+    box-shadow: 0px 0px 13px 1px rgba(107, 104, 104, 0.5);
+}
+
+.flame--upper {
+    position: absolute;
+    z-index: 3;
+    bottom: -40%;
+}
+
+.flame--lower {
+    position: absolute;
+    z-index: 4;
+    bottom: -66%;
 }
 
 /* Food Selection Page */
