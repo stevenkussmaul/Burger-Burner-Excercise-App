@@ -5,7 +5,7 @@ const foodSelection = {
 
     <section ng-click= "$ctrl.homePage();" class="title">BURGER BURNER</section>
 
-    <h2 class="click-hint">Click to add item to plate</h2>
+    <h2 class="click-hint">Click to add / delete items</h2>
 
     <button class="go-btn" ng-show="$ctrl.buttonShow" ng-click="$ctrl.goActivity();">I'm Full</button>
 
@@ -19,7 +19,7 @@ const foodSelection = {
 
         <section class="right">
             <section class="plate-container">
-                <img class="food-item" id="item{{$index}}" ng-repeat="food in $ctrl.plate track by $index" src="{{ food.src}}">
+                <img anime-directive class="food-item" id="item{{$index}}" ng-repeat="food in $ctrl.plate track by $index" src="{{ food.src}}" ng-click="$ctrl.delete($index);">
             </section>
 
             <section count="0" class="plate">
@@ -110,6 +110,10 @@ const foodSelection = {
                     $location.path("/activity-selection"), 2000
                 })
             }
+        }
+
+        vm.delete = (index) => {
+            Service.deleteFood(index);
         }
 
         vm.plate = Service.getPlate();

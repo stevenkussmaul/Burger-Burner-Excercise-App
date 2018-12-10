@@ -23,7 +23,7 @@ const results = {
         <section ng-show="$ctrl.buttonShow" class="btn-container">
             <button ng-click="$ctrl.homePage();" class="restart-btn">Restart</button>
         </section>
-
+        <img class="car" src="app/images/sprite_car.png">
         <section class="results-container">
             <section class="movement-container">
                 <section class="skyline-container">
@@ -46,17 +46,18 @@ const results = {
         vm.buttonShow = false;
         vm.decrementDistance = vm.totalDistance;
         
-          
         vm.countdown = () => {      
             vm.element = document.getElementById("progress");  
             vm.decrementDistance = (vm.decrementDistance-.5);
             vm.distance = Math.round( vm.decrementDistance * 10 ) / 10;
             vm.width = ((vm.distance / vm.totalDistance)*100); 
+
             if (vm.distance <= 0) {
                 vm.element.style.width = (100 - vm.width) + '%'; 
                 vm.distance = 0;
                 $interval.cancel(vm.counter);
                 stopAnimate();
+                document.getElementsByClassName("car")[0].style.animation = "slide 1s forwards";
                 document.getElementsByClassName("skyline-background")[0].style.animation = "none";
                 document.getElementsByClassName("results-text")[0].innerHTML = "";
                 document.getElementsByClassName("distance")[0].setAttribute("class", "completed");
@@ -69,6 +70,7 @@ const results = {
                 // vm.distanceRounded--;
                 } 
 
+           
         }
 
         vm.counter = $interval(function (){

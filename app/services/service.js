@@ -260,10 +260,16 @@ function Service ($http, $q, $location) {
     self.plate = [];
     self.addFood = (food) => {
         self.plate.push(angular.copy(food));
-        console.log(self.plate);
+        console.log(angular.element(document.querySelector('#item0'))); // trying to find a way to adjust sizing by the food choice... adding sizing to #item[i] if food.src === *ANDY*
     }
     self.getPlate = () => {
         return self.plate;
+    }
+
+    self.deleteFood = (index) => {
+        console.log(index);
+        self.plate.splice(index, 1);
+        console.log(self.plate);
     }
 
 // method to get calorie total to be used in activity-selection.js
