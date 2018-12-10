@@ -724,6 +724,7 @@ p, button {
 @media only screen and (min-width: 768px) {
     .click-hint {
         margin-top: 35px;
+        font-size: 32px;
     }
 
     .go-btn {
@@ -743,17 +744,23 @@ p, button {
     }
 
     .food-photos {
-        max-height: 130px;
-        max-width: 130px;
+        max-height: 120px;
+        max-width: 120px;
     }
 
     .food-item {
-        margin-left: 80px;
+        margin-left: 125px;
+        max-height: 120px;
+        max-width: 120px;
     }
 
     .plate {
         margin-left: 70px;
         bottom: 25px;
+    }
+    
+    .plate-image {
+        height: 5.5em;
     }
 
     .activity-header {
