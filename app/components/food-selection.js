@@ -12,14 +12,14 @@ const foodSelection = {
     <section class="main-container">
         
         <section class="left">
-            <section anime-directive class="food-choice" ng-repeat="food in $ctrl.listOfFood track by $index">
-                <img ng-click="$ctrl.add(food)" src="{{ food.src }}" class="food-photos">
+            <section class="food-choice" anime-directive ng-repeat="food in $ctrl.listOfFood track by $index">
+                <img ng-click="$ctrl.add(food)" src="{{food.src}}" class="food-photos">
             </section>
         </section>
 
         <section class="right">
             <section class="plate-container">
-                <img class="food-item" id="item{{$index}}" ng-repeat="food in $ctrl.plate track by $index" src="{{ food.src}}" ng-click="$ctrl.delete($index);">
+                <img class="food-item" id="item{{$index}}" ng-repeat="food in $ctrl.plate track by $index" src="{{food.src}}" ng-click="$ctrl.delete($index);">
             </section>
 
             <section count="0" class="plate">
@@ -31,35 +31,44 @@ const foodSelection = {
 
     `,
     bindings: [],
-    controller: ["Service", "$location", function (Service, $location) {
+    controller: ["Service", "$location", "$timeout", function (Service, $location, $timeout) {
         const vm = this;
         vm.buttonShow = false;
+
+    //    vm.listOfFood = Service.getFoodItems()
+    //         .then((response) => {
+    //             console.log(response.data)
+    //             vm.listOfFood = response.data})
+    //         .catch((err) => {
+    //             console.log(err)
+    //             console.log("bad API request");
+    //         })
 
         vm.listOfFood = [
             {
                 name: "bigmac",
                 cal: 563,
-                src: "app/images/big-mac.png"
+                src: "app/images/big-mac_final.png"
             },
             {
                 name: "fries",
                 cal: 510,
-                src: "app/images/fries.png"
+                src: "app/images/fries_final.png"
             },
             {
-                name: "apple pie",
+                name: "sundae",
                 cal: 230,
-                src: "app/images/apple-pie.png"
+                src: "app/images/sundae_final.png"
             },
             {
                 name: "coke",
                 cal: 150,
-                src: "app/images/coke.png"
+                src: "app/images/coke_final.png"
             },
             {
                 name: "nuggets",
                 cal: 440,
-                src: "app/images/nuggets.png"
+                src: "app/images/nuggets_final.png"
             }
         ];
 
@@ -68,33 +77,6 @@ const foodSelection = {
         vm.goActivity = () => {
             $location.path("/activity-selection");
         };
-
-        // Service.getBigMac().then(function(result) {
-        //     vm.bigMacObj = result;
-        //     vm.listOfFood[0] = vm.bigMacObj            
-        // });
-
-        // Service.getCoke().then(function(result) {
-        //     vm.cokeObj = result;
-        //     vm.listOfFood[1] = vm.cokeObj            
-        // });
-
-        // Service.getFries().then(function(result) {
-        //     vm.friesObj = result;
-        //     vm.listOfFood[2] = vm.friesObj            
-        // });
-
-        // Service.getApplePie().then(function(result) {
-        //     vm.ApplePieObj = result;
-        //     vm.listOfFood[3] = vm.ApplePieObj            
-        // });
-
-        // Service.getNuggets().then(function(result) {
-        //     vm.nuggetsObj = result;
-        //     vm.listOfFood[4] = vm.nuggetsObj           
-        // });
-
-        // vm.listOfFood = [vm.bigMac, vm.coke, vm.fries, vm.pie, vm.nuggets];
 
         vm.add = (food) => {
 
@@ -105,10 +87,10 @@ const foodSelection = {
             Service.addFood(food);
             vm.plate = Service.getPlate();
             console.log(vm.plate.length);
-            if (vm.plate.length === 5) {
-                setTimeout(function () {
-                    $location.path("/activity-selection"), 2000
-                })
+            if (vm.plate.length === 6) {
+                $timeout(function () {
+                    $location.path("/activity-selection")
+                }, 1000)
             }
         }
 
@@ -121,7 +103,9 @@ const foodSelection = {
         vm.homePage = () => {
             Service.goHome();
         }
-
+        vm.goActivity = () => {
+            $location.path("/activity-selection");
+        };
 
     }]
 

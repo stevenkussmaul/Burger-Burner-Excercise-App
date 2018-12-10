@@ -29,7 +29,7 @@ function landingAnimation() {
             landingTimeline
                 .add({
                     targets: '.intro--are',
-                    top: '-0.8em',
+                    top: '-0.2em',
                     scaley: [
                         { value: 10, duration: 1800, delay: 500, easing: 'easeOutExpo' },
                         { value: 1, duration: 900, elasticity: 300 }
@@ -40,7 +40,7 @@ function landingAnimation() {
                 })
                 .add({
                     targets: '.intro--u',
-                    top: '-0.8em',
+                    top: '-0.2em',
                     // delay: 1000,
                     duration: 500,
                     offset: '-=100',
@@ -58,7 +58,7 @@ function landingAnimation() {
                 })
                 .add({
                     targets: '.intro--to',
-                    right: '2.5em',
+                    right: '2.48em',
                     // rotate: '1turn',
                     // delay: 1000,
                     duration: 500,
@@ -69,7 +69,7 @@ function landingAnimation() {
                 .add({
                     targets: '.intro--burn',
                     // left: '0em',
-                    top: '1.23em',
+                    top: '1.83em',
                     // scale: [ { value: -2 }, { value: 2 }, { value: 1 } ],
                     // rotate: '1turn',
                     // delay: 1000,
@@ -80,7 +80,7 @@ function landingAnimation() {
                 })
                 .add({
                     targets: '.intro--qs',
-                    top: '1.02em',
+                    top: '1.65em',
                     // left: '0em',
                     // fontSize: [ { value: '5em' }, { value: '8em' }, { value: '12.1em' } ],
                     // scale: [ { value: -2 }, { value: 2 }, { value: 1 } ],
