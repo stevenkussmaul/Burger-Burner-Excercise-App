@@ -297,6 +297,10 @@ function Service ($http, $q, $location) {
         return self.activityChoice;
     }
 
+    self.getCalories = () => {
+        return self.sum;
+    }
+
     self.getDistance = () => {
         return self.distance;
       };
