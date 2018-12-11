@@ -767,8 +767,8 @@ p, button {
     }
 
     .food-item {
-        margin-left: 125px;
-        max-height: 120px;
+        margin-left: 115px;
+        max-height: 100px;
         max-width: 120px;
     }
 
@@ -832,6 +832,27 @@ p, button {
         width: 160px;
     }
 
+    #walk {
+        top: 100px;
+    }
+
+    #crawl {
+        top: 195px;
+    }
+
+    #skip {
+        top: 110px;
+    }
+
+    .car {
+        bottom: 340px;
+    }
+
+    @keyframes slide {
+        0% {right: -306px}
+        100% {right: -50px}
+    }
+
 }
 
 /* Desktop Media Queries */
@@ -863,12 +884,12 @@ p, button {
     }
 
     .food-photos {
-        max-width: 220px;
-        max-height: 220px;
+        max-width: 120px;
+        max-height: 120px;
         height: auto;
         width: auto;
         margin-top: 0px;
-        margin-left: 60px;
+        margin-left: 100px;
     }
 
     .plate-container {
@@ -885,8 +906,8 @@ p, button {
     }
 
     .food-item {
-        margin-left: 235px;
-        max-height: 100px;
+        margin-left: 245px;
+        max-height: 70px;
         max-width: 100px;
     }
 
