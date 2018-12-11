@@ -58,7 +58,7 @@ function landingAnimation() {
                 })
                 .add({
                     targets: '.intro--to',
-                    right: '2.48em',
+                    left: '0em',
                     // rotate: '1turn',
                     // delay: 1000,
                     duration: 500,

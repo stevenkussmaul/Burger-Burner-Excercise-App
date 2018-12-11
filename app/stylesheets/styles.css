@@ -47,12 +47,12 @@ body {
 .intro--container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    margin: 0px;
+    /* justify-content: flex-start; */
+    /* margin: 0px; */
 }
 
 .intro {
-    /* position: absolute; */
+    position: absolute;
     font-family: 'Bungee', cursive;
     color: #A39B8B;
     /* margin-block-start: 0;
@@ -60,11 +60,6 @@ body {
     margin: 0; */
     z-index: 2;
     padding: 0px;
-}
-
-.intro-topline {
-    display: flex;
-    flex-direction: row;
 }
 
 .intro--are {
@@ -89,7 +84,7 @@ body {
 .intro--to {
     font-size: 6em;
     top: 1.73em;
-    right: -4em;
+    right: -4rem;
 }
 
 .intro--burn {
@@ -873,6 +868,54 @@ p, button {
         100% {right: -50px}
     }
 
+    /* home page animation words */
+
+    .intro--container--container {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+    }
+
+    .intro--container {
+        display: flex;
+        flex-direction: row;
+        width: 800px;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* margin: 0px; */
+    }
+    
+    .intro {
+        position: static;
+
+        font-size: 8em;
+        margin-right: 20px;
+        
+    }
+    
+    .intro--are {
+        font-size: 8em;
+        top: 3em;
+    }
+    
+    .intro--u {
+        color: #3fe4f0;
+
+    }
+    
+    .intro--ready {
+        color: #F1E9DB;
+        
+    }
+    
+    .intro--burn {
+        color: #3fe4f0;
+    }
+    
+    .intro--qs {
+        color: #F1E9DB;
+    
+    }
 }
 
 /* Desktop Media Queries */
@@ -1026,4 +1069,54 @@ p, button {
     #crawl {
         top: 190px;
     }
+
+    /* home page animation words */
+    
+    .intro--container--container {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+    }
+
+    .intro--container {
+        display: flex;
+        flex-direction: row;
+        width: 800px;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* margin: 0px; */
+    }
+    
+    .intro {
+        position: static;
+
+        font-size: 8em;
+        margin-right: 20px;
+        
+    }
+    
+    .intro--are {
+        font-size: 8em;
+        top: 3em;
+    }
+    
+    .intro--u {
+        color: #3fe4f0;
+
+    }
+    
+    .intro--ready {
+        color: #F1E9DB;
+       
+    }
+
+    .intro--burn {
+        color: #3fe4f0;
+    }
+    
+    .intro--qs {
+        color: #F1E9DB;
+ 
+    }
+    
 }
