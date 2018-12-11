@@ -798,6 +798,7 @@ p, button {
     
     .plate-image {
         height: 5.5em;
+        width: 12em;
     }
 
     .activity-header {
@@ -819,20 +820,20 @@ p, button {
 
     .skip-text {
         font-size: 40px;
-        top: 620px;
+        top: 630px;
         left: 94px;
     }
 
     .crawl-text {
         font-size: 40px;
-        top: 440px;
+        top: 450px;
         left: 76px;
     }
 
     .walk-text {
         font-size: 40px;
         left: 13px;
-        top: 270px;
+        top: 275px;
         left: 90px;
     }
 
