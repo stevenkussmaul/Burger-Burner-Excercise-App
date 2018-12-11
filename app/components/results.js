@@ -26,8 +26,6 @@ const results = {
         <section ng-show="$ctrl.buttonShow" class="btn-container">
             <button ng-click="$ctrl.homePage();" class="restart-btn">Restart</button>
         </section>
-
-        <img class="car" src="app/images/sprite_car.png">
         
         <section class="results-container">
             <section class="movement-container">
@@ -38,6 +36,7 @@ const results = {
                     </section>
                 </section>
             </section>
+            <img class="car" src="app/images/sprite_car.png">
         </section>
 
     </section>

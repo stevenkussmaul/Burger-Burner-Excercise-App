@@ -241,7 +241,7 @@ function animeDirective($window) {
                         });
                         anime(animations[count]);
                         plate.attributes[0].value++;
-                    } else if (screenWidth > 768 && screenWidth <= 1224) { // animations for tablet
+                    } else if (screenWidth >= 768 && screenWidth <= 1224) { // animations for tablet
                         const tabletAnimations = [
                             {
                                 targets: '#item0',
