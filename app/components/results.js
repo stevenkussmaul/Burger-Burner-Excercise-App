@@ -52,7 +52,7 @@ const results = {
             vm.introShow = false;
             vm.counter = $interval(function () {
                 vm.countdown();
-            }, 500)
+            }, 800)
         }
 
         vm.totalDistance = Service.getDistance();

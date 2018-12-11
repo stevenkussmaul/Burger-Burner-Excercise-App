@@ -72,8 +72,6 @@ const foodSelection = {
             }
         ];
 
-
-
         vm.goActivity = () => {
             $location.path("/activity-selection");
         };
