@@ -340,6 +340,7 @@ p, button {
     font-size: 30px;
     left: 10px;
     top: 225px;
+    cursor: pointer;
 }
 
 .walking {
@@ -371,6 +372,7 @@ p, button {
     font-size: 30px;
     left: 0px;
     top: 375px;
+    cursor: pointer;
 }
 
 .bear-crawl {
@@ -402,6 +404,7 @@ p, button {
     font-size: 30px;
     left: 15px;
     top: 525px;
+    cursor: pointer;
 }
 
 .skipping {
@@ -535,7 +538,7 @@ p, button {
     width: 1%; 
     border-radius: 3px;
     box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
-    transition: width .4s ease-in-out; 
+    transition: width 1s linear; 
     text-align: center; 
     line-height: 32px; 
     color: black;
@@ -864,7 +867,7 @@ p, button {
         max-height: 220px;
         height: auto;
         width: auto;
-        margin-top: 60px;
+        margin-top: 0px;
         margin-left: 60px;
     }
 
@@ -878,11 +881,11 @@ p, button {
 
     .plate {
         margin-left: 185px;
-        bottom: 60px;
+        bottom: 90px;
     }
 
     .food-item {
-        margin-left: 245px;
+        margin-left: 235px;
         max-height: 100px;
         max-width: 100px;
     }
@@ -963,11 +966,23 @@ p, button {
     }
 
     .car {
-        bottom: 140px;
+        bottom: 70px;
     }
     
     @keyframes slide {
         0% {right: -306px}
         100% {right: 150px}
+    }
+
+    #walk {
+        top: 105px;
+    }
+
+    #skip {
+        top: 105px;
+    }
+
+    #crawl {
+        top: 190px;
     }
 }

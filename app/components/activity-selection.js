@@ -5,16 +5,16 @@ const activitySelection = {
         <section ng-click="$ctrl.homePage();"  class="title">BURGER BURNER</section>
         <h2 class="activity-header">Choose an activity</h2>
         <section class="exercise-container">
-            <section class="walking-container">
-                <section ng-click="$ctrl.walking($ctrl.calorieTotal);" class="walking"></section>
+            <section class="walking-container" ng-click="$ctrl.walking($ctrl.calorieTotal);">
+                <section class="walking"></section>
                 <p class="walk-text">Walk</p>
             </section>
-            <section class="crawling-container">
-                <section ng-click="$ctrl.bearCrawl($ctrl.calorieTotal);" class="bear-crawl"></section>
+            <section class="crawling-container" ng-click="$ctrl.bearCrawl($ctrl.calorieTotal);">
+                <section class="bear-crawl"></section>
                 <p class="crawl-text">Crawl</p>
             </section>
-            <section class="skipping-container">
-                <section ng-click="$ctrl.skipping($ctrl.calorieTotal);" class="skipping"></section>
+            <section class="skipping-container" ng-click="$ctrl.skipping($ctrl.calorieTotal);">
+                <section class="skipping"></section>
                 <p class="skip-text">Skip</p>
             </section>
         </section>
