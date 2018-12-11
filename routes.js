@@ -1,7 +1,7 @@
 "use strict";
 const express = require("express");
 const food = express.Router();
-const pool = require("./connection.js")
+const pool = require("./pg-connection-pool.js");
 
 // function getFood (req, res) {
 
