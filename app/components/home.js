@@ -5,12 +5,16 @@ const home = {
     <!-- <section ng-show="$ctrl.showTitle" class="title">BURGER BURNER</section> -->
     <section id="home--title">BURGER BURNER</section>
 
-    <p class="intro intro--are">are</p>
-    <p class="intro intro--u">u</p>
-    <p class="intro intro--ready">ready</p>
-    <p class="intro intro--to">to</p>
-    <p class="intro intro--burn">burn</p>
-    <p class="intro intro--qs">???</p>
+    <section class="intro--container">
+        <section class="intro-topline">
+            <section class="intro intro--are">are</section>
+            <section class="intro intro--u">u</section>
+        </section>
+        <section class="intro intro--ready">ready</section>
+        <section class="intro intro--to">to</section>
+        <section class="intro intro--burn">burn</section>
+        <section class="intro intro--qs">???</section>
+    </section>
 
     <section class="instructions">
             <!-- <h2 class="instructions-heading">Are you ready to burn??</h2> -->
