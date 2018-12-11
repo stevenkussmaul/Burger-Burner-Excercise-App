@@ -302,7 +302,7 @@ p, button {
     width: auto;
     display: block;
     position: absolute;
-    margin-left: 50px;
+    margin-left: 60px;
     cursor: pointer;
 }
 
@@ -316,12 +316,12 @@ p, button {
     width: 8em;
     height: 2em;
     z-index: -1;
-    margin-left: 0px;
+    margin-left: 20px;
 }
 
 .plate-image {
     height: 4em;
-    width: 12em;
+    width: 9em;
 }
 
 /* Activity Selection Page */
@@ -798,6 +798,7 @@ p, button {
     
     .plate-image {
         height: 5.5em;
+        width: 12em;
     }
 
     .activity-header {
@@ -819,20 +820,20 @@ p, button {
 
     .skip-text {
         font-size: 40px;
-        top: 620px;
+        top: 630px;
         left: 94px;
     }
 
     .crawl-text {
         font-size: 40px;
-        top: 440px;
+        top: 450px;
         left: 76px;
     }
 
     .walk-text {
         font-size: 40px;
         left: 13px;
-        top: 270px;
+        top: 275px;
         left: 90px;
     }
 
