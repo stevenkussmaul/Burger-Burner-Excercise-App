@@ -19,7 +19,7 @@ function animeDirective($window) {
                 function plateWobble(count) {
                     var screenWidth = $window.innerWidth;
 
-                    if (screenWidth <= 376) { // animations for mobile
+                    if (screenWidth <= 767) { // animations for mobile
                         // array of animations
                         const animations = [
                             {
@@ -241,7 +241,7 @@ function animeDirective($window) {
                         });
                         anime(animations[count]);
                         plate.attributes[0].value++;
-                    } else if (screenWidth > 375 && screenWidth <= 769) { // animations for tablet
+                    } else if (screenWidth > 768 && screenWidth <= 1224) { // animations for tablet
                         const tabletAnimations = [
                             {
                                 targets: '#item0',
@@ -462,7 +462,7 @@ function animeDirective($window) {
                         });
                         anime(tabletAnimations[count]);
                         plate.attributes[0].value++;
-                    } else if (screenWidth >= 770) { //animations for desktop
+                    } else if (screenWidth >= 1224) { //animations for desktop
                         const tabletAnimations = [
                             {
                                 targets: '#item0',
@@ -683,7 +683,6 @@ function animeDirective($window) {
                         });
                         anime(tabletAnimations[count]);
                         plate.attributes[0].value++;
-                        console.log("tablet animations ran");
                     }
                 };
 
