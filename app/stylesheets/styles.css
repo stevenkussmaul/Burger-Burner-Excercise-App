@@ -17,6 +17,7 @@ body {
     text-shadow: 2px 2px #07020D;
     padding: 20px 0px 15px 0px;
     z-index: 1;
+    cursor: pointer;
 }
 
 
@@ -147,6 +148,7 @@ body {
     font-size: 0px;
     padding-top: 0;
     box-shadow: 0px 0px 13px 1px rgba(107, 104, 104, 0.5);
+    cursor: pointer;
 }
 
 .flame--upper {
@@ -199,6 +201,7 @@ p, button {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    cursor: pointer;
 }
 
 /* Go Button Animation- Glow */
@@ -232,6 +235,7 @@ p, button {
     height: auto;
     width: auto;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .food-choice {
@@ -280,6 +284,11 @@ p, button {
     display: block;
     position: absolute;
     margin-left: 50px;
+    cursor: pointer;
+}
+
+#item0, #item1, #item2, #item3, #item4, #item5, #item6, #item7 {
+    cursor: pointer;
 }
 
 .plate {
@@ -293,7 +302,7 @@ p, button {
 
 .plate-image {
     height: 4em;
-    width: 12 em;
+    width: 12em;
 }
 
 /* Activity Selection Page */
@@ -347,6 +356,7 @@ p, button {
     animation-iteration-count: infinite;
     margin-top: 0px;
     text-align: center;
+    cursor: pointer;
 }
 
 .crawl-text {
@@ -377,6 +387,7 @@ p, button {
     animation-timing-function: steps(2);
     animation-delay: 100ms;
     animation-iteration-count: infinite;
+    cursor: pointer;
 }
 
 .skip-text {
@@ -407,6 +418,7 @@ p, button {
     animation-timing-function: steps(2);
     animation-delay: 50ms;
     animation-iteration-count: infinite;
+    cursor: pointer;
 }
 
 @keyframes activity {
@@ -450,6 +462,7 @@ p, button {
     transform: translateX(-50%);
     border-radius: 5px;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .car {
