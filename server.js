@@ -11,5 +11,5 @@ app.use("/",food);
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
-    console.log("Server is on port 3000");
+    console.log(`Server is on PORT: ${port}`);
 });
