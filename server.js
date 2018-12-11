@@ -2,6 +2,7 @@
 const express = require("express");
 const app = express();
 const food = require("./routes.js");
+const port = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(express.static("./"));

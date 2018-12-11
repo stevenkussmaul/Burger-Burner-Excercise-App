@@ -1,0 +1,5 @@
+{
+    "name": "Burger Burner",
+    "description": "Calculate how many miles away you have to park to burn off all the calories you eat.",
+    "image": "heroku/nodejs"
+    }
