@@ -8,5 +8,5 @@ app.use(express.static("./"));
 app.use("/",food);
 
 app.listen(3000, () => {
-    console.log("server is on 3000");
+    console.log("Server is on port 3000");
 });
