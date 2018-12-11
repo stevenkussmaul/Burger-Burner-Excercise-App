@@ -83,16 +83,8 @@ const results = {
                 vm.buttonShow = true;
             } else {
                 vm.element.style.width = (100 - vm.width) + '%';
-                console.log(vm.width);
-                // vm.distanceRounded--;
             }
-
-
         }
-
-        // vm.counter = $interval(function (){
-        //     vm.countdown();
-        // }, 500) 
 
         var tID; //we will use this variable to clear the setInterval()
 
