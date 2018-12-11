@@ -79,7 +79,7 @@ const results = {
                 document.getElementsByClassName("results-text")[0].innerHTML = "";
                 document.getElementsByClassName("distance")[0].setAttribute("class", "completed");
                 document.getElementsByClassName("completed")[0].setAttribute("id", "final-text");
-                setTimeout(function () { document.getElementsByClassName("completed")[0].innerHTML = `Congratulations! You burned off all the calories you ate!` }, 1000);
+                setTimeout(function () { document.getElementsByClassName("completed")[0].innerHTML = `Congratulations! You burned off ${vm.calorieSum} calories!` }, 1000);
                 vm.buttonShow = true;
             } else {
                 vm.element.style.width = (100 - vm.width) + '%';
@@ -176,14 +176,8 @@ const results = {
         vm.homePage = () => {
             Service.goHome();
         }
-
-
+        
         vm.plate = Service.getPlate();
-
-
-
-
-
     }]
 
 }

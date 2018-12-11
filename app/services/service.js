@@ -90,8 +90,9 @@ function Service($http, $q, $location) {
         console.log("YAY")
         self.plate = [];
         self.activityChoice = null;
+        self.sum = 0;
         $location.path("/food-selection");
-    }
+    };
 
 
 }
