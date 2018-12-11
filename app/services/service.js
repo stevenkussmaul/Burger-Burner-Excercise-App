@@ -10,13 +10,6 @@ function Service($http, $q, $location) {
         })
     }
 
-
-    // self.getListOfFood = () => {
-    //     console.log(foodItems);
-    //     return self.listOfFood;
-    // }
-
-
     self.plate = [];
     self.addFood = (food) => {
         self.plate.push(angular.copy(food));
