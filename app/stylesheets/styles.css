@@ -1050,7 +1050,7 @@ p, button {
     }
 
     .car {
-        bottom: 650px;
+        bottom: 50px;
     }
     
     @keyframes slide {
@@ -1116,7 +1116,6 @@ p, button {
     
     .intro--qs {
         color: #F1E9DB;
- 
     }
     
 }
