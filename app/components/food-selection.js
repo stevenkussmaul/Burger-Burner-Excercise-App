@@ -39,42 +39,42 @@ const foodSelection = {
         const vm = this;
         vm.buttonShow = false;
 
-    //    vm.listOfFood = Service.getFoodItems()
-    //         .then((response) => {
-    //             console.log(response.data)
-    //             vm.listOfFood = response.data})
-    //         .catch((err) => {
-    //             console.log(err)
-    //             console.log("bad API request");
-    //         })
+       vm.listOfFood = Service.getFoodItems()
+            .then((response) => {
+                console.log(response.data)
+                vm.listOfFood = response.data})
+            .catch((err) => {
+                console.log(err)
+                console.log("bad API request");
+            })
 
-        vm.listOfFood = [
-            {
-                name: "bigmac",
-                cal: 563,
-                src: "app/images/big-mac_final.png"
-            },
-            {
-                name: "fries",
-                cal: 510,
-                src: "app/images/fries_final.png"
-            },
-            {
-                name: "sundae",
-                cal: 230,
-                src: "app/images/sundae_final.png"
-            },
-            {
-                name: "coke",
-                cal: 150,
-                src: "app/images/coke_final.png"
-            },
-            {
-                name: "nuggets",
-                cal: 440,
-                src: "app/images/nuggets_final.png"
-            }
-        ];
+        // vm.listOfFood = [
+        //     {
+        //         name: "bigmac",
+        //         cal: 563,
+        //         src: "app/images/big-mac_final.png"
+        //     },
+        //     {
+        //         name: "fries",
+        //         cal: 510,
+        //         src: "app/images/fries_final.png"
+        //     },
+        //     {
+        //         name: "sundae",
+        //         cal: 230,
+        //         src: "app/images/sundae_final.png"
+        //     },
+        //     {
+        //         name: "coke",
+        //         cal: 150,
+        //         src: "app/images/coke_final.png"
+        //     },
+        //     {
+        //         name: "nuggets",
+        //         cal: 440,
+        //         src: "app/images/nuggets_final.png"
+        //     }
+        // ];
 
         vm.goActivity = () => {
             $location.path("/activity-selection");

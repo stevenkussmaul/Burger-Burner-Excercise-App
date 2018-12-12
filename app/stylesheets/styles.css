@@ -794,11 +794,11 @@ p, button {
 
 @media only screen and (min-width: 700px) {
     .skyline-background {
-        height: 315px;
+        height: 300px;
     }
 
     .car {
-        bottom: 5px;
+        bottom: 0px;
     }
     
     @keyframes slide {
@@ -815,13 +815,20 @@ p, button {
     }
 }
 
+@media only screen and (min-width: 715px) {
+    #walk {
+        top: 100px;
+    }
+
+}
+
 @media only screen and (min-width: 750px) {
     .skyline-background {
-        height: 340px;
+        height: 300px;
     }
 
     .car {
-        bottom: -20px;
+        bottom: 0px;
     }
     
     @keyframes slide {
@@ -1008,13 +1015,19 @@ p, button {
     }
 }
 
+@media only screen and (min-width: 715px) {
+    #walk {
+        top: 125px;
+    }
+}
+
 @media only screen and (min-width: 800px) {
     .skyline-background {
-        height: 360px;
+        height: 300px;
     }
 
     .car {
-        bottom: -45px;
+        bottom: 0px;
     }
     
     @keyframes slide {
@@ -1023,25 +1036,25 @@ p, button {
     }
 
     #walk {
-        top: 130px;
+        top: 120px;
     }
 
     #crawl {
-        top: 220px;
+        top: 200px;
     }
 
     #skip {
-        top: 140px;
+        top: 120px;
     }
 }
 
 @media only screen and (min-width: 850px) {
     .skyline-background {
-        height: 408px;
+        height: 300px;
     }
 
     .car {
-        bottom: -80px;
+        bottom: 0px;
     }
     
     @keyframes slide {
@@ -1050,25 +1063,25 @@ p, button {
     }
 
     #walk {
-        top: 170px;
+        top: 120px;
     }
 
     #crawl {
-        top: 260px;
+        top: 200px;
     }
 
     #skip {
-        top: 175px;
+        top: 120px;
     }
 }
 
 @media only screen and (min-width: 900px) {
     .skyline-background {
-        height: 408px;
+        height: 300px;
     }
 
     .car {
-        bottom: -80px;
+        bottom: 0px;
     }
     
     @keyframes slide {
@@ -1077,25 +1090,25 @@ p, button {
     }
 
     #walk {
-        top: 170px;
+        top: 120px;
     }
 
     #crawl {
-        top: 260px;
+        top: 200px;
     }
 
     #skip {
-        top: 175px;
+        top: 120px;
     }
 }
 
 @media only screen and (min-width: 950px) {
     .skyline-background {
-        height: 430px;
+        height: 300px;
     }
 
     .car {
-        bottom: -100px;
+        bottom: 0px;
     }
     
     @keyframes slide {
@@ -1104,25 +1117,25 @@ p, button {
     }
 
     #walk {
-        top: 180px;
+        top: 120px;
     }
 
     #crawl {
-        top: 280px;
+        top: 200px;
     }
 
     #skip {
-        top: 200px;
+        top: 120px;
     }
 }
 
 @media only screen and (min-width: 1000px) {
     .skyline-background {
-        height: 450px;
+        height: 300px;
     }
 
     .car {
-        bottom: -120px;
+        bottom: 0px;
     }
     
     @keyframes slide {
@@ -1131,25 +1144,25 @@ p, button {
     }
 
     #walk {
-        top: 205px;
+        top: 120px;
     }
 
     #crawl {
-        top: 305px;
+        top: 200px;
     }
 
     #skip {
-        top: 230px;
+        top: 120px;
     }
 }
 
 @media only screen and (min-width: 1050px) {
     .skyline-background {
-        height: 475px;
+        height: 300px;
     }
 
     .car {
-        bottom: -140px;
+        bottom: 0px;
     }
     
     @keyframes slide {
@@ -1158,25 +1171,25 @@ p, button {
     }
 
     #walk {
-        top: 235px;
+        top: 120px;
     }
 
     #crawl {
-        top: 330px;
+        top: 200px;
     }
 
     #skip {
-        top: 240px;
+        top: 120px;
     }
 }
 
 @media only screen and (min-width: 1100px) {
     .skyline-background {
-        height: 490px;
+        height: 300px;
     }
 
     .car {
-        bottom: -160px;
+        bottom: 0px;
     }
     
     @keyframes slide {
@@ -1185,25 +1198,25 @@ p, button {
     }
 
     #walk {
-        top: 245px;
+        top: 120px;
     }
 
     #crawl {
-        top: 340px;
+        top: 200px;
     }
 
     #skip {
-        top: 260px;
+        top: 120px;
     }
 }
 
 @media only screen and (min-width: 1150px) {
     .skyline-background {
-        height: 520px;
+        height: 300px;
     }
 
     .car {
-        bottom: -180px;
+        bottom: 0px;
     }
     
     @keyframes slide {
@@ -1212,25 +1225,29 @@ p, button {
     }
 
     #walk {
-        top: 265px;
+        top: 120px;
     }
 
     #crawl {
-        top: 365px;
+        top: 200px;
     }
 
     #skip {
-        top: 300px;
+        top: 100px;
     }
 }
 
 @media only screen and (min-width: 1200px) {
     .skyline-background {
-        height: 540px;
+        height: 300px;
+    }
+
+    .skyline-container {
+        height: 300px; 
     }
 
     .car {
-        bottom: -200px;
+        bottom: 0px;
     }
     
     @keyframes slide {
@@ -1239,15 +1256,15 @@ p, button {
     }
 
     #walk {
-        top: 285px;
+        top: 120px;
     }
 
     #crawl {
-        top: 370px;
+        top: 200px;
     }
 
     #skip {
-        top: 305px;
+        top: 100px;
     }
 }
 
@@ -1383,7 +1400,7 @@ p, button {
     }
 
     .car {
-        bottom: 50px;
+        bottom: -20px;
     }
     
     @keyframes slide {
@@ -1392,15 +1409,28 @@ p, button {
     }
 
     #walk {
-        top: 105px;
+        top: 120px;
     }
 
     #skip {
-        top: 105px;
+        top: 120px;
     }
 
     #crawl {
-        top: 190px;
+        top: 200px;
+    }
+
+    .results-wrapper {
+        height: 110vh;
+    }
+
+    .skyline-container {
+        height: 300px;
+    }
+
+    .skyline-background {
+        max-width: 100vw;
+        height: 300px;
     }
 
     /* home page animation words */
