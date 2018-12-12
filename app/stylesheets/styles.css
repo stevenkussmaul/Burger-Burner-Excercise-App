@@ -1209,11 +1209,15 @@ p, button {
 
 @media only screen and (min-width: 1200px) {
     .skyline-background {
-        height: 540px;
+        height: 350px;
+    }
+
+    .skyline-container {
+        height: 350px; 
     }
 
     .car {
-        bottom: -200px;
+        bottom: -50px;
     }
     
     @keyframes slide {
@@ -1366,7 +1370,7 @@ p, button {
     }
 
     .car {
-        bottom: 50px;
+        bottom: -85px;
     }
     
     @keyframes slide {
@@ -1375,15 +1379,27 @@ p, button {
     }
 
     #walk {
-        top: 105px;
+        top: 170px;
     }
 
     #skip {
-        top: 105px;
+        top: 85px;
     }
 
     #crawl {
-        top: 190px;
+        top: 165px;
+    }
+
+    .skyline-container {
+        height: 360px;
+    }
+
+    .skyline-background {
+        max-width: 100vw;
+        max-height: 38vh;
+        overflow: visible;
+        /* height: auto;
+        width: auto; */
     }
 
     /* home page animation words */
