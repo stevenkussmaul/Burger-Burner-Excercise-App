@@ -19,8 +19,6 @@ body {
     padding: 20px 0px 15px 0px;
     z-index: 1;
     cursor: pointer;
-    animation: 1s cubic-bezier(0.755, 0.05, 0.855, 0.06) 0s 1 slideInFromLeft;
-
 }
 
 
@@ -42,9 +40,6 @@ body {
 }
 
 .landing--container {
-    position: absolute;
-    z-index: 4;
-    top: 0;
     width: 100vw;
     height: 100vh;
 }
@@ -360,17 +355,7 @@ p, button {
     left: 10px;
     top: 225px;
     cursor: pointer;
-    animation: 1s ease-out 0s 1 slideInFromLeft;
 }
-
-@keyframes slideInFromLeft {
-    0% {
-      transform: translateY(-100%);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
 
 .walking {
     font-family: 'Changa', sans-serif;
@@ -473,8 +458,6 @@ p, button {
     top: 200px;
     left: 50%;
     transform: translateX(-50%);
-    animation: 1s ease-out 0s 1 slideInFromLeft;
-
 }
 
 .results-intro p {
