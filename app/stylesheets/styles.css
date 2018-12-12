@@ -451,7 +451,7 @@ p, button {
 .results-intro {
     position: fixed;
     z-index: 10000;
-    height: 170px;
+    height: 240px;
     width: 220px;
     background-color: #F1E9DB;
     border: 3px solid #DD1A08;
@@ -534,6 +534,12 @@ p, button {
     width: auto;
 }
 
+span {
+    font-size: 25px;
+    color: #DD1A08;
+    text-shadow: 1 px 1px #07020D;
+}
+
 .progress-bar {
     background-color: #F1E9DB;
     height: 20px;
@@ -567,6 +573,7 @@ p, button {
     border: 3px solid #DD1A08;
     margin: 10px;
     padding: 5px;
+    border-radius: 5px;
 }
 
 .completed {
@@ -630,6 +637,7 @@ p, button {
 #miles {
     font-size: 40px;
     font-family: 'Bungee', cursive;
+    color: #07020D;
 }
 
 .results-text {

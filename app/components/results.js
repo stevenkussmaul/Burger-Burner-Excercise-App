@@ -5,7 +5,7 @@ const results = {
     <section ng-click="$ctrl.homePage();" class="title">BURGER BURNER</section>
 
     <section class="results-intro" ng-show="$ctrl.introShow">
-            <p>You need to park {{$ctrl.totalDistance}} miles away in order to burn off {{$ctrl.calorieSum}} calories.</p>
+            <p>You need to park <span>{{$ctrl.totalDistance}}</span> miles away in order to burn off <span>{{$ctrl.calorieSum}}</span> calories.</p>
             <button class="results-go-btn" ng-click="$ctrl.showPage();">Burn it off!</button>
     </section>
 
