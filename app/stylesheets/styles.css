@@ -297,7 +297,7 @@ p, button {
     width: auto;
     display: block;
     position: absolute;
-    margin-left: 50px;
+    margin-left: 60px;
     cursor: pointer;
 }
 
@@ -311,12 +311,12 @@ p, button {
     width: 8em;
     height: 2em;
     z-index: -1;
-    margin-left: 0px;
+    margin-left: 20px;
 }
 
 .plate-image {
     height: 4em;
-    width: 12em;
+    width: 9em;
 }
 
 /* Activity Selection Page */
@@ -488,14 +488,14 @@ p, button {
     position: absolute;
     z-index: 1000;
     right: -306px;
-    bottom: 15px;
+    bottom: 0px;
     animation: none;
     animation-duration: 1s;
 }
 
 @keyframes slide {
     0% {right: -306px}
-    100% {right: -210px}
+    100% {right: -200px}
 }
 
 .results-wrapper {
@@ -703,7 +703,7 @@ p, button {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    top: 88px;
+    top: 100px;
 
     /* background-size: 1000% 100%;
     animation-name: movement;
@@ -724,7 +724,7 @@ p, button {
     background-size: cover;
     position: relative;
     left: 50%;
-    top: 170px;
+    top: 160px;
     transform: translateX(-50%);
 
     /* background-size: 1000% 100%;
@@ -743,13 +743,93 @@ p, button {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    top: 88px;
+    top: 75px;
     /* background-size: 1000% 100%;
     animation-name: movement;
     animation-duration: 4s;
     animation-timing-function: steps(10);
     animation-delay: 0;
     animation-iteration-count: infinite; */
+}
+
+@media only screen and (min-width: 400px) {
+    .skyline-background {
+        height: 315px;
+    }
+
+    .car {
+        bottom: 0px;
+    }
+    
+    @keyframes slide {
+        0% {right: -306px}
+        100% {right: -200px}
+    }
+
+    #crawl {
+        top: 170px;
+    }
+
+    #skip {
+        top: 95px;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .skyline-background {
+        height: 315px;
+    }
+
+    .car {
+        bottom: 5px;
+    }
+    
+    @keyframes slide {
+        0% {right: -306px}
+        100% {right: -110px}
+    }
+
+    #skip {
+        top: 90px;
+    }
+
+    #crawl {
+        top: 170px;
+    }
+}
+
+@media only screen and (min-width: 715px) {
+    #walk {
+        top: 100px;
+    }
+
+}
+
+@media only screen and (min-width: 750px) {
+    .skyline-background {
+        height: 340px;
+    }
+
+    .car {
+        bottom: -20px;
+    }
+    
+    @keyframes slide {
+        0% {right: -306px}
+        100% {right: -110px}
+    }
+
+    #walk {
+        top: 105px;
+    }
+
+    #crawl {
+        top: 200px;
+    }
+
+    #skip {
+        top: 125px;
+    }
 }
 
 /* Tablet Media Queries */
@@ -793,6 +873,7 @@ p, button {
     
     .plate-image {
         height: 5.5em;
+        width: 12em;
     }
 
     .activity-header {
@@ -814,20 +895,20 @@ p, button {
 
     .skip-text {
         font-size: 40px;
-        top: 620px;
+        top: 630px;
         left: 94px;
     }
 
     .crawl-text {
         font-size: 40px;
-        top: 440px;
+        top: 450px;
         left: 76px;
     }
 
     .walk-text {
         font-size: 40px;
         left: 13px;
-        top: 270px;
+        top: 275px;
         left: 90px;
     }
 
@@ -859,7 +940,7 @@ p, button {
     }
 
     .car {
-        bottom: 340px;
+        bottom: -15px;
     }
 
     @keyframes slide {
@@ -914,6 +995,259 @@ p, button {
     .intro--qs {
         color: #F1E9DB;
     
+    }
+}
+
+@media only screen and (min-width: 715px) {
+    #walk {
+        top: 125px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .skyline-background {
+        height: 360px;
+    }
+
+    .car {
+        bottom: -45px;
+    }
+    
+    @keyframes slide {
+        0% {right: -306px}
+        100% {right: -60px}
+    }
+
+    #walk {
+        top: 130px;
+    }
+
+    #crawl {
+        top: 220px;
+    }
+
+    #skip {
+        top: 140px;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    .skyline-background {
+        height: 408px;
+    }
+
+    .car {
+        bottom: -80px;
+    }
+    
+    @keyframes slide {
+        0% {right: -306px}
+        100% {right: -60px}
+    }
+
+    #walk {
+        top: 170px;
+    }
+
+    #crawl {
+        top: 260px;
+    }
+
+    #skip {
+        top: 175px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .skyline-background {
+        height: 408px;
+    }
+
+    .car {
+        bottom: -80px;
+    }
+    
+    @keyframes slide {
+        0% {right: -306px}
+        100% {right: -60px}
+    }
+
+    #walk {
+        top: 170px;
+    }
+
+    #crawl {
+        top: 260px;
+    }
+
+    #skip {
+        top: 175px;
+    }
+}
+
+@media only screen and (min-width: 950px) {
+    .skyline-background {
+        height: 430px;
+    }
+
+    .car {
+        bottom: -100px;
+    }
+    
+    @keyframes slide {
+        0% {right: -306px}
+        100% {right: -60px}
+    }
+
+    #walk {
+        top: 180px;
+    }
+
+    #crawl {
+        top: 280px;
+    }
+
+    #skip {
+        top: 200px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .skyline-background {
+        height: 300px;
+    }
+
+    .car {
+        bottom: 0px;
+    }
+    
+    @keyframes slide {
+        0% {right: -306px}
+        100% {right: -60px}
+    }
+
+    #walk {
+        top: 140px;
+    }
+
+    #crawl {
+        top: 200px;
+    }
+
+    #skip {
+        top: 130px;
+    }
+}
+
+@media only screen and (min-width: 1050px) {
+    .skyline-background {
+        height: 300px;
+    }
+
+    .car {
+        bottom: 0px;
+    }
+    
+    @keyframes slide {
+        0% {right: -306px}
+        100% {right: -20px}
+    }
+
+    #walk {
+        top: 140px;
+    }
+
+    #crawl {
+        top: 200px;
+    }
+
+    #skip {
+        top: 140px;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .skyline-background {
+        height: 300px;
+    }
+
+    .car {
+        bottom: 0px;
+    }
+    
+    @keyframes slide {
+        0% {right: -306px}
+        100% {right: 0px}
+    }
+
+    #walk {
+        top: 140px;
+    }
+
+    #crawl {
+        top: 200px;
+    }
+
+    #skip {
+        top: 150px;
+    }
+}
+
+@media only screen and (min-width: 1150px) {
+    .skyline-background {
+        height: 300px;
+    }
+
+    .car {
+        bottom: 0px;
+    }
+    
+    @keyframes slide {
+        0% {right: -306px}
+        100% {right: 20px}
+    }
+
+    #walk {
+        top: 120px;
+    }
+
+    #crawl {
+        top: 200px;
+    }
+
+    #skip {
+        top: 150px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .skyline-background {
+        height: 350px;
+    }
+
+    .skyline-container {
+        height: 350px; 
+    }
+
+    .car {
+        bottom: -50px;
+    }
+    
+    @keyframes slide {
+        0% {right: -306px}
+        100% {right: 40px}
+    }
+
+    #walk {
+        top: 175px;
+    }
+
+    #crawl {
+        top: 245px;
+    }
+
+    #skip {
+        top: 150px;
     }
 }
 
@@ -1049,7 +1383,7 @@ p, button {
     }
 
     .car {
-        bottom: 650px;
+        bottom: -85px;
     }
     
     @keyframes slide {
@@ -1058,15 +1392,24 @@ p, button {
     }
 
     #walk {
-        top: 105px;
+        top: 150px;
     }
 
     #skip {
-        top: 105px;
+        top: 165px;
     }
 
     #crawl {
-        top: 190px;
+        top: 245px;
+    }
+
+    .skyline-container {
+        height: 360px;
+    }
+
+    .skyline-background {
+        max-width: 100vw;
+        height: 360px;
     }
 
     /* home page animation words */
@@ -1115,7 +1458,6 @@ p, button {
     
     .intro--qs {
         color: #F1E9DB;
- 
     }
     
 }

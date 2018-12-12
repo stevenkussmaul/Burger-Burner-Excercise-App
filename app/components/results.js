@@ -26,8 +26,6 @@ const results = {
         <section ng-show="$ctrl.buttonShow" class="btn-container">
             <button ng-click="$ctrl.homePage();" class="restart-btn">Restart</button>
         </section>
-
-        <img class="car" src="app/images/sprite_car.png">
         
         <section class="results-container">
             <section class="movement-container">
@@ -38,6 +36,7 @@ const results = {
                     </section>
                 </section>
             </section>
+            <img class="car" src="app/images/sprite_car.png">
         </section>
 
     </section>
@@ -52,7 +51,7 @@ const results = {
             vm.introShow = false;
             vm.counter = $interval(function () {
                 vm.countdown();
-            }, 500)
+            }, 800)
         }
 
         vm.totalDistance = Service.getDistance();
@@ -79,7 +78,7 @@ const results = {
                 document.getElementsByClassName("results-text")[0].innerHTML = "";
                 document.getElementsByClassName("distance")[0].setAttribute("class", "completed");
                 document.getElementsByClassName("completed")[0].setAttribute("id", "final-text");
-                setTimeout(function () { document.getElementsByClassName("completed")[0].innerHTML = `Congratulations! You burned off all the calories you ate!` }, 1000);
+                setTimeout(function () { document.getElementsByClassName("completed")[0].innerHTML = `Congratulations! You burned off ${vm.calorieSum} calories!` }, 1000);
                 vm.buttonShow = true;
             } else {
                 vm.element.style.width = (100 - vm.width) + '%';
@@ -176,14 +175,8 @@ const results = {
         vm.homePage = () => {
             Service.goHome();
         }
-
-
+        
         vm.plate = Service.getPlate();
-
-
-
-
-
     }]
 
 }

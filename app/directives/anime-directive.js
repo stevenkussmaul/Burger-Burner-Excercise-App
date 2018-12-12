@@ -19,7 +19,7 @@ function animeDirective($window) {
                 function plateWobble(count) {
                     var screenWidth = $window.innerWidth;
 
-                    if (screenWidth <= 375) {
+                    if (screenWidth <= 767) { // animations for mobile
                         // array of animations
                         const animations = [
                             {
@@ -48,7 +48,7 @@ function animeDirective($window) {
                                     { value: [0.1, -0.1], duration: 210 },
                                     { value: [0, -0], duration: 210 }
                                 ],
-                                bottom: "75px",
+                                bottom: "70px",
                                 duration: 210,
                                 offset: 500,
                                 easing: 'easeInOutCirc'
@@ -79,7 +79,7 @@ function animeDirective($window) {
                                     { value: [0.1, -0.1], duration: 210 },
                                     { value: [0, -0], duration: 210 }
                                 ],
-                                bottom: "140px",
+                                bottom: "130px",
                                 duration: 210,
                                 offset: 500,
                                 easing: 'easeInOutCirc'
@@ -110,7 +110,7 @@ function animeDirective($window) {
                                     { value: [0.1, -0.1], duration: 210 },
                                     { value: [0, -0], duration: 210 }
                                 ],
-                                bottom: "205px",
+                                bottom: "195px",
                                 duration: 210,
                                 offset: 500,
                                 easing: 'easeInOutCirc'
@@ -141,7 +141,7 @@ function animeDirective($window) {
                                     { value: [0.1, -0.1], duration: 210 },
                                     { value: [0, -0], duration: 210 }
                                 ],
-                                bottom: "270px",
+                                bottom: "260px",
                                 duration: 210,
                                 offset: 500,
                                 easing: 'easeInOutCirc'
@@ -172,7 +172,7 @@ function animeDirective($window) {
                                     { value: [0.1, -0.1], duration: 210 },
                                     { value: [0, -0], duration: 210 }
                                 ],
-                                bottom: "335px",
+                                bottom: "320px",
                                 duration: 210,
                                 offset: 500,
                                 easing: 'easeInOutCirc'
@@ -203,7 +203,7 @@ function animeDirective($window) {
                                     { value: [0.1, -0.1], duration: 210 },
                                     { value: [0, -0], duration: 210 }
                                 ],
-                                bottom: "400px",
+                                bottom: "380px",
                                 duration: 210,
                                 offset: 500,
                                 easing: 'easeInOutCirc'
@@ -241,7 +241,7 @@ function animeDirective($window) {
                         });
                         anime(animations[count]);
                         plate.attributes[0].value++;
-                    } else if (screenWidth > 375 && screenWidth <= 769) {
+                    } else if (screenWidth >= 768 && screenWidth < 1224) { // animations for tablet
                         const tabletAnimations = [
                             {
                                 targets: '#item0',
@@ -462,8 +462,7 @@ function animeDirective($window) {
                         });
                         anime(tabletAnimations[count]);
                         plate.attributes[0].value++;
-                        console.log("tablet animations ran");
-                    } else if (screenWidth >= 770) {
+                    } else if (screenWidth >= 1224) { //animations for desktop
                         const tabletAnimations = [
                             {
                                 targets: '#item0',
@@ -684,7 +683,6 @@ function animeDirective($window) {
                         });
                         anime(tabletAnimations[count]);
                         plate.attributes[0].value++;
-                        console.log("tablet animations ran");
                     }
                 };
 
