@@ -165,7 +165,20 @@ function landingAnimation() {
                     offset: '-=300'
                 });
 
-            
+                // function extingiush() {
+                //     let flameDown = anime.timeline();
+
+                //     flameDown
+                //         .add({
+                //             targets: '.landing--container',
+                //             backgroundColor: '#291717',
+                //             // offset: '-=2400',
+                //             duration: 1000
+                //         });
+                //     document.querySelector('.instructions__btn').onclick = extingiush();
+
+                // };
+                
 
                 // .add({
                 //     targets: '.flame',

@@ -19,6 +19,16 @@ body {
     padding: 20px 0px 15px 0px;
     z-index: 1;
     cursor: pointer;
+    animation: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035) 0s 1 slideInFromTop;
+}
+
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
 }
 
 
@@ -191,6 +201,8 @@ body {
     2px -2px 0 #F1E9DB,
     -2px 2px 0 #F1E9DB,
     2px 2px 0 #F1E9DB; 
+    animation: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035) 0s 1 fadeIn;
+
 }
 
 p, button {
@@ -340,6 +352,8 @@ p, button {
     2px -2px 0 #F1E9DB,
     -2px 2px 0 #F1E9DB,
     2px 2px 0 #F1E9DB; 
+    animation: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035) 0s 1 fadeIn;
+
 }
 
 .walk-text {
@@ -355,6 +369,17 @@ p, button {
     left: 10px;
     top: 225px;
     cursor: pointer;
+    animation: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035) 0s 1 fadeIn;
+
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .walking {
@@ -387,6 +412,8 @@ p, button {
     left: 0px;
     top: 375px;
     cursor: pointer;
+    animation: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035) 0s 1 fadeIn;
+
 }
 
 .bear-crawl {
@@ -419,6 +446,8 @@ p, button {
     left: 15px;
     top: 525px;
     cursor: pointer;
+    animation: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035) 0s 1 fadeIn;
+
 }
 
 .skipping {
@@ -450,7 +479,6 @@ p, button {
 /* Results Page */
 .results-intro {
     position: fixed;
-    z-index: 10000;
     height: 170px;
     width: 220px;
     background-color: #F1E9DB;
@@ -458,7 +486,10 @@ p, button {
     top: 200px;
     left: 50%;
     transform: translateX(-50%);
+    animation: 0.4s cubic-bezier(0.95, 0.05, 0.795, 0.035) 0s 1 fadeIn;
 }
+
+
 
 .results-intro p {
     color: black;
@@ -503,7 +534,7 @@ p, button {
     flex-direction: column;
     align-items: center;
     width: 100%;
-
+    
 }
 
 .results-container {
@@ -511,6 +542,7 @@ p, button {
     width: 100%;
 
     top: 360px;
+    
 }
 
 .progress-bar-container {
@@ -532,6 +564,8 @@ p, button {
     max-height: 40px;
     height: auto;
     width: auto;
+    animation: 0.2s cubic-bezier(0.95, 0.05, 0.795, 0.035) 0s 1 fadeIn;
+
 }
 
 .progress-bar {
